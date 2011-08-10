@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Default $SUBDIR to CITS4230
+if [ "$SUBDIR" == "" ]; then
+	SUBDIR="CITS4230"
+fi
+# If a Student ID is not provided then ask for it on stdin
+if [ "$ID" == "" ]; then
+	echo -n "What's your student ID? "
+	read ID
+fi
+# If the INIT flag is set to 1 then create the remote directory $SUBDIR in WWW
+if [ $INIT -eq 1 ]; then
+	echo "Initialising..."
+	ssh $ID@uggp.csse.uwa.edu.au "cd WWW;mkdir $SUBDIR"
+fi
+# Copy the files in WWW to remote WWW/$SUBDIR
+echo "Copying..."
+scp -r WWW/* "$ID@uggp.csse.uwa.edu.au:~/WWW/$SUBDIR/"
