@@ -1,3 +1,19 @@
 This is a basic README.
 
 //TODO: Make this more awesome later.
+//Also, repo name might want to be changed.
+
+Helper scripts included in this repo:
+
+./upload
+Uploads the contents of a local "WWW" directory to a sub-directory of your
+CSSE student WWW directory.
+Variables:
+  INIT - Set this to 1 if you want it to create the sub-directory.
+  ID - Set this to pass your student ID.
+  SUBDIR - Set this to change the sub-directory.
+Example usage:
+  INIT=1 ID=12345678 ./upload
+*WARNING*:
+  It currently overwrites everything in the remote directory so do not store
+  other things in the specified sub-directory.
