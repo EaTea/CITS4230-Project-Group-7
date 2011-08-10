@@ -10,7 +10,7 @@ if [ "$ID" == "" ]; then
 	read ID
 fi
 # If the INIT flag is set to 1 then create the remote directory $SUBDIR in WWW
-if [ $INIT -eq 1 ]; then
+if [ "$INIT" == "1" ]; then
 	echo "Initialising..."
 	ssh $ID@uggp.csse.uwa.edu.au "cd WWW;mkdir $SUBDIR"
 fi
