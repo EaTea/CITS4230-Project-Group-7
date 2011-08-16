@@ -12,16 +12,16 @@
 	<nav hidden="hidden" id="accessibility_access">
 		<a href="#main" accesskey="c">Go to page content</a>
 		<a href="#top_bar" accesskey="m">Go to main menu</a>
-		<a href="#s" accesskey="s" onclick="$('#s').focus(); return false;">Go to the search field</a>
+		<!--<a href="#s" accesskey="s" onclick="$('#s').focus(); return false;">Go to the search field</a>-->
 	</nav>
-	<!-- global domain bar -->
-	<div id="global_domain_bar">
-		<div>
-			<a href="/"><strong>XYZ:</strong> The Shared Todo List</a>
-		</div>
-	</div>
 	<!-- header -->
 	<header>
+		<!-- global domain bar -->
+		<div id="global_domain_bar">
+			<div>
+				<a href="/"><strong>XYZ:</strong> The Shared Todo List</a>
+			</div>
+		</div>
 		<!-- top navbar -->
 		<nav id="top_bar">
 			<ul>
