@@ -1,12 +1,18 @@
-<?php $current_path = substr($_SERVER['PHP_SELF'],0,strrpos($_SERVER['PHP_SELF'],"/index.")); $top_level = $_SERVER['HTTP_HOST'].$current_path; ?>
+<?php
+	if(empty($_SERVER["HTTPS"])) $s = '';
+    else if($_SERVER["HTTPS"] == "on") $s = 's';
+    else $s = '';
+	$current_path = substr($_SERVER['PHP_SELF'],0,strrpos($_SERVER['PHP_SELF'],"/index."));
+	$top_level = "http".$s."://".$_SERVER['SERVER_NAME'].$current_path;
+?>
 <!DOCTYPE HTML>
 <html lang="en-AU">
 <head>
 	<meta charset="utf-8" />
 	<title>XYZ: <?php echo $title; ?></title>
-	<link rel="icon" type="image/png" href="<?php echo $top_level; ?>images/favicon.png"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo $top_level; ?>global/style.css" />
-	<script type="application/javascript" src="<?php echo $top_level; ?>global/script.js"></script>
+	<link rel="icon" type="image/png" href="<?php echo $top_level; ?>/images/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo $top_level; ?>/global/style.css" />
+	<script type="application/javascript" src="<?php echo $top_level; ?>/global/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="application/javascript" src="script.js"></script>
 </head>
