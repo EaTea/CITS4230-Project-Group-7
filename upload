@@ -14,6 +14,11 @@ if [ "$INIT" == "1" ]; then
 	echo "Initialising..."
 	ssh $ID@uggp.csse.uwa.edu.au "cd WWW;mkdir $SUBDIR"
 fi
+# If the CMD flag is set to 2 then clear the remote directory $SUBDIR in WWW
+if [ "$INIT" == "2" ]; then
+	echo "Clearing..."
+	ssh $ID@uggp.csse.uwa.edu.au "cd WWW/$SUBDIR;rm -r *"
+fi
 # Copy the files in WWW to remote WWW/$SUBDIR
 echo "Copying..."
 scp -r WWW/* "$ID@uggp.csse.uwa.edu.au:~/WWW/$SUBDIR/"

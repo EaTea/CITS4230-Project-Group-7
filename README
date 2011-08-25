@@ -8,7 +8,9 @@ Helper scripts included in this repo:
 Uploads the contents of a local "WWW" directory to a sub-directory of your
 CSSE student WWW directory.
 Variables:
-  INIT - Set this to 1 if you want it to create the sub-directory.
+  INIT - Set this to to run a predefined command:
+           1: creates the sub-directory.
+           2: clears the contents of the sub-directory
   ID - Set this to pass your student ID.
   SUBDIR - Set this to change the sub-directory.
 Example usage:
