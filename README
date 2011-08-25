@@ -1,7 +1,6 @@
 This is a basic README.
 
 //TODO: Make this more awesome later.
-//Also, repo name might want to be changed.
 
 Helper scripts included in this repo:
 
@@ -15,5 +14,5 @@ Variables:
 Example usage:
   INIT=1 ID=12345678 ./upload
 *WARNING*:
-  It currently overwrites everything in the remote directory so do not store
+  It currently overwrites any contents on the remote directory so do not store
   other things in the specified sub-directory.
