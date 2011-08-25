@@ -1,12 +1,12 @@
-<?php $TOP_LEVEL = "http://student.csse.uwa.edu.au/~20503332/CITS4230/"; ?>
+<?php $current_path = substr($_SERVER['PHP_SELF'],0,strrpos($_SERVER['PHP_SELF'],"/index.")); $top_level = $_SERVER['HTTP_HOST'].$current_path; ?>
 <!DOCTYPE HTML>
 <html lang="en-AU">
 <head>
 	<meta charset="utf-8" />
-	<title>XYZ: <?php echo $TITLE; ?></title>
-	<link rel="icon" type="image/png" href="<?php echo $TOP_LEVEL; ?>images/favicon.png"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo $TOP_LEVEL; ?>global/style.css" />
-	<script type="application/javascript" src="<?php echo $TOP_LEVEL; ?>global/script.js"></script>
+	<title>XYZ: <?php echo $title; ?></title>
+	<link rel="icon" type="image/png" href="<?php echo $top_level; ?>images/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo $top_level; ?>global/style.css" />
+	<script type="application/javascript" src="<?php echo $top_level; ?>global/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="application/javascript" src="script.js"></script>
 </head>
@@ -22,18 +22,18 @@
 		<!-- global domain bar -->
 		<div id="global_domain_bar">
 			<div>
-				<a href="./"><strong><?php echo $_SERVER['SERVER_NAME']; ?></strong> <?php echo $_SERVER['PHP_SELF']; ?></a>
+				<a href="<?php echo $top_level; ?>"><strong><?php echo $_SERVER['SERVER_NAME']; ?></strong><?php echo str_replace("/", " &gt; ", $current_path); ?></a>
 			</div>
 		</div>
 		<!-- top navbar -->
 		<nav id="top_bar">
 			<ul>
-				<li><a href="./" title="Home">Home</a></li>
+				<li><a href="<?php echo $top_level; ?>" title="Home">Home</a></li>
 			</ul>
 		</nav>
 		<!-- home banner -->
 		<div id="home_banner">
-			<a href="./">
+			<a href="<?php echo $top_level; ?>">
 				<?php // Placeholder for now
 				echo '<img src="images/banner.jpg" alt="XYZ: The Shared Todo List" title="XYZ: The Shared Todo List" />';
 				?>
