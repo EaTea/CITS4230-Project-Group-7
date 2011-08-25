@@ -10,9 +10,11 @@
 <head>
 	<meta charset="utf-8" />
 	<title>XYZ: <?php echo $title; ?></title>
+	<!-- global externals -->
 	<link rel="icon" type="image/png" href="<?php echo $top_level; ?>/images/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo $top_level; ?>/global/style.css" />
 	<script type="application/javascript" src="<?php echo $top_level; ?>/global/script.js"></script>
+	<!-- local externals -->
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="application/javascript" src="script.js"></script>
 </head>
