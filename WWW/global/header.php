@@ -16,6 +16,7 @@
 	<nav hidden="hidden" id="accessibility_access">
 		<a href="#main" accesskey="c">Go to page content</a>
 		<a href="#top_bar" accesskey="m">Go to main menu</a>
+		<a href="#bottom_bar" accesskey="i">Go to content info</a>
 		<!--<a href="#s" accesskey="s" onclick="$('#s').focus(); return false;">Go to the search field</a>-->
 	</nav>
 	<!-- header -->
@@ -23,7 +24,7 @@
 		<!-- domain bar -->
 		<div id="domain_bar">
 			<div>
-				<a href="<?php echo $top_level; ?>"><strong><?php echo $top_host; ?></strong><?php echo ucwords(str_replace("_"," ", str_replace("/", " &gt; ", $current_path))); ?></a>
+				<a href="<?php echo $top_level; ?>"><strong><?php echo $top_host; ?></strong><?php echo ucwords(str_replace("_"," ", str_replace("/", " › ", $current_path))); ?></a>
 			</div>
 		</div>
 		<!-- top navbar -->
