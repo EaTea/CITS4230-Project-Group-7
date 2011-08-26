@@ -1,5 +1,5 @@
 		<!-- home banner -->
-		<div id="home_banner">
+		<div id="banner">
 			<a href="<?php echo $top_level; ?>">
 				<img src="images/banner.jpg" alt="XYZ: The Shared Todo List" title="XYZ: The Shared Todo List" />
 			</a>
