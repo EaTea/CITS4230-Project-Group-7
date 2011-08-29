@@ -1,9 +1,9 @@
 <?php
 	$title = "The Shared Todo List";
 	if(empty($_SERVER["HTTPS"])) $s = '';
-    else if($_SERVER["HTTPS"] == "on") $s = 's';
-    else $s = '';
-    $top_host = $_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']);
+	else if($_SERVER["HTTPS"] == "on") $s = 's';
+	else $s = '';
+	$top_host = $_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']);
 	$top_rpath = dirname(__FILE__);
 	while(!file_exists($top_rpath."/global")) {
 		$top_host = dirname($top_host);
