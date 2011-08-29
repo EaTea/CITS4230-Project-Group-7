@@ -21,4 +21,4 @@ if [ "$INIT" == "2" ]; then
 fi
 # Copy the files in WWW to remote WWW/$SUBDIR
 echo "Copying..."
-scp -r WWW/* "$ID@uggp.csse.uwa.edu.au:~/WWW/$SUBDIR/"
+scp -r -p WWW/* "$ID@uggp.csse.uwa.edu.au:~/WWW/$SUBDIR/"
