@@ -57,5 +57,3 @@
         </div>
         </aside>
 
-        <!-- make the middle region's background color expand -->
-        <div class="clear"></div>
