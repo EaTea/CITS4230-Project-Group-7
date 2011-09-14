@@ -6,10 +6,10 @@
 	<!-- global externals -->
 	<link rel="icon" type="image/png" href="<?php echo $top_level; ?>/global/images/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo $top_level; ?>/global/style.css" />
-	<script type="application/javascript" src="<?php echo $top_level; ?>/global/script.js"></script>
+	<script type="application/ecmascript" src="<?php echo $top_level; ?>/global/script.es"></script>
 	<!-- local externals -->
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script type="application/javascript" src="script.js"></script>
+	<script type="application/ecmascript" src="script.es"></script>
 </head>
 <body>
 	<!-- accessibility access -->
