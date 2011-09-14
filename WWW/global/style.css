@@ -1,0 +1,104 @@
+/* General */
+/* ========================================================================== */
+
+html,body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+header, nav, article, section, footer {
+	display: block;
+}
+html {
+	background: #fff url(images/html-bg.png) top repeat-x;
+}
+#main {
+	max-width: 960px;
+	margin: 18px auto 0px;
+}
+
+
+/* Accessibility access */
+/* ========================================================================== */
+
+#accessibility_access {
+	display:none;
+}
+
+/* Domain Bar */
+/* ========================================================================== */
+
+#domain_bar {
+	background: #3b5998;
+	height: 10px;
+}
+#domain_bar div {
+	max-width: 960px;
+	margin: 0 auto;
+}
+#domain_bar a {
+	margin-right: 30px;
+	float: right;
+	background: #3b5998 url(images/favicon.png) 6px 4px no-repeat;
+	padding: 4px 12px 2px 26px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* Top bar */
+/* ========================================================================== */
+
+#top_bar {
+	background: #2e3436 url("images/top_bar-bg.png") top repeat-x;
+	padding: 8px 0;
+	margin: 0 auto;
+	margin-top: 24px;
+	max-width: 960px;
+	font-size: 13px;
+	line-height: normal;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+#top_bar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0 5px;
+}
+#top_bar ul li {
+	display: inline;
+	margin: 0 5px 0 0;
+}
+#top_bar a {
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 8px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	outline: 0;
+	-webkit-transition: background 100ms linear;
+	-moz-transition: background 100ms linear;
+	transition: background 100ms linear;
+	text-shadow: 0 1px 0 #000;
+}
+#top_bar a:hover {
+	background: #64696d;
+	background: rgba(100%, 100%, 100%, 0.2);
+}
+#top_bar a:focus {
+	background: rgba(100%, 100%, 100%, 0.15);
+}
+#top_bar a:active, #top_bar li.current-menu-item a {
+	background: #1c2021 url("images/top_bar-item-bg.png") top repeat-x;
+	-moz-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+	box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+}

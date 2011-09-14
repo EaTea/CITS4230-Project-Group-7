@@ -1,0 +1,4 @@
+Favicon:
+http://www.leehansen.com/clipart/Holidays/GrandparentsDay/pages/forget-me-not-flower.htm
+Style+BG:
+http://www.gnome.org/
