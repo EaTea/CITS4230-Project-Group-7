@@ -6,13 +6,13 @@ html,body {
 	padding: 0;
 	border: 0;
 }
-header, nav, article, section, footer {
+header, footer, nav, article, section, aside {
 	display: block;
 }
 html {
 	background: #fff url(images/html-bg.png) top repeat-x;
 }
-#main {
+#content {
 	max-width: 960px;
 	margin: 18px auto 0px;
 }
