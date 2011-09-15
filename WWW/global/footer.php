@@ -1,10 +1,10 @@
 	</section>
 	<!-- footer -->
-	<footer id="bottom_bar">
+	<footer>
 		<p>
 			Last Updated: September 09 2011 12:28 by CITS4200 Group G
 		</p>
-		<nav id="bottom_navigation">
+		<nav id="bottom_bar">
 			<ul>
 				<li>| <a href="#">Home</a></li>
 				<li>| <a href="#">Contact Us</a></li>
