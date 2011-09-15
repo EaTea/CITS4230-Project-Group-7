@@ -47,34 +47,34 @@ body>footer {
 
 /* Styles: HTML and CSS validator links */
 
-div#validators ul {
+#validators ul {
 	list-style-type: none;
 	list-style-image: none; 
 }
 
-div#validators li {
+#validators li {
 	display: inline; 
 }
 
 
 /* Styles: footer navigation links */
 
-nav#bottom_navigation ul {
+#bottom_bar ul {
 	list-style-type: none;
 	list-style-image: none;  
 }
 
-nav#bottom_navigation li {
+#bottom_bar li {
 	display: inline; 
 }
 
-nav#bottom_navigation ul li a {
+#bottom_bar ul li a {
 	text-decoration:none;  
 	margin: 1px;
 	color: #0F88DA;
 }
 
-#bottom_navigation ul li a:hover {
+#bottom_bar ul li a:hover {
 	color: purple;
 }
 
