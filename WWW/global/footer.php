@@ -6,12 +6,12 @@
 		</p>
 		<nav id="bottom_navigation">
 			<ul>
-				| <li><a href="#">Home</a></li>
-				| <li><a href="#">Contact Us</a></li>
-				| <li><a href="#">References</a></li>
-				| <li><a href="#">Site Map</a></li>
-				| <li><a href="#">Feedback</a></li>
-				| <li><a href="#">Accessibility</a></li>
+				<li>| <a href="#">Home</a></li>
+				<li>| <a href="#">Contact Us</a></li>
+				<li>| <a href="#">References</a></li>
+				<li>| <a href="#">Site Map</a></li>
+				<li>| <a href="#">Feedback</a></li>
+				<li>| <a href="#">Accessibility</a></li>
 			</ul>
 		</nav>
 		<div id="validators">
