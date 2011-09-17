@@ -48,7 +48,7 @@
 					</label>
 					<input type="password" name="password" id="password" required="required" />
 
-					<button  type="submit">Sign Up</button>
+					<button type="submit">Sign Up</button>
 					<div class="spacer"></div>
 
 				</form>
