@@ -1,20 +1,71 @@
-/* General */
+/* Reset */
 /* ========================================================================== */
 
-html,body {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-header, footer, nav, article, section, aside {
+ol,ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	border:none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* HTML5 Compatibility */
+/* ========================================================================== */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	display: block;
 }
+
+/* General */
+/* ========================================================================== */
+
 html {
 	background: #fff url(images/html-bg.png) top repeat-x;
 }
+body {
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 1.25;
+}
 #content {
 	max-width: 960px;
-	margin: 18px auto 0px;
+	margin: 16px auto 12px;
+}
+body>footer {
+	font-size:10px;
+	color: #736F6E;
+	border-top: 1px ridge black;
+	max-width: 960px;
+	margin: 0 auto;
+}
+body>footer li {
+	display: inline;
+}
+body>footer li:before {
+	content: '·';
+}
+#validators {
+	float: right;
+}
+#validators:before {
+	content: 'Validators';
 }
 
 
@@ -22,7 +73,7 @@ html {
 /* ========================================================================== */
 
 #accessibility_access {
-	display:none;
+	display: none;
 }
 
 /* Domain Bar */
@@ -101,4 +152,17 @@ html {
 	-moz-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
 	-webkit-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
 	box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Bottom bar */
+/* ========================================================================== */
+
+#bottom_bar {
+	float: left;
+}
+#bottom_bar:before {
+	content: 'XYZ © 2011';
+}
+#bottom_bar a {
+	color: #0F88DA;
 }
