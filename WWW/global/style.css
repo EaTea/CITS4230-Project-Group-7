@@ -67,6 +67,9 @@ body>footer li:before {
 #validators:before {
 	content: 'Validators';
 }
+#validators a {
+	target-name: new;
+}
 
 
 /* Accessibility access */

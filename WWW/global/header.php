@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="application/ecmascript" src="script.es"></script>
 </head>
-<body>
+<body onload="load()">
 	<!-- header -->
 	<header>
 		<!-- accessibility access -->
