@@ -141,6 +141,7 @@ body>footer li:before {
 	outline: 0;
 	-webkit-transition: background 100ms linear;
 	-moz-transition: background 100ms linear;
+	-o-transition: background 100ms linear;
 	transition: background 100ms linear;
 	text-shadow: 0 1px 0 #000;
 }
