@@ -25,43 +25,33 @@
 					<h1>To-Do List Sign Up</h1>
 					<p>Register and share list with your friends!</p>
 
-					<label>First Name
-						<span class="highlight">Add your first names</span>
+					<label>Name
+						<span class="highlight">Enter a name</span>
 					</label>
-					<input type="text" name="first_name" id="first_name" />
-
-					<label>Last Name
-						<span class="highlight">Add your surname</span>
-					</label>
-					<input type="text" name="last_name" id="last_name" />
-
-					<label>Gender
-						<span class="highlight">Select your sex</span>
-					</label>
-					<select id="gender" name="gender">
-						<option value="0">-Select Sex-</option>
-						<option value="1">Female</option>
-						<option value="2">Male</option>
-					</select>
+					<input type="text" name="name" id="name" required="required" />
 
 					<label>Email
-						<span class="highlight">Add a valid address</span>
+						<span class="highlight">Enter an email address</span>
 					</label>
-					<input type="email" name="email" id="email" />
+					<input type="email" name="email" id="email" required="required" />
 
 					<label>Confirm Email
-						<span class="highlight">Confirm your above email</span>
+						<span class="highlight">Confirm the above</span>
 					</label>
-					<input type="email" name="confirm_email" id="confirm_email" />
+					<input type="email" name="confirm_email" id="confirm_email" required="required" />
 
-					<label>New Password
+					<label>Password
 						<span class="highlight">Min. size 6 chars</span>
 					</label>
 					<input type="password" name="password" id="password" required="required" />
 
+					<label>Confirm Password
+						<span class="highlight">Min. size 6 chars</span>
+					</label>
+					<input type="password" name="confirm_password" id="confirm_password" required="required" />
+
 					<button type="submit">Sign Up</button>
 					<div class="spacer"></div>
-
 				</form>
 			</div>
 		</aside>
