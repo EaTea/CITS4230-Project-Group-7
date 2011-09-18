@@ -2,7 +2,18 @@
 			<header>
 				<h1>Shared TO-DO List lets you to connect and share Lists with your Friends!</h1>
 			</header>
-			<div class="front_image"></div>
+			<figure id="slideshow">
+				<div class="img_container">
+					<img src="images/fmn-A.jpg" alt="A" />
+					<img src="images/fmn-B.jpg" alt="B" />
+					<img src="images/fmn-C.jpg" alt="C" />
+					<img src="images/fmn-D.jpg" alt="D" />
+				</div>
+				<nav>
+					<ul></ul>
+				</nav>
+				<figcaption></figcaption>
+			</figure>
 			<footer>
 				<p><a href="#">Learn more...</a></p>
 			</footer>

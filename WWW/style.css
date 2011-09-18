@@ -11,58 +11,98 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 
-/* Styles for section element of the main content */
+/* Slideshow */
+/* ========================================================================== */
+
+#slideshow {
+	margin: 12px auto;
+	cursor: pointer;
+}
+#slideshow figcaption {
+	text-align: center;
+}
+#slideshow .img_container {
+	width: 412px;
+	height: 309px;
+	border: 2px solid black;
+}
+#slideshow .img_container img {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+#slideshow .img_container img:first-of-type {
+	display: inline;
+}
+#slideshow nav ul {
+	display: table;
+	width: 100%;
+}
+#slideshow nav li {
+	display: table-cell;
+	border: 2px solid transparent;
+	text-align: center;
+}
+#slideshow nav li div {
+	width: 100%;
+	height: 11px;
+}
+#slideshow nav li.hovered {
+	border-color: black;
+}
+#slideshow nav li.hovered div {
+	background: #000 url('images/thumb_arrow.png') top no-repeat;
+}
+
+/* Main Content */
+/* ========================================================================== */
 
 #content {
 	display: table;
 	width: 100%;
 	background: url('images/background.jpg') repeat-x;
 }
-
 #main_content {
 	display: table-cell;
 	width: 50%;
-	padding: 35px;
+	padding: 32px;
 }
-
 #registration {
 	display: table-cell;
 	width: 50%;
-	padding:35px;
+	padding:32px;
 }
 
-/* Styles: global To-Do system forms */
+/* Global To-Do System Forms */
+/* ========================================================================== */
 
 .todo-form {
-	margin:0 auto;
-	width:375px;
-	padding:10px;
+	margin: 0 auto;
+	width: 375px;
+	padding: 10px;
 }
-
 p, h1, form, button {
-	border:0; 
-	margin:0; 
-	padding:0;
+	border: 0; 
+	margin: 0; 
+	padding: 0;
 }
-
 .spacer {
-	clear:both; 
-	height:1px;
+	clear: both; 
+	height: 1px;
 }
 
-/* Styles: user registration form */
+/* User Registration Form */
+/* ========================================================================== */
 
 #reg_form {
 	border: solid 2px #b7ddf2;
 	background: #ebf4fb;
 }
-
 #reg_form h1 {
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 8px;
 }
-
 #reg_form p {
 	font-size: 11px;
 	color: #666666;
@@ -70,7 +110,6 @@ p, h1, form, button {
 	border-bottom: solid 1px #b7ddf2;
 	padding-bottom: 10px;
 }
-
 #reg_form label {
 	display: block;
 	font-weight: bold;
@@ -78,7 +117,6 @@ p, h1, form, button {
 	width: 140px;
 	float: left;
 }
-
 #reg_form .highlight {
 	color: #736F6E;
 	display: block;
@@ -87,7 +125,6 @@ p, h1, form, button {
 	text-align: right;
 	width: 140px;
 }
-
 #reg_form input, select {
 	float: left;
 	font-size: 12px;
@@ -96,7 +133,6 @@ p, h1, form, button {
 	width: 175px;
 	margin: 2px 0 20px 10px;
 }
-
 #reg_form button {
 	clear: both;
 	margin-left: 150px;
