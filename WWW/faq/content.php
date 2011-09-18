@@ -28,8 +28,8 @@
 				<h3>Another question.</h3>
 			</li>
 		</ul>
-		<!--<aside>-->
+		<!--<aside>
 		<p>
 			Still confused? Never fear! Visit our <a href="<?php echo $top_level; ?>/help">help section</a> to learn more.
 		</p>
-		<!--</aside>-->
+		</aside>-->
