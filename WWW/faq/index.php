@@ -1,5 +1,5 @@
 <?php
-	$title = "The Shared Todo List";
+	$title = "FAQ";
 	if(empty($_SERVER["HTTPS"])) $s = '';
 	else if($_SERVER["HTTPS"] == "on") $s = 's';
 	else $s = '';
