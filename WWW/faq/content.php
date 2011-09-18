@@ -25,7 +25,27 @@
 				</p>
 			</li>
 			<li>
-				<h3>Another question.</h3>
+				<h3>This website isn't working on my browser!</h3>
+				<p>
+					Are you using Internet Explorer with a version earlier than 8?
+				</p>
+			</li>
+			<li>
+				<h3>Why, yes I am! How did you guess?</h3>
+				<p>
+					We're just awesome like that. Tell you what, why don't you go and upgrade your browser? It won't cost you a cent.
+				</p>
+			</li>
+			<li>
+				<h3>Really? Upgrade my browser? I guess I could...</h3>
+				<p>
+					Or you could support these wonderful open-source projects, download one of these browsers and try them out:
+					<ul>
+						<li><a href="http://www.mozilla.org/en-US/firefox/">Mozilla Firefox</a></li>
+						<li><a href="http://www.google.com/chrome">Google Chrome</a></li>
+						<li><a href="http://www.opera.com/">Opera</a></li>
+					</ul>
+				</p>
 			</li>
 		</ul>
 		<!--<aside>
