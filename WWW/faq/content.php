@@ -1,8 +1,27 @@
+		<!-- FAQ Subject to change as Stage II implemented -->
 		<h1>Frequently Asked Questions</h1>
 		<p>
 			Got questions on about XYZ? Here are some frequently asked questions that might help.
 		</p>
 		<ul>
+			<li>
+				<h3>Who worked on this website?</h3>
+				<p>
+					Yuki Osada (20503332) and Sonam Tobgay (20976539). And Edwin Tay (20529864) did something too.
+				</p>
+			</li>
+			<li>
+				<h3>But then why is this website so awesome? It only has 3 people working on it!</h3>
+				<p>
+					Yuki and Sonam have tiger's blood running in their veins. Can't help it if we're bi-winning. Now, read the rest of the FAQ 'cause I'm sure that you cam here with a serious question.
+				</p>
+			</li>
+			<li>
+				<h3>There's another product called "XYZ" already! Aren't you copying them a little bit?</h3>
+				<p>
+					We didn't even know they existed, up until one of us (Edwin) was informed by a friend. And they don't have Menma's blessing. So to be technical, they're copying us.
+				</p>
+			</li>
 			<li>
 				<h3>How do I add a new To-Do List to my lists?</h3>
 				<p>
@@ -25,6 +44,18 @@
 				</p>
 			</li>
 			<li>
+				<h3>How do I mark something as completed or remove it from my tasks?</h3>
+				<p>
+					It's pretty simple. If you go to your task viewer, you'll notice that there's a little drop-down icon. If you click on it, you'll bring up a little menu, and you can choose to remove, or mark something as completed there.
+				</p>
+			</li>
+			<li>
+				<h3>I want to store my To-Do List offline. How do I use the offline synch?</h3>
+				<p>
+					All you have to do is go to your list, select "Edit List", and in the corresponding panel, you can select "Export to My Computer". You'll be asked where you want to save the offline copy, and then hey! presto! Your To-Do list will be stored offline for you.
+				</p>
+			</li>
+			<li>
 				<h3>This website isn't working on my browser!</h3>
 				<p>
 					Are you using Internet Explorer with a version earlier than 8?
@@ -39,7 +70,7 @@
 			<li>
 				<h3>Really? Upgrade my browser? I guess I could...</h3>
 				<p>
-					Or you could support these wonderful open-source projects, download one of these browsers and try them out:
+					Or you could support these wonderful open-source projects, download one of these browsers (for free) and try them out:
 					<ul>
 						<li><a href="http://www.mozilla.org/en-US/firefox/">Mozilla Firefox</a></li>
 						<li><a href="http://www.google.com/chrome">Google Chrome</a></li>
