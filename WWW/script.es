@@ -1,7 +1,8 @@
-function Slideshow() {
+function Slideshow(title) {
 	this.sshow = document.getElementById("slideshow");
 	this.imgs = this.sshow.getElementsByTagName("div")[0].getElementsByTagName("img");
 	this.nav = this.sshow.getElementsByTagName("nav")[0].getElementsByTagName("ul")[0];
+	this.nav.setAttribute("title", title);
 	this.t;
 	this.on = 0;
 	this.cur = 0;
@@ -39,15 +40,14 @@ function Slideshow() {
 	}
 	this.mover = function(event) {
 		if (event.target == event.currentTarget) {
-			var siblings = event.currentTarget.parentNode.childNodes;;//ss.nav.childNodes
+			var siblings = event.currentTarget.parentNode.childNodes;
 			for (var i = 0; i < siblings.length; i++) {
 				siblings[i].removeAttribute("class");
 				if (siblings[i] == event.currentTarget) {
 					siblings[i].setAttribute("class", "hovered");
-					ss.update(i);
+					eval(event.currentTarget.parentNode.getAttribute("title")+".update("+i+")");
 				}
 			}
-			//event.currentTarget.setAttribute("class", "hovered");
 		}
 	}
 	
@@ -68,7 +68,7 @@ function Slideshow() {
 }
 
 function main() {
-	ss = new Slideshow();
+	ss = new Slideshow("ss");
 	ss.sshow.addEventListener("mouseover", function(event) {
 		ss.end();
 	}, false);
