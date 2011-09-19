@@ -26,7 +26,7 @@
 					<p>Register and share list with your friends!</p>
 
 					<label>Name
-						<span class="highlight">Enter a name</span>
+						<span class="highlight">Enter your name</span>
 					</label>
 					<input type="text" name="name" id="name" required="required" />
 
@@ -36,7 +36,7 @@
 					<input type="email" name="email" id="email" required="required" />
 
 					<label>Confirm Email
-						<span class="highlight">Confirm the above</span>
+						<span class="highlight">Confirm the above email</span>
 					</label>
 					<input type="email" name="confirm_email" id="confirm_email" required="required" />
 
