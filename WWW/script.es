@@ -26,18 +26,20 @@ function Slideshow() {
 		this.t = setTimeout(oname+".next('"+oname+"')", 3000);
 	}
 	this.start = function(oname) {
+		//alert("start");
 		if (!this.on) {
 			this.on=1;
 			this.t = setTimeout(oname+".next('"+oname+"')", 3000);
 		}
 	}
 	this.end = function() {
+		//alert("end");
 		clearTimeout(this.t);
 		this.on=0;
 	}
 	this.mover = function(event) {
 		if (event.target == event.currentTarget) {
-			var siblings = ss.nav.childNodes;//event.currentTarget.parentNode.childNodes;
+			var siblings = event.currentTarget.parentNode.childNodes;;//ss.nav.childNodes
 			for (var i = 0; i < siblings.length; i++) {
 				siblings[i].removeAttribute("class");
 				if (siblings[i] == event.currentTarget) {
@@ -68,15 +70,13 @@ function Slideshow() {
 function main() {
 	ss = new Slideshow();
 	ss.sshow.addEventListener("mouseover", function(event) {
-		if (event.eventPhase == Event.BUBBLING_PHASE) {
-			ss.end();
-		}
+		ss.end();
 	}, false);
 	ss.sshow.addEventListener("mouseout", function(event) {
-		if (event.eventPhase == Event.CAPTURING_PHASE) {
+		if (event.target == event.currentTarget) {
 			ss.start("ss");
 		}
-	}, true);
+	}, false);
 	/*ss.sshow.onmouseout = function(event) {
 		if (event.eventPhase == Event.BUBBLING_PHASE) {
 			ss.start("ss");

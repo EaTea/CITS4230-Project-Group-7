@@ -17,13 +17,14 @@
 #slideshow {
 	margin: 12px auto;
 	cursor: pointer;
+	border: 2px solid transparent;
 }
 #slideshow figcaption {
 	text-align: center;
 }
 #slideshow .img_container {
-	width: 412px;
-	height: 309px;
+	width: 408px;
+	height: 306px;
 	border: 2px solid black;
 }
 #slideshow .img_container img {
