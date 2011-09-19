@@ -2,7 +2,6 @@ function Slideshow(title) {
 	this.sshow = document.getElementById("slideshow");
 	this.imgs = this.sshow.getElementsByTagName("div")[0].getElementsByTagName("img");
 	this.nav = this.sshow.getElementsByTagName("nav")[0].getElementsByTagName("ul")[0];
-	this.nav.setAttribute("title", title);
 	this.t;
 	this.on = 0;
 	this.cur = 0;
@@ -27,14 +26,12 @@ function Slideshow(title) {
 		this.t = setTimeout(oname+".next('"+oname+"')", 3000);
 	}
 	this.start = function(oname) {
-		//alert("start");
 		if (!this.on) {
 			this.on=1;
 			this.t = setTimeout(oname+".next('"+oname+"')", 3000);
 		}
 	}
 	this.end = function() {
-		//alert("end");
 		clearTimeout(this.t);
 		this.on=0;
 	}
@@ -51,6 +48,7 @@ function Slideshow(title) {
 		}
 	}
 	
+	this.nav.setAttribute("title", title);
 	for (var i = 0; i < this.imgs.length; i++) {
 		// Set image titles
 		var title = this.imgs[i].alt;
@@ -69,23 +67,19 @@ function Slideshow(title) {
 
 function main() {
 	ss = new Slideshow("ss");
-	ss.sshow.addEventListener("mouseover", function(event) {
+	ss.sshow.addEventListener("mousemove", function(event) {
 		ss.end();
+		event.stopPropagation();
 	}, false);
-	ss.sshow.addEventListener("mouseout", function(event) {
-		if (event.target == event.currentTarget) {
-			ss.start("ss");
-		}
+	document.addEventListener("mousemove", function(event) {
+		ss.start("ss");
 	}, false);
-	/*ss.sshow.onmouseout = function(event) {
-		if (event.eventPhase == Event.BUBBLING_PHASE) {
-			ss.start("ss");
-		}
+	/*ss.sshow.onmousemove = function(event) {
+		ss.end();
+		event.stopPropagation();
 	}
-	ss.sshow.onmouseover = function(event) {
-		if (event.eventPhase == Event.BUBBLING_PHASE) {
-			ss.end();
-		}
+	document.onmouseover = function(event) {
+		ss.start("ss");
 	}*/
 	ss.start("ss");
 }
