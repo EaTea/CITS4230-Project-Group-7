@@ -1,4 +1,4 @@
-		<div id="content">
+		<article id="content">
 			<header>
 				<h1>Shared TO-DO List lets you to connect and share Lists with your Friends!</h1>
 			</header>
@@ -17,7 +17,7 @@
 			<footer>
 				<p><a href="#">Learn more...</a></p>
 			</footer>
-		</div>
+		</article>
 
 		<aside id="registration">
 			<form id="signup_form" name="signup" method="post" action="#">
