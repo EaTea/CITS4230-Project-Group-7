@@ -1,3 +1,19 @@
+function debug() {
+	document.addEventListener("click", function(event) {
+		var textNode = document.getElementById("debug").childNodes[0];
+		var styles = window.getComputedStyle(event.target, null);
+		var path = "(target) : {";
+		var cur = event.target;
+		while(cur != document) {
+			path = cur.tagName + " > " + path;
+			cur = cur.parentNode;
+		}
+		textNode.nodeValue = "CSS of " + path;
+		for(var i = 0; i < styles.length; i++) textNode.nodeValue += "\n\t" + styles[i] + ": " + styles.getPropertyValue(styles[i]);
+		textNode.nodeValue += "\n}";
+	}, false);
+}
+
 function gmain() {
 	var top = document.getElementById("main_nav_list");
 	if (top.getAttribute("data-cp") != "") {

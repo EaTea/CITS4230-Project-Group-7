@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="application/ecmascript" src="script.es"></script>
 </head>
-<body onload="load()">
+<body onload="load();debug();">
 	<!-- header -->
 	<header>
 		<!-- accessibility access -->

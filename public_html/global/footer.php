@@ -23,5 +23,6 @@
 		</div>
 		<div></div>
 	</footer>
+	<pre id="debug" style="clear:both;width:80%;border:2px solid black;padding:8px;margin:0 auto;">Debugger</pre>
 </body>
 </html>
