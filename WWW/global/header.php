@@ -16,7 +16,7 @@
 	<header>
 		<!-- accessibility access -->
 		<nav hidden="hidden" id="accessibility_access">
-			<a href="#content" accesskey="c">Go to page content</a>
+			<a href="#main" accesskey="c">Go to page body</a>
 			<a href="#top_bar" accesskey="m">Go to main menu</a>
 			<a href="#bottom_bar" accesskey="i">Go to content info</a>
 			<!--<a href="#s" accesskey="s" onclick="$('#s').focus(); return false;">Go to the search field</a>-->
@@ -34,5 +34,5 @@
 			<li><a href="<?php echo $top_level; ?>" title="Home">Home</a></li>
 		</ul>
 	</nav>
-	<!-- page content -->
-	<section id="content">
+	<!-- page body -->
+	<section id="main">
