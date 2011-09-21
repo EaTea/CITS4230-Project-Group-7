@@ -31,9 +31,22 @@
 	</header>
 	<!-- top navbar -->
 	<nav id="top_bar">
+		<div>
+		<div>
 		<ul>
 			<li><a href="<?php echo $top_level; ?>" title="Home">Home</a></li>
+			<li><a href="<?php echo $top_level; ?>/features" title="Features">Features</a></li>
+			<li><a href="<?php echo $top_level; ?>/faq" title="FAQ">FAQ</a></li>
 		</ul>
+		</div>
+		<div class="right">
+		<form id="login_form" name="login" method="post" action="#">
+			<input type="text" name="user" id="user" required="required" placeholder="Enter username" />
+			<input type="password" name="pass" id="pass" required="required" placeholder="Enter password" />
+			<button type="submit">Log In</button>
+		</form>
+		</div>
+		</div>
 	</nav>
 	<!-- page body -->
 	<section id="main">

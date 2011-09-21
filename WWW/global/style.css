@@ -124,12 +124,13 @@ body {
 /* ========================================================================== */
 
 #top_bar {
+	color: #fff;
 	background: #2e3436 url("images/top_bar-bg.png") top repeat-x;
 	padding: 8px 0;
 	margin: 0 auto;
 	margin-top: 24px;
 	max-width: 960px;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: normal;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -138,14 +139,25 @@ body {
 	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+#top_bar>div {
+	display: table;
+	width: 100%;
+}
+#top_bar>div>div {
+	display: table-cell;
+	width: 50%;
+}
+#top_bar>div .right {
+	text-align: right;
+}
 #top_bar ul {
 	list-style: none;
 	margin: 0;
-	padding: 0 5px;
+	padding: 0 6px;
 }
 #top_bar ul li {
 	display: inline;
-	margin: 0 5px 0 0;
+	margin: 0 6px 0 0;
 }
 #top_bar a {
 	color: #fff;
@@ -162,11 +174,11 @@ body {
 	text-shadow: 0 1px 0 #000;
 }
 #top_bar a:hover {
-	background: #64696d;
-	background: rgba(100%, 100%, 100%, 0.2);
+	background-color: #64696d;
+	background-color: rgba(100%, 100%, 100%, 0.2);
 }
 #top_bar a:focus {
-	background: rgba(100%, 100%, 100%, 0.15);
+	background-color: rgba(100%, 100%, 100%, 0.15);
 }
 #top_bar a:active, #top_bar li.current-menu-item a {
 	background: #1c2021 url("images/top_bar-item-bg.png") top repeat-x;
@@ -174,6 +186,33 @@ body {
 	-webkit-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
 	box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
 }
+#top_bar form {
+	padding-right: 8px;
+}
+#top_bar input {
+    margin: -8px 0 -8px -8px;
+    line-height: 22px;
+    width: 150px;
+    border: 0;
+    font: inherit;
+    padding: 8px 8px 8px 28px;
+    background: transparent url(images/search-icon.png) 8px center no-repeat;
+    color: #eee;
+    border-left: 1px solid rgba(100%,100%,100%,0.3);
+    outline: none;
+}
+#top_bar input:focus {
+    background-color: rgba(100%,100%,100%,0.1);
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* Main Footer */
+/* ========================================================================== */
 
 body>footer {
 	font-size: 80%;
