@@ -42,32 +42,9 @@ html {
 body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
 	font-size: 12px;
-	line-height: 1.25;
-}
-h1,h2,h3,h4,h5,h6 {
-	font-weight: bold;
-	padding: 1em 2em 0.5em 0;
-	text-indent: -2em;
-}
-h1 {
-	font-size: 140%;
-}
-h2 {
-	font-size: 120%;
-	font-style: italic;
-}
-h3 {
-	font-size: 120%;
-}
-h4 {
-	font-size: 100%;
-	font-style: italic;
-}
-h5 {
-	font-size: 100%;
-}
-h6 {
-	font-size: 80%;
+	line-height: 1.32;
+	background-color: white;
+	color: black;
 }
 #main {
 	max-width: 960px;
@@ -75,7 +52,7 @@ h6 {
 }
 body>footer {
 	font-size: 10px;
-	color: #736F6E;
+	color: #736f6e;
 	border-top: 1px ridge black;
 	max-width: 960px;
 	margin: 0 auto;
@@ -90,7 +67,40 @@ body>footer li:before {
 /* Global Class Definitions */
 /* ========================================================================== */
 
-
+.doc h1,.doc h2,.doc h3,.doc h4,.doc h5,.doc h6 {
+	font-weight: bold;
+	padding: 1em 0 1em 2em;
+	text-indent: -2em;
+}
+.doc h1 {
+	font-size: 140%;
+}
+.doc h2 {
+	font-size: 120%;
+	font-style: italic;
+}
+.doc h3 {
+	font-size: 120%;
+}
+.doc h4 {
+	font-size: 100%;
+	font-style: italic;
+}
+.doc h5 {
+	font-size: 100%;
+}
+.doc h6 {
+	font-size: 80%;
+}
+.doc p {
+	padding: 0 0 1em;
+}
+.doc ol {
+	list-style: decimal outside;
+}
+.doc ul {
+	list-style: disc outside;
+}
 
 /* Validators */
 /* ========================================================================== */
