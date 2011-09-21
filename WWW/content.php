@@ -1,7 +1,5 @@
 		<article id="content">
-			<header>
-				<h1>Shared TO-DO List lets you to connect and share Lists with your Friends!</h1>
-			</header>
+			Shared to-do lists let you manage and share schedules with your friends!
 			<figure id="slideshow">
 				<div class="img_container">
 					<img src="images/fmn-A.jpg" alt="A" />
@@ -14,15 +12,13 @@
 				</nav>
 				<figcaption></figcaption>
 			</figure>
-			<footer>
-				<p><a href="#">Learn more...</a></p>
-			</footer>
+			<a href="#">Learn more...</a>
 		</article>
 
 		<aside id="registration">
 			<form id="signup_form" name="signup" method="post" action="#">
-				<h1>To-Do List Sign Up</h1>
-				<p>Register and share list with your friends!</p>
+				<h1>To-do List Sign Up</h1>
+				<p>Register and share lists with your friends!</p>
 
 				<label>Name
 					<span class="highlight">Enter your name</span>
