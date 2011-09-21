@@ -1,5 +1,5 @@
 		<article id="content">
-			Shared to-do lists let you manage and share schedules with your friends!
+			Shared To-do Lists let you manage and share schedules with your friends!
 			<figure id="slideshow">
 				<div class="img_container">
 					<img src="images/fmn-A.jpg" alt="A" />
@@ -12,7 +12,7 @@
 				</nav>
 				<figcaption></figcaption>
 			</figure>
-			<a href="#">Learn more...</a>
+			<a href="<?php echo $top_level; ?>/features">Learn more...</a>
 		</article>
 
 		<aside id="registration">
@@ -20,27 +20,27 @@
 				<h1>To-do List Sign Up</h1>
 				<p>Register and share lists with your friends!</p>
 
-				<label>Name
-					<span class="highlight">Enter your name</span>
+				<label for="username">Username
+					<span class="highlight">Enter a username</span>
 				</label>
-				<input type="text" name="name" id="name" required="required" />
+				<input type="text" name="username" id="username" required="required" />
 
-				<label>Email
+				<label for="email">Email
 					<span class="highlight">Enter an email address</span>
 				</label>
 				<input type="email" name="email" id="email" required="required" />
 
-				<label>Confirm Email
+				<label for="confirm_email">Confirm Email
 					<span class="highlight">Confirm the above email</span>
 				</label>
 				<input type="email" name="confirm_email" id="confirm_email" required="required" />
 
-				<label>Password
+				<label for="password">Password
 					<span class="highlight">Min. size 6 chars</span>
 				</label>
 				<input type="password" name="password" id="password" required="required" />
 
-				<label>Confirm Password
+				<label for="confirm_password">Confirm Password
 					<span class="highlight">Min. size 6 chars</span>
 				</label>
 				<input type="password" name="confirm_password" id="confirm_password" required="required" />
