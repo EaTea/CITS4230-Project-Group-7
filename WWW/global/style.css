@@ -51,11 +51,16 @@ body {
 	margin: 16px auto 24px;
 }
 body>footer {
-	font-size: 10px;
-	color: #736f6e;
+	font-size: 80%;
 	border-top: 1px ridge black;
+}
+body>footer>div {
 	max-width: 960px;
 	margin: 0 auto;
+}
+body>footer>div:last-of-type {
+	clear: both;
+	margin-bottom: 6px;
 }
 body>footer li {
 	display: inline;
