@@ -50,24 +50,6 @@ body {
 	max-width: 960px;
 	margin: 16px auto 24px;
 }
-body>footer {
-	font-size: 80%;
-	border-top: 1px ridge black;
-}
-body>footer>div {
-	max-width: 960px;
-	margin: 0 auto;
-}
-body>footer>div:last-of-type {
-	clear: both;
-	margin-bottom: 6px;
-}
-body>footer li {
-	display: inline;
-}
-body>footer li:before {
-	content: '·';
-}
 
 /* Global Class Definitions */
 /* ========================================================================== */
@@ -105,19 +87,6 @@ body>footer li:before {
 }
 .doc ul {
 	list-style: disc outside;
-}
-
-/* Validators */
-/* ========================================================================== */
-
-#validators {
-	float: right;
-}
-#validators:before {
-	content: 'Validators';
-}
-#validators a {
-	target-name: new;
 }
 
 /* Accessibility Access */
@@ -206,15 +175,41 @@ body>footer li:before {
 	box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
 }
 
-/* Bottom Bar */
+body>footer {
+	font-size: 80%;
+	border-top: 1px ridge black;
+}
+body>footer>div {
+	max-width: 960px;
+	margin: 0 auto;
+}
+body>footer>div:last-of-type {
+	clear: both;
+	margin-bottom: 6px;
+}
+body>footer li {
+	display: inline;
+}
+body>footer li:before {
+	content: '·';
+}
+body>footer a {
+	color: #0f88da;
+}
+
+/* Bottom Bar and Main Footer */
 /* ========================================================================== */
 
 #bottom_bar {
 	float: left;
 }
-#bottom_bar:before {
-	content: 'XYZ © 2011';
+
+/* Validators */
+/* ========================================================================== */
+
+#validators {
+	float: right;
 }
-#bottom_bar a {
-	color: #0F88DA;
+#validators a {
+	target-name: new;
 }
