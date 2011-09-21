@@ -18,4 +18,4 @@
 				Offline Storage: Can't actually get to XYZ at a point in time? Never fear! You can use our handy Local Synch feature to get a copy of your To-Do List and store it on your computer
 			</li>
 		</ul>
-		If you've got some questions, you should go to our <a href="<?php echo $top_level;?>/faq"/>FAQ</a> to learn more.
+		If you've got some questions, you should go to our <a href="<?php echo $top_level;?>/faq">FAQ</a> to learn more.
