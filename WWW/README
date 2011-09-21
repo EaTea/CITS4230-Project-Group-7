@@ -1,0 +1,65 @@
+Form Controls:
+ - Used in:
+    - Log In form in the header
+	   - Takes in user details for verification.
+	- Registration form
+	   - Takes in user details for account creation.
+
+CSS:
+ - Used in:
+    - Global level external CSS is used on all pages
+	   - Used to style all the common elements on each page, especially the header and footer parts.
+	- Embeded CSS is not used, but is simulated with local level externals - used on nearly all pages
+	   - Used to style multiple elements specific to that page.
+	- Inline CSS shouldn't be used in the markup to avoid mixing presentation, but is used within our scripts.
+	   - Used to style the slideshow on the home page.
+
+Client-side Programming:
+ - Javascript was used.
+ - Used in:
+    - Slideshow
+	   - Accesses the DOM to create the widget nodes,
+	   - Applies and removes inline styles to make transitions in the slideshow.
+	     - Inline style editing allows overriding of all other styles.
+	   - Uses DOM2 events.
+	     - Register events onto my widgets, as well as the document root node.
+	       - Registering at the root node allows me to detect when an event occurs outside the slideshow area. This is used to detect when mouse focus is on or taken off (ie. hover state)
+	- (Planned to be used in) Form validation
+	   - Used to validate forms when HTML5 validation is not available - when available, both will be done.
+
+Server-side Programming:
+ - PHP was used.
+ - Used in:
+    - All pages
+	   - To extend portability and reference URLs no matter how deep or shallow the site was going to be.
+	   - Increase modularity to reduce the amount of duplicated code so fixing one area can be done in one go.
+	   - Avoid the use of DWTs as I had limited access to Expression Web.
+	- Products pages
+	   - Used to switch between displays while being able to keep track of what has been done so far ie. check what product category a user was in etc.
+	   
+Web pages have been tested with Firefox 6.0 and partially tested on Opera 10.50.
+Some features were unsupported in this old version of Opera, so a few declarations were dropped.
+Firefox 6.0 reports 2 warnings:
+ - Unknown property 'target-name'.  Declaration dropped.
+   - This is covered with a fallback ECMAScript function, which emulates it.
+ - Unknown property 'transition'.  Declaration dropped.
+   - The vendor extension -moz-transition is detected, so it works.
+
+**NOTE:** This does not work with IE at the moment as we are using DOM2 events.
+Although, it is currently higher priority for us to get some backwards compatibility with fallback script emulations for HTML5 and CSS3 features, which are still very new and not very well supported.
+
+W3C's Markup Validation errors:
+- Bad value no-email-collection for attribute name on element meta: Keyword no-email-collection is not registered.
+  - Reason: In the header, I've added references to Project Honey Pot to keep spambots away from the site... hopefully.
+
+W3C's Style Validation errors:
+1. 0 is not a box-shadow value : 0 2px 4px rgba(0,0,0,0.2) 0 2px 4px rgba(0,0,0,0.2)
+2. Property transition doesn't exist : background 100ms linear background 100ms linear
+3. Value Error : border-left Too many values or values are not recognized : 1px solid rgba(100%,100%,100%,0.3) 1px solid rgba(100%,100%,100%,0.3)
+4. Property target-name doesn't exist : new new
+
+2: The transition property is at working draft: http://www.w3.org/TR/css3-transitions/
+4: The target-* properties are at working draft: http://www.w3.org/TR/css3-hyperlinks/#the-target-name
+1, 3: Not sure. They look valid, but I might be missing something.
+  - 1 seems to pass if I put inset on, which is just an extra optional argument: http://www.w3.org/TR/css3-background/#the-box-shadow so it should be valid without it...
+  - 3 doesn't seem to like the alpha value in the border. It works in Firefox, but I could just make it a solid color close to it, if needed.
