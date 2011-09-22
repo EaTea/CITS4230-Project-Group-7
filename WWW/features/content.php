@@ -2,7 +2,7 @@
 		<article id="features" class="doc">
 			<h1>Features</h1>
 			I guess you're wondering what kind of things you'll be able to do on FMN? Plenty! Take a look below at some of FMN's features:
-			<ul class="styledList">
+			<ul class="logo">
 				<li>
 					<h2>Customisable tasks</h2>
 					<p>
