@@ -31,9 +31,7 @@ function gmain() {
 }
 
 function show_accesskeys() {
-	alert("Sorry, this display is still not implemented properly.\n\
-For now we have a alert window.\n\
-Current access keys are:\n\
+	alert("Access keys are:\n\
 	c - Goes to page body\n\
 	m - Goes to main menu\n\
 	i - Goes to footer\n\
