@@ -25,7 +25,7 @@
 		<!-- domain bar -->
 		<div id="domain_bar">
 			<div>
-				<a href="<?php echo $top_level; ?>"><strong><?php echo $top_host; ?></strong><?php echo ucwords(str_replace("_"," ", str_replace("/", " › ", $current_path))); ?></a>
+				<a href="<?php echo $top_level; ?>"><strong>FMN</strong><?php echo " › ".$title; ?></a>
 			</div>
 		</div>
 	</header>
