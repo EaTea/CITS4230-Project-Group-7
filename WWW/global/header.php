@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>FMN: <?php echo $title; ?></title>
-	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection" />
+	<!-- <meta name="no-email-collection" content="http://www.unspam.com/noemailcollection" /> -->
 	<!-- global externals -->
 	<link rel="icon" type="image/png" href="<?php echo $rel_path; ?>global/images/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo $rel_path; ?>global/style.css" />
