@@ -87,9 +87,9 @@ body {
 }
 .tlist section {
 	display: table;
-	width: 100%;
+	width: 96%;
 	border-bottom: 1px dotted black;
-	padding: 8px;
+	padding: 8px 2%;
 }
 .tlist section:nth-of-type(even) {
 	background-color: #eaf2d3;
