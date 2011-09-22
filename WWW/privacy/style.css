@@ -1,0 +1,23 @@
+/* Privacy Policy */
+/* ========================================================================== */
+
+#privacy_list section {
+	display: table;
+	width: 100%;
+	border-bottom: 1px dotted black;
+	padding: 8px;
+}
+#privacy_list section:nth-of-type(even) {
+	background-color: #eaf2d3;
+}
+#privacy_list section h2 {
+	display: table-cell;
+	width: 35%;
+	padding-right: 16px;
+	color: brown;
+	vertical-align: middle;
+	text-align:center;
+}
+#privacy_list section ul {
+	list-style: disc inside;
+}
