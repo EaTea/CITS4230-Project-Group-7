@@ -48,6 +48,7 @@ Firefox 6.0 reports 2 warnings:
 Other requirements:
  - Currently only works correctly with screens width >=960px
    - Work may be done later to allow better resizing
+ - Email is obfuscated and requires ECMAScript. Also, reference to Project Honey Pot was made to hopefully repel spambots - although, we don't have a terms of use with it.
 
 **NOTE:** This does not work with IE at the moment as we are using DOM2 events.
 Although, it is currently higher priority for us to get some backwards compatibility with fallback script emulations for HTML5 and CSS3 features, which are still very new and not very well supported.
