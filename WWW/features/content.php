@@ -1,7 +1,7 @@
 		<!-- Features -->
 		<article id="features" class="doc">
 			<h1>Features</h1>
-			I guess you're wondering what kind of things you'll be able to do on FMN? Plenty! Take a look below at some of FMN's features:
+			<p>I guess you're wondering what kind of things you'll be able to do on FMN? Plenty! Take a look below at some of FMN's features:</p>
 			<ul class="logo">
 				<li>
 					<h2>Customisable tasks</h2>
@@ -18,7 +18,8 @@
 				<li>
 					<h2>List permissions</h2>
 					<p>
-					 Need to make a list that people can view, but they can't change? It's easy with FMN's List Permissions system!
+						Need to make a list that people can view, but they can't change? It's easy with FMN's List Permissions system!
+					</p>
 				</li>
 				<li>
 					<h2>Automated Email Reminders</h2>
@@ -33,5 +34,5 @@
 					</p>
 				</li>
 			</ul>
-			If you've got some questions, you should go to our <a href="../faq">FAQ</a> to learn more.
+			<p>If you've got some questions, you should go to our <a href="../faq">FAQ</a> to learn more.</p>
 		</article>
