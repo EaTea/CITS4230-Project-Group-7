@@ -1,5 +1,6 @@
 function Slideshow(sname) {
 	this.sshow = document.getElementById("slideshow");
+	this.caption = this.sshow.getElementsByTagName("figcaption")[0];
 	this.imgs = this.sshow.getElementsByTagName("div")[0].getElementsByTagName("img");
 	this.nav = this.sshow.getElementsByTagName("nav")[0].getElementsByTagName("ul")[0];
 	this.t;
@@ -8,6 +9,7 @@ function Slideshow(sname) {
 	
 	this.update = function(next) {
 		if (next != this.cur) {
+			this.caption.innerHTML = this.imgs[next].getAttribute("title");
 			var elts = this.nav.childNodes;
 			elts[this.cur].removeAttribute("class");
 			this.imgs[this.cur].style.display = "none";
@@ -55,16 +57,17 @@ function Slideshow(sname) {
 		var li = document.createElement("li");
 		var div = document.createElement("div");
 		li.appendChild(div);
-		li.appendChild(document.createTextNode(i));
+		li.appendChild(document.createTextNode(this.imgs[i].getAttribute("alt")));
 		li.setAttribute("title", i);
 		li.addEventListener("mousemove", this.mover, false);
 		//li.onmouseover = this.mover;
 		if (i == 0) li.setAttribute("class", "hovered");
 		this.nav.appendChild(li);
 	}
+	this.caption.innerHTML = this.imgs[0].title;
 }
 
 function main() {
 	ss = new Slideshow("ss");
-	ss.start("ss");
+	ss.start();
 }
