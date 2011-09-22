@@ -12,7 +12,7 @@
 				</nav>
 				<figcaption></figcaption>
 			</figure>
-			<a href="<?php echo $top_level; ?>/features">Learn more...</a>
+			<a href="features">Learn more...</a>
 		</article>
 
 		<aside id="registration">

@@ -5,9 +5,9 @@
 	<title>XYZ: <?php echo $title; ?></title>
 	<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection" />
 	<!-- global externals -->
-	<link rel="icon" type="image/png" href="<?php echo $top_level; ?>/global/images/favicon.png"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo $top_level; ?>/global/style.css" />
-	<script type="application/ecmascript" src="<?php echo $top_level; ?>/global/script.es"></script>
+	<link rel="icon" type="image/png" href="<?php echo $rel_path; ?>global/images/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo $rel_path; ?>global/style.css" />
+	<script type="application/ecmascript" src="<?php echo $rel_path; ?>global/script.es"></script>
 	<!-- local externals -->
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="application/ecmascript" src="script.es"></script>
@@ -33,10 +33,10 @@
 	<nav id="top_bar">
 		<div>
 		<div>
-		<ul>
-			<li><a href="<?php echo $top_level; ?>" title="Home">Home</a></li>
-			<li><a href="<?php echo $top_level; ?>/features" title="Features">Features</a></li>
-			<li><a href="<?php echo $top_level; ?>/faq" title="FAQ">FAQ</a></li>
+		<ul id="main_nav_list" data-cp="<?php echo $current_path; ?>">
+			<li><a href="<?php echo $rel_path; ?>" title="Home">Home</a></li>
+			<li><a href="<?php echo $rel_path; ?>features" title="Features">Features</a></li>
+			<li><a href="<?php echo $rel_path; ?>faq" title="FAQ">FAQ</a></li>
 		</ul>
 		</div>
 		<div class="right">

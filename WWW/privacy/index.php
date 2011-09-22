@@ -11,6 +11,7 @@
 	}
 	$top_level = "http".$s."://".$top_host;
 	$current_path = substr(dirname(__FILE__), strlen($top_rpath));
+	$rel_path = preg_replace('/\/[a-z]*/', "../", $current_path);
 	include($top_rpath."/global/header.php");
 	include("content.php");
 	include($top_rpath."/global/footer.php");

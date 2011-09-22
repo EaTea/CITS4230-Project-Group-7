@@ -87,6 +87,6 @@
 		</article>
 		<!--<aside>
 			<p>
-				Still confused? Fear not! Visit our <a href="<?php echo $top_level; ?>/help">help section</a> to learn more.
+				Still confused? Fear not! Visit our <a href="../help">help section</a> to learn more.
 			</p>
 		</aside>-->
