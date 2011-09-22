@@ -57,26 +57,27 @@ body {
 	text-indent: -2em;
 }
 .doc h1 {
-	font-size: 140%;
+	font-size: 200%;
 }
 .doc h2 {
-	font-size: 120%;
+	font-size: 160%;
 	font-style: italic;
 }
 .doc h3 {
-	font-size: 120%;
+	font-size: 160%;
 }
 .doc h4 {
-	font-size: 100%;
+	font-size: 120%;
 	font-style: italic;
 }
 .doc h5 {
-	font-size: 100%;
+	font-size: 120%;
 }
 .doc h6 {
 	font-size: 80%;
 }
 .doc p {
+	font-size: 110%;
 	padding: 0 0 1em;
 }
 .doc ol {
