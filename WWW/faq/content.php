@@ -70,14 +70,14 @@
 			<section>
 				<h2>Really? Upgrade my browser? I guess I could...</h2>
 				<p>
-					Or you could support these wonderful open-source projects, and download (for free) one of these web browsers:
+					Or you could support those wonderful open-source projects, and download (for free) one of their web browsers:
 				</p>
 				<ul>
 					<li><a href="http://www.firefox.com/">Mozilla Firefox</a></li>
 					<li><a href="http://www.google.com/chrome">Google Chrome</a></li>
 				</ul>
 				<p>
-					Or this excellent and free, but proprietary, web browser:
+					Or even an excellent and free, but proprietary, web browser:
 				</p>
 				<ul>
 					<li><a href="http://www.opera.com/">Opera</a></li>
