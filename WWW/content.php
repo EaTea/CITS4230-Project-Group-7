@@ -1,5 +1,5 @@
 		<article id="content">
-			Shared To-do Lists let you manage and share schedules with your friends!
+			Shared to-do lists let you manage and share schedules with your friends!
 			<figure id="slideshow">
 				<div class="img_container">
 					<img src="images/fmn-A.jpg" alt="A" />
@@ -17,7 +17,7 @@
 
 		<aside id="registration">
 			<form id="signup_form" name="signup" method="post" action="#">
-				<h1>To-do List Sign Up</h1>
+				<h1>Forget-Me-Not Sign Up</h1>
 				<p>Register and share lists with your friends!</p>
 
 				<label for="username">Username

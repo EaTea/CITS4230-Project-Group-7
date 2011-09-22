@@ -3,7 +3,7 @@
 			<div class="doc">
 			<h1>Frequently Asked Questions</h1>
 			<p>
-				Got questions on about XYZ? Here are some frequently asked questions that might help.
+				Got questions on about FMN? Here are some frequently asked questions that might help.
 			</p>
 			</div>
 			<div id="faq_list">
@@ -20,15 +20,15 @@
 				</p>
 			</section>
 			<section>
-				<h2>There's another product called "XYZ" already! Aren't you kind of copying them?</h2>
+				<h2>There's another product called "FMN" already! Aren't you kind of copying them?</h2>
 				<p>
 					We didn't even know they existed, up until one of us (Edwin) was informed by a friend. And they don't have Menma's blessing. So to be technical, they're copying us.
 				</p>
 			</section>
 			<section>
-				<h2>How do I add a new To-do List to my lists?</h2>
+				<h2>How do I add a new to-do list to my lists?</h2>
 				<p>
-					If you want to add a new To-do List, you should go to your dashboard, where you can see all your lists. The dashboard should display all your current To-do Lists and in the top right-hand corner you should see a "add new To-do List". Click that, and follow the steps to create a new To-do List.
+					If you want to add a new to-do list, you should go to your dashboard, where you can see all your lists. The dashboard should display all your current to-do lists and in the top right-hand corner you should see a "add new to-do list". Click that, and follow the steps to create a new to-do list.
 				</p>
 			</section>
 			<section>
@@ -50,9 +50,9 @@
 				</p>
 			</section>
 			<section>
-				<h2>I want to store my To-do List offline. How do I use the offline synch?</h2>
+				<h2>I want to store my to-do list offline. How do I use the offline synch?</h2>
 				<p>
-					All you have to do is go to your list, select "Edit List", and in the corresponding panel, you can select "Export to Local Computer". You'll be asked where you want to save the offline copy, and then, presto! Your To-do List will be saved for offline use.
+					All you have to do is go to your list, select "Edit List", and in the corresponding panel, you can select "Export to Local Computer". You'll be asked where you want to save the offline copy, and then, presto! Your to-do list will be saved for offline use.
 				</p>
 			</section>
 			<section>
