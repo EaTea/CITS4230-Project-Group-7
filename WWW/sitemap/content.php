@@ -6,8 +6,7 @@
 						Home
 					</a>
 				</h3>
-			</li>
-			<ul class="styledList">
+				<ul class="styledList">
 				<li>
 					<h3 class="itemTitle">
 						<a title="FAQ" href="<?php echo $rel_path;?>faq" class="genLink">
@@ -29,5 +28,6 @@
 						</a>
 					</h3>
 				</li>
-			</ul>
+				</ul>
+			</li>
 		</ul>
