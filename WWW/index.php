@@ -1,5 +1,5 @@
 <?php
-	$title = "The Forget-Me-Not Shared To-do List";
+	$title = "The Shared To-do List";
 	if(empty($_SERVER["HTTPS"])) $s = '';
 	else if($_SERVER["HTTPS"] == "on") $s = 's';
 	else $s = '';
