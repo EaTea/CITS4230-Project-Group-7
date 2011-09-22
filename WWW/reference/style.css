@@ -1,20 +1,7 @@
-h1.pageTitle
-{
-	font-size:200%;
+a.genLink:link, a.genLnk:visited, a.genLink:active {
+	color: DarkSlateGray;
 }
 
-h3.itemTitle
-{
-	font-size:125%;
-}
-
-a.genLink:link, a.genLnk:visited, a.genLink:active, a.getLink:hover
-{
-	color:DarkSlateGray;
-}
-
-ul.styledList
-{
-	list-style-image: url('../global/images/favicon.png');
-	padding:2% 10%;
+ul.logo {
+	padding: 0 8%;
 }
