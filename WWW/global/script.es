@@ -1,5 +1,6 @@
 function load() {
 	fallback();
+	gmain();
 	main();
 }
 
@@ -14,6 +15,18 @@ function fallback() {
 			break;
 		}
 		a.setAttribute("target", "_blank");
+	}
+}
+
+function gmain() {
+	var top = document.getElementById("main_nav_list");
+	if (top.getAttribute("data-cp") != "") {
+		var items = top.getElementsByTagName("a");
+		for (var i = 0; i < items.length; i++) {
+			if (items[i].getAttribute("href").indexOf(top.getAttribute("data-cp"), 0) != -1) {
+				items[i].parentNode.setAttribute("class", "current-menu-item");
+			}
+		}
 	}
 }
 
