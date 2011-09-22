@@ -86,6 +86,12 @@ body {
 .doc ul {
 	list-style: disc outside;
 }
+ul.logo {
+	list-style-image: url('images/favicon.png');
+}
+ul.logo li {
+	padding-left: 4px;
+}
 .tlist section {
 	display: table;
 	width: 96%;
