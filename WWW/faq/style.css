@@ -1,9 +1,6 @@
 /* FAQ */
 /* ========================================================================== */
 
-#faq_list {
-	width: 100%;
-}
 #faq_list section {
 	display: table;
 	width: 100%;
@@ -16,6 +13,7 @@
 #faq_list section h2 {
 	display: table-cell;
 	width: 50%;
+	padding-right: 16px;
 	color: brown;
 	vertical-align: middle;
 }
