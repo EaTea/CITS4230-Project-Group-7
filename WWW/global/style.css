@@ -53,7 +53,7 @@ body {
 
 .doc h1,.doc h2,.doc h3,.doc h4,.doc h5,.doc h6 {
 	font-weight: bold;
-	padding: 1em 0 1em 2em;
+	padding: 1em 0 0.5em 2em;
 	text-indent: -2em;
 }
 .doc h1 {
@@ -78,16 +78,23 @@ body {
 }
 .doc p {
 	font-size: 110%;
+}
+.doc p, .doc ul {
 	padding: 0 0 1em;
+}
+.doc p:last-child, .doc ul:last-child {
+	padding-bottom: 0.5em;
 }
 .doc ol {
 	list-style: decimal outside;
 }
-.doc ul {
+.doc ul, .tlist section ul {
 	list-style: disc outside;
+	margin-left: 1em;
 }
 ul.logo {
 	list-style-image: url('images/favicon.png');
+	margin-left: 4em;
 }
 ul.logo li {
 	padding-left: 4px;
@@ -107,9 +114,6 @@ ul.logo li {
 	padding-right: 16px;
 	color: brown;
 	vertical-align: middle;
-}
-.tlist section ul {
-	list-style: disc inside;
 }
 
 /* Accessibility Access */

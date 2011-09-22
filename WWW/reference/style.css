@@ -1,7 +1,6 @@
+/* Reference */
+/* ========================================================================== */
+
 a.genLink:link, a.genLnk:visited, a.genLink:active {
 	color: DarkSlateGray;
-}
-
-ul.logo {
-	padding: 0 8%;
 }
