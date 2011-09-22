@@ -23,7 +23,7 @@
 						<a title="Picture A" href="http://www.whataracquet.com.au/wp-content/uploads/2010/03/to-do-list.jpg" class="genLink">Picture A</a>
 					</li>
 					<li>
-						<a title="Picture B" href="http://browse.deviantart.com/?qh=&section=&q=menma#/d3icrjs" class="genLink">Picture B</a>
+						<a title="Picture B" href="http://browse.deviantart.com/?qh=&amp;section=&amp;q=menma#/d3icrjs" class="genLink">Picture B</a>
 					</li>
 					<li>
 						<a title="Picture C" href="http://www.copyright-free-photos.org.uk/flowers/forget-me-not-08.jpg" class="genLink">Picture C</a>
