@@ -36,14 +36,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 /* General */
 /* ========================================================================== */
 
-html {
-	background: #fff url(images/html-bg.png) top repeat-x;
-}
 body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	line-height: 1.32;
-	background-color: white;
+	background: white url(images/html-bg.png) top repeat-x;
 	color: black;
 }
 #main {
@@ -120,6 +117,42 @@ body {
 	border-radius: 5px;
 }
 
+/* Logo */
+/* ========================================================================== */
+
+#logo {
+	max-width: 960px;
+	margin: 12px auto 0;
+}
+#logo a {
+	display: inline-block;
+	height: 80px;
+	vertical-align: middle;
+}
+#logo a:link, #logo a:visited, #logo a:active {
+	color: rgba(10%,10%,10%,1);
+	text-decoration: none;
+}
+#logo a:hover {
+	opacity: 0.8;
+	color: rgba(10%,10%,10%,0.88);
+}
+#logo strong {
+	font-size: 56px;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+	margin-right: 8px;
+}
+#logo small {
+	vertical-align: sub;
+	font-style: italic;
+}
+#logo img {
+	float: left;
+	height: inherit;
+	margin-right: 16px;
+}
+
 /* Top Bar */
 /* ========================================================================== */
 
@@ -127,8 +160,7 @@ body {
 	color: #fff;
 	background: #2e3436 url("images/top_bar-bg.png") top repeat-x;
 	padding: 8px 0;
-	margin: 0 auto;
-	margin-top: 24px;
+	margin: 12px auto 0;
 	max-width: 960px;
 	font-size: 14px;
 	line-height: normal;
@@ -236,7 +268,7 @@ body>footer a {
 	color: #0f88da;
 }
 
-/* Bottom Bar and Main Footer */
+/* Bottom Bar */
 /* ========================================================================== */
 
 #bottom_bar {

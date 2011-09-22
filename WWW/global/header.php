@@ -28,6 +28,7 @@
 				<a href="<?php echo $top_level; ?>"><strong>FMN</strong><?php echo " › ".$title; ?></a>
 			</div>
 		</div>
+		<div id="logo"><h1><a title="Go to home page" href="<?php echo $top_level; ?>"><img src="<?php echo $rel_path; ?>global/images/fmn-logo.png" alt="FMN: The Forget-Me-Not Shared To-do List Service"><strong>FMN</strong><small>We still don't know the name of the list we saw that day.</small></a></h1></div>
 	</header>
 	<!-- top navbar -->
 	<nav id="top_bar">
