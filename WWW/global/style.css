@@ -190,25 +190,25 @@ body {
 	padding-right: 8px;
 }
 #top_bar input {
-    margin: -8px 0 -8px -8px;
-    line-height: 22px;
-    width: 150px;
-    border: 0;
-    font: inherit;
-    padding: 8px 8px 8px 28px;
-    background: transparent url(images/search-icon.png) 8px center no-repeat;
-    color: #eee;
-    border-left: 1px solid rgba(100%,100%,100%,0.3);
-    outline: none;
+	margin: -8px 0 -8px -8px;
+	line-height: 22px;
+	width: 150px;
+	border: 0;
+	padding: 8px 8px 8px 28px;
+	background: transparent url(images/search-icon.png) 8px center no-repeat;
+	color: rgba(100%,100%,100%,0.6);
+	border-left: 1px solid rgba(100%,100%,100%,0.3);
+	outline: none;
 }
 #top_bar input:focus {
-    background-color: rgba(100%,100%,100%,0.1);
-    -moz-border-radius-topright: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-top-right-radius: 6px;
-    -webkit-border-bottom-right-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+	background-color: rgba(100%,100%,100%,0.1);
+	color: rgba(100%,100%,100%,1.0);
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
 }
 
 /* Main Footer */
