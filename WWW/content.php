@@ -3,7 +3,7 @@
 			<figure id="slideshow">
 				<div class="img_container">
 					<img src="images/fmn-A.jpg" alt="A" />
-					<img src="images/fmn-B.jpg" alt="B" />
+					<img src="images/fmn-B.png" alt="B" />
 					<img src="images/fmn-C.jpg" alt="C" />
 					<img src="images/fmn-D.jpg" alt="D" />
 				</div>
