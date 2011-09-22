@@ -45,6 +45,7 @@ body {
 }
 #main {
 	max-width: 960px;
+	width: 960px;
 	margin: 16px auto 24px;
 }
 
@@ -127,11 +128,13 @@ ul.logo li {
 /* ========================================================================== */
 
 #domain_bar {
+	min-width: 960px;
 	background-color: #3b5998;
 	height: 10px;
 }
 #domain_bar div {
 	max-width: 960px;
+	width: 960px;
 	margin: 0 auto;
 }
 #domain_bar a {
@@ -154,6 +157,7 @@ ul.logo li {
 	position: relative;
 	text-align: right;
 	max-width: 960px;
+	width: 960px;
 	margin: 12px auto 0;
 }
 #logo a {
@@ -196,6 +200,7 @@ ul.logo li {
 	padding: 8px 0;
 	margin: 12px auto 0;
 	max-width: 960px;
+	width: 960px;
 	font-size: 14px;
 	line-height: normal;
 	-moz-border-radius: 6px;
@@ -294,11 +299,13 @@ ul.logo li {
 /* ========================================================================== */
 
 body>footer {
+	min-width: 960px;
 	font-size: 80%;
 	border-top: 1px ridge black;
 }
 body>footer>div {
 	max-width: 960px;
+	width: 960px;
 	margin: 0 auto;
 }
 body>footer>div:last-of-type {
