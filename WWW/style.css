@@ -48,8 +48,8 @@
 }
 #slideshow .img_container img {
 	display: none;
-	width: 100%;
-	height: 100%;
+	width: inherit;
+	height: inherit;
 }
 #slideshow .img_container img:first-of-type {
 	display: inline;
