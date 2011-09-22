@@ -85,6 +85,25 @@ body {
 .doc ul {
 	list-style: disc outside;
 }
+.tlist section {
+	display: table;
+	width: 100%;
+	border-bottom: 1px dotted black;
+	padding: 8px;
+}
+.tlist section:nth-of-type(even) {
+	background-color: #eaf2d3;
+}
+.tlist section h2 {
+	display: table-cell;
+	width: 50%;
+	padding-right: 16px;
+	color: brown;
+	vertical-align: middle;
+}
+.tlist section ul {
+	list-style: disc inside;
+}
 
 /* Accessibility Access */
 /* ========================================================================== */

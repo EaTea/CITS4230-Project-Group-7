@@ -1,22 +1,2 @@
 /* FAQ */
 /* ========================================================================== */
-
-#faq_list section {
-	display: table;
-	width: 100%;
-	border-bottom: 1px dotted black;
-	padding: 8px;
-}
-#faq_list section:nth-of-type(even) {
-	background-color: #eaf2d3;
-}
-#faq_list section h2 {
-	display: table-cell;
-	width: 50%;
-	padding-right: 16px;
-	color: brown;
-	vertical-align: middle;
-}
-#faq_list section ul {
-	list-style: disc inside;
-}

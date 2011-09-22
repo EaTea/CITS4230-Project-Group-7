@@ -8,7 +8,7 @@
 				We've put together a little privacy policy to let you know what you're getting into, and how we'll use your information when you sign up for FMN.
 			</p>
 		</div>
-		<div id="privacy_list">
+		<div class="tlist">
 			<section>
 				<h2>Account Information</h2>
 				<p>

@@ -6,7 +6,7 @@
 				Got questions on about FMN? Here are some frequently asked questions that might help.
 			</p>
 			</div>
-			<div id="faq_list">
+			<div class="tlist">
 			<section>
 				<h2>Who worked on this website?</h2>
 				<p>
