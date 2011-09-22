@@ -2,10 +2,10 @@
 			Shared to-do lists let you manage and share schedules with your friends!
 			<figure id="slideshow">
 				<div class="img_container">
-					<img src="images/fmn-A.jpg" alt="A" />
-					<img src="images/fmn-B.png" alt="B" />
-					<img src="images/fmn-C.jpg" alt="C" />
-					<img src="images/fmn-D.jpg" alt="D" />
+					<img src="images/fmn-A.jpg" alt="A" title="FMN: the exciting shared To-Do List website! Read more [./features]here[/]!"/>
+					<img src="images/fmn-B.png" alt="B" title="Are you feeling a little confused? See our [./faq]FAQ[/] and we'll point you in the right direction!"/>
+					<img src="images/fmn-C.jpg" alt="C" title="FMN is doing its utmost to ensure that your data is safe and secure. Read about our [./privacy]privacy policy[/]!"/>
+					<img src="images/fmn-D.jpg" alt="D" title="Wanna join? It's easy! Just fill in the form to your right and you're set!"/>
 				</div>
 				<nav>
 					<ul></ul>
