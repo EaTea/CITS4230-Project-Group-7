@@ -40,6 +40,7 @@
 }
 #slideshow figcaption {
 	text-align: center;
+	padding: 4px 0;
 }
 #slideshow .img_container {
 	width: 412px;
