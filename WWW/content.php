@@ -45,7 +45,7 @@
 				</label>
 				<input type="password" name="v_pass" id="v_pass" required="required" />
 
-				<button type="submit">Sign Up</button>
+				<button type="submit" value="Sign Up">Sign Up</button>
 				<!--<input type="submit" value="Sign Up" />-->
 			</form>
 		</aside>

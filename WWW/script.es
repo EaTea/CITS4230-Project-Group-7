@@ -71,3 +71,43 @@ function main() {
 	ss = new Slideshow("ss");
 	ss.start();
 }
+
+function validate_registration() {
+	var username = document.forms['signup']['username'].value;
+	if((username == null || username == "")) {
+		alert('Please fill in the username field with a valid username.');
+		return false;
+	}
+	if(username.match(/\W/) != null) {
+		alert("You\'ve used a character that's not a letter, number or underscore in your username. Please remove it from your username and resubmit.");
+		return false;
+	}
+	var email = document.forms['signup']['email'].value;
+	if((email == null || email == "")) {
+		alert('Please fill in the email field with a valid email.');
+		return false;
+	}
+	if(email.match(/[\w\.]+@([\w]+\.)+[\w]{2,}/) == null) {
+		alert('It looks like you\'ve inputted an invalid email address. Please make sure you inputted a valid email address and try again.');
+		return false;
+	}
+	var confirm_email = document.forms['signup']['confirm_email'].value;
+	if(email.match(confirm_email) == null) {
+		alert('Hey! Listen! Your email doesn\'t match the confirmation email! Please make sure they match and then try again!');
+		return false;
+	}
+	var password = document.forms['signup']['password'].value;
+	if((password == null || password == "")) {
+		alert('Please fill in the password field with a valid password.');
+		return false;
+	}
+	if(password.match(/[\w]{6,}/) == null) {
+		alert('Please use a password that consists of letters, numbers or underscores only, and is at least of length 6.');
+		return false;
+	}
+	var confirm_password = document.forms['signup']['confirm_password'].value;
+	if(password.match(confirm_password) == null) {
+		alert("Oops! Your password and confirmation password don't match. Please check that they were the same and try again.");
+		return false;
+	}
+}
