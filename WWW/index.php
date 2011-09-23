@@ -14,7 +14,6 @@
 	$current_path = substr(dirname(__FILE__), strlen($top_rpath));
 	$rel_path = preg_replace('/\/[a-z]*/', "../", $current_path);
 	include($top_rpath."/global/header.php");
-	if ($_REQUEST["new_user"] != "" && $_REQUEST["email"] != "" && $_REQUEST["v_email"] == $_REQUEST["email"] && $_REQUEST["new_pass"] != "" && $_REQUEST["v_pass"] == $_REQUEST["new_pass"]) include("register.php");
 	include("content.php");
 	include($top_rpath."/global/footer.php");
 ?>
