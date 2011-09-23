@@ -127,7 +127,7 @@ ul.logo li {
 /* ========================================================================== */
 
 #domain_bar {
-	background: #3b5998;
+	background-color: #3b5998;
 	height: 10px;
 }
 #domain_bar div {
@@ -261,7 +261,7 @@ ul.logo li {
 	width: 150px;
 	border: 0;
 	padding: 8px 8px 8px 28px;
-	background: transparent url(images/search-icon.png) 8px center no-repeat;
+	background: transparent url(images/fmn-icon.png) 8px center no-repeat;
 	color: rgba(100%,100%,100%,0.6);
 	border-left: 1px solid rgba(100%,100%,100%,0.3);
 	outline: none;

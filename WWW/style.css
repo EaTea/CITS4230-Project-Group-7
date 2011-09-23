@@ -125,7 +125,7 @@
 	margin-left: 170px;
 	width: 120px;
 	height: 32px;
-	background: #666666 url(img/button.png) no-repeat;
+	background-color: #666666;
 	text-align: center;
 	line-height: 31px;
 	color: white;
