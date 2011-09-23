@@ -261,10 +261,13 @@ ul.logo li {
 	width: 150px;
 	border: 0;
 	padding: 8px 8px 8px 28px;
-	background: transparent url(images/fmn-icon.png) 8px center no-repeat;
+	background: transparent url(images/key-icon.png) 8px center no-repeat;
 	color: rgba(100%,100%,100%,0.6);
 	border-left: 1px solid rgba(100%,100%,100%,0.3);
 	outline: none;
+}
+#top_bar input:first-child {
+	background: transparent url(images/favicon.png) 8px center no-repeat;
 }
 #top_bar input:focus {
 	background-color: rgba(100%,100%,100%,0.1);
