@@ -16,34 +16,34 @@
 		</article>
 
 		<aside id="registration">
-			<form id="signup_form" name="signup" method="post" action="#">
+			<form id="signup_form" name="signup" method="post" action="./" onsubmit="return validate_registration();">
 				<h1>Forget-Me-Not Sign Up</h1>
 				<p>Register and share lists with your friends!</p>
 
-				<label for="username">Username
+				<label for="new_user">Username
 					<span class="highlight">Enter a username</span>
 				</label>
-				<input type="text" name="username" id="username" required="required" />
+				<input type="text" name="new_user" id="new_user" required="required" value="<?php echo $_REQUEST['new_name']; ?>" />
 
 				<label for="email">Email
 					<span class="highlight">Enter an email address</span>
 				</label>
-				<input type="email" name="email" id="email" required="required" />
+				<input type="email" name="email" id="email" required="required" value="<?php echo $_REQUEST['email']; ?>" />
 
-				<label for="confirm_email">Confirm Email
+				<label for="v_email">Confirm Email
 					<span class="highlight">Confirm the above email</span>
 				</label>
-				<input type="email" name="confirm_email" id="confirm_email" required="required" />
+				<input type="email" name="v_email" id="v_email" required="required" />
 
-				<label for="password">Password
+				<label for="new_pass">Password
 					<span class="highlight">Min. size 6 chars</span>
 				</label>
-				<input type="password" name="password" id="password" required="required" />
+				<input type="password" name="new_pass" id="new_pass" required="required" />
 
-				<label for="confirm_password">Confirm Password
+				<label for="v_pass">Confirm Password
 					<span class="highlight">Min. size 6 chars</span>
 				</label>
-				<input type="password" name="confirm_password" id="confirm_password" required="required" />
+				<input type="password" name="v_pass" id="v_pass" required="required" />
 
 				<button type="submit">Sign Up</button>
 			</form>
