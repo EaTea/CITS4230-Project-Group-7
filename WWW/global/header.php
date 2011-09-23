@@ -50,7 +50,7 @@
 		</ul>
 		</div>
 		<div class="right">
-		<form id="login_form" name="login" method="post" action="#">
+		<form id="login_form" name="login" method="post" action="./">
 			<input type="text" name="user" id="user" required="required" placeholder="Enter username" />
 			<input type="password" name="pass" id="pass" required="required" placeholder="Enter password" />
 			<button type="submit">Log In</button>
