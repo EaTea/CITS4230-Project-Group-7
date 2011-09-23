@@ -1,6 +1,6 @@
 /* Site-Map */
 /* ========================================================================== */
 
-a.genLink:link, a.genLnk:visited, a.genLink:active {
+a {
 	color: DarkSlateGray;
 }

@@ -159,8 +159,6 @@ ul.logo li {
 #logo a {
 	display: inline-block;
 	height: 64px;
-}
-#logo a:link, #logo a:visited, #logo a:active {
 	color: rgba(10%,10%,10%,1);
 	text-decoration: none;
 }
