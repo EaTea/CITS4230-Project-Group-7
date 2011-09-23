@@ -21,16 +21,16 @@
 					<h3>Slideshow pictures</h3>
 					<ul class="logo">
 						<li>
-							<a title="Picture A" href="http://www.whataracquet.com.au/wp-content/uploads/2010/03/to-do-list.jpg" class="genLink">Picture A: http://www.whataracquet.com.au/wp-content/uploads/2010/03/to-do-list.jpg</a>
+							<a title="Picture A" href="http://www.whoisbolaji.com/to-do-lists" class="genLink">Todo list (Picture A): http://www.whoisbolaji.com/wp-content/uploads/2011/03/20071126-todo-list.png</a>
 						</li>
 						<li>
-							<a title="Picture B" href="http://browse.deviantart.com/?qh=&amp;section=&amp;q=menma#/d3icrjs" class="genLink">Picture B: http://browse.deviantart.com/?qh=&amp;section=&amp;q=menma#/d3icrjs</a>
+							<a title="Menma by airana" href="http://airana.deviantart.com/art/Menma-212227192" class="genLink">Menma by airana (Picture B): http://www.deviantart.com/download/212227192/menma_by_airana-d3icrjs.png</a>
 						</li>
 						<li>
-							<a title="Picture C" href="http://www.copyright-free-photos.org.uk/flowers/forget-me-not-08.jpg" class="genLink">Picture C: http://www.copyright-free-photos.org.uk/flowers/forget-me-not-08.jpg</a>
+							<a title="Forget Me Not" href="http://www.copyright-free-photos.org.uk/flowers/forget-me-not-08.jpg" class="genLink">Forget Me Not (Picture C): http://www.copyright-free-photos.org.uk/flowers/forget-me-not-08.jpg</a>
 						</li>
 						<li>
-							<a title="Picture D" href="http://www.neighborhoodafc.com/calendar.jpg" class="genLink">Picture D: http://www.neighborhoodafc.com/calendar.jpg</a>
+							<a title="Calendar" href="http://www.neighborhoodafc.com/calendar.jpg" class="genLink">Calendar (Picture D): http://www.neighborhoodafc.com/calendar.jpg</a>
 						</li>
 					</ul>
 				</li>
