@@ -10,9 +10,11 @@
 		$top_rpath = dirname($top_rpath);
 	}
 	$top_level = "http".$s."://".$top_host;
+	if ($_REQUEST["user"] != "" && $_REQUEST["pass"] != "") include("login.php");
 	$current_path = substr(dirname(__FILE__), strlen($top_rpath));
 	$rel_path = preg_replace('/\/[a-z]*/', "../", $current_path);
 	include($top_rpath."/global/header.php");
+	if ($_REQUEST["new_user"] != "" && $_REQUEST["email"] != "" && $_REQUEST["v_email"] == $_REQUEST["email"] && $_REQUEST["new_pass"] != "" && $_REQUEST["v_pass"] == $_REQUEST["new_pass"]) include("register");
 	include("content.php");
 	include($top_rpath."/global/footer.php");
 ?>
