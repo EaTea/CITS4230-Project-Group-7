@@ -23,7 +23,7 @@
 				<label for="new_user">Username
 					<span class="highlight">Enter a username</span>
 				</label>
-				<input type="text" name="new_user" id="new_user" required="required" value="<?php echo $_REQUEST['new_name']; ?>" />
+				<input type="text" name="new_user" id="new_user" required="required" value="<?php echo $_REQUEST['new_user']; ?>" />
 
 				<label for="email">Email
 					<span class="highlight">Enter an email address</span>
