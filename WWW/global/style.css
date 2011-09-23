@@ -276,6 +276,16 @@ ul.logo li {
 	border-top-right-radius: 6px;
 	border-bottom-right-radius: 6px;
 }
+#top_bar button {
+	margin: -8px 0 -8px -8px;
+	line-height: 22px;
+	border: 0;
+	padding: 8px 8px 8px 28px;
+	background: white url(images/login-icon.png) 8px center no-repeat;
+	color: black;
+	font-weight: bold;
+	cursor: pointer;
+}
 
 /* Main Footer */
 /* ========================================================================== */
