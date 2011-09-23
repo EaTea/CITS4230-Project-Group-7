@@ -5,7 +5,18 @@
 					<h3>Favicon and Logo</h3>
 					<ul class="logo">
 						<li>
-							<a title="Favicon and Logo" href="http://www.leehansen.com/clipart/Holidays/GrandparentsDay/pages/forget-me-not-flower.htm" class="genLink">Grandparents Day Clip Art: Forget Me Not Flowers</a>
+							<a title="Navigation bar icons" href="http://www.leehansen.com/clipart/Holidays/GrandparentsDay/pages/forget-me-not-flower.htm" class="genLink">Grandparents Day Clip Art: Forget Me Not Flowers</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Navigation bar icons</h3>
+					<ul class="logo">
+						<li>
+							<a title="Login" href="http://demo.boonex.com/administration/" class="genLink">Boonex: Login</a>
+						</li>
+						<li>
+							<a title="Favicon and Logo" href="http://www.iconfinder.com/icondetails/22584/64/" class="genLink">Icon Finder: Key, Pass, Password icon | Icon Search Engine</a>
 						</li>
 					</ul>
 				</li>
@@ -38,7 +49,7 @@
 					<h3>Privacy Policy and FAQ</h3>
 					<ul class="logo">
 						<li>
-							<a title="Privacy Policy and FAQ" href="http://teuxdeux.com/" class="genLink">What deux yeux have teux deux teuxday?</a>
+							<a title="Privacy Policy and FAQ" href="http://teuxdeux.com/" class="genLink">TeuxDeux: What deux yeux have teux deux teuxday?</a>
 						</li>
 					</ul>
 				</li>

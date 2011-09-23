@@ -1,4 +1,7 @@
 Favicon+Logo:
 http://www.leehansen.com/clipart/Holidays/GrandparentsDay/pages/forget-me-not-flower.htm
+Nav bar icons:
+http://www.iconfinder.com/icondetails/22584/64/  :  http://www.iconfinder.com/ajax/download/png/?id=22584&s=16
+http://demo.boonex.com/administration/  :  http://demo.boonex.com/administration/templates/base/images/admin_login_icon.png
 Style+BG:
 http://www.gnome.org/
