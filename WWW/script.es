@@ -73,7 +73,7 @@ function main() {
 }
 
 function validate_registration() {
-	var username = document.forms['signup']['username'].value;
+	var username = document.forms['signup']['new_user'].value;
 	if((username == null || username == "")) {
 		alert('Please fill in the username field with a valid username.');
 		return false;
@@ -91,12 +91,12 @@ function validate_registration() {
 		alert('It looks like you\'ve inputted an invalid email address. Please make sure you inputted a valid email address and try again.');
 		return false;
 	}
-	var confirm_email = document.forms['signup']['confirm_email'].value;
+	var confirm_email = document.forms['signup']['v_email'].value;
 	if(email.match(confirm_email) == null) {
 		alert('Hey! Listen! Your email doesn\'t match the confirmation email! Please make sure they match and then try again!');
 		return false;
 	}
-	var password = document.forms['signup']['password'].value;
+	var password = document.forms['signup']['new_pass'].value;
 	if((password == null || password == "")) {
 		alert('Please fill in the password field with a valid password.');
 		return false;
@@ -105,7 +105,7 @@ function validate_registration() {
 		alert('Please use a password that consists of letters, numbers or underscores only, and is at least of length 6.');
 		return false;
 	}
-	var confirm_password = document.forms['signup']['confirm_password'].value;
+	var confirm_password = document.forms['signup']['v_pass'].value;
 	if(password.match(confirm_password) == null) {
 		alert("Oops! Your password and confirmation password don't match. Please check that they were the same and try again.");
 		return false;
