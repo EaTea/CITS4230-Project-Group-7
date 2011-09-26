@@ -39,15 +39,14 @@ function show_accesskeys() {
 	return false;
 }
 
-function validate_login()
-{
+function validate_login() {
 	var username = document.forms['login']['user'].value;
 	if((username == null || username == "")) {
 		alert('Please fill in the username field with a valid username.');
 		return false;
 	}
 	if(username.match(/\W/) != null) {
-		alert("You\'ve used a character that's not a letter, number or underscore in your username. Please remove it from your username and resubmit.");
+		alert("You\'ve used a character that's not a letter, number or underscore in your username.\nPlease remove it from your username and resubmit.");
 		return false;
 	}
 	var password = document.forms['login']['pass'].value;

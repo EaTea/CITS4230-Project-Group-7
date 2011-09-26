@@ -79,7 +79,7 @@ function validate_registration() {
 		return false;
 	}
 	if(username.match(/\W/) != null) {
-		alert("You\'ve used a character that's not a letter, number or underscore in your username. Please remove it from your username and resubmit.");
+		alert("You\'ve used a character that's not a letter, number or underscore in your username.\nPlease remove it from your username and resubmit.");
 		return false;
 	}
 	var email = document.forms['signup']['email'].value;
@@ -88,12 +88,12 @@ function validate_registration() {
 		return false;
 	}
 	if(email.match(/[\w\.]+@([\w]+\.)+[\w]{2,}/) == null) {
-		alert('It looks like you\'ve inputted an invalid email address. Please make sure you inputted a valid email address and try again.');
+		alert('It looks like you\'ve inputted an invalid email address.\nPlease make sure you inputted a valid email address and try again.');
 		return false;
 	}
 	var confirm_email = document.forms['signup']['v_email'].value;
 	if(email.match(confirm_email) == null) {
-		alert('Hey! Listen! Your email doesn\'t match the confirmation email! Please make sure they match and then try again!');
+		alert('Hey! Listen! Your email doesn\'t match the confirmation email!\nPlease make sure they match and then try again!');
 		return false;
 	}
 	var password = document.forms['signup']['new_pass'].value;
@@ -107,7 +107,7 @@ function validate_registration() {
 	}
 	var confirm_password = document.forms['signup']['v_pass'].value;
 	if(password.match(confirm_password) == null) {
-		alert("Oops! Your password and confirmation password don't match. Please check that they were the same and try again.");
+		alert("Oops! Your password and confirmation password don't match.\nPlease check that they were the same and try again.");
 		return false;
 	}
 }
