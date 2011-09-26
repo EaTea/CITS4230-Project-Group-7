@@ -38,3 +38,25 @@ function show_accesskeys() {
 	");
 	return false;
 }
+
+function validate_login()
+{
+	var username = document.forms['login']['user'].value;
+	if((username == null || username == "")) {
+		alert('Please fill in the username field with a valid username.');
+		return false;
+	}
+	if(username.match(/\W/) != null) {
+		alert("You\'ve used a character that's not a letter, number or underscore in your username. Please remove it from your username and resubmit.");
+		return false;
+	}
+	var password = document.forms['login']['pass'].value;
+	if((password == null || password == "")) {
+		alert('Please fill in the password field with a valid password.');
+		return false;
+	}
+	if(password.match(/[\w]{6,}/) == null) {
+		alert('Please use a password that consists of letters, numbers or underscores only, and is at least of length 6.');
+		return false;
+	}
+}
