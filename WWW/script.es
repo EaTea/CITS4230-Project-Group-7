@@ -101,8 +101,8 @@ function validate_registration() {
 		alert('Please fill in the password field with a valid password.');
 		return false;
 	}
-	if(password.match(/[\w]{6,}/) == null) {
-		alert('Please use a password that consists of letters, numbers or underscores only, and is at least of length 6.');
+	if(password.match(/.{6,}/) == null) {
+		alert('Please use a password that is at least of length 6 characters.');
 		return false;
 	}
 	var confirm_password = document.forms['signup']['v_pass'].value;
