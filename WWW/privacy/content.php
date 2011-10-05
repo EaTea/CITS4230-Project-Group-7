@@ -19,7 +19,7 @@
 					<h2>User Communications</h2>
 					<p>
 						If you communicate with someone within FMN, that's going to stay private between you and whoever else you've allowed to view your conversations. Say whatever kinky or weird things you wanna discuss, and have no fear that prying eyes will unwantedly view your, uh, "work". <br />
-						On the other hand, contacting us is as easy as emailing us at taye03@student.uwa.edu.au. We're always looking forward to being told how you've enjoyed/been frustrated by using FMN. We'll take what you said into consideration in order to make FMN even better. Just watch the comments about Edwin's hair...he's a little...sensitive about that...
+						On the other hand, contacting us is as easy as emailing us at <script type='application/ecmascript'>var a = new Array('.edu','@stu','2052','9864','dent','.uwa','.au');document.write("<a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;"+a[2]+a[3]+a[1]+a[4]+a[5]+a[0]+a[6]+"'>2 0 5 2 9 8 6 4 at student dot uwa dot edu dot au</a>");</script>. We're always looking forward to being told how you've enjoyed/been frustrated by using FMN. We'll take what you said into consideration in order to make FMN even better. Just watch the comments about Edwin's hair...he's a little...sensitive about that...
 					</p>
 				</section>
 				<section>
