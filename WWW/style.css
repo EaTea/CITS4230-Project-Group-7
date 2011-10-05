@@ -55,23 +55,23 @@
 #slideshow .img_container img:first-of-type {
 	display: inline;
 }
-#slideshow nav ul {
+#slideshow .selector ul {
 	display: table;
 	width: 100%;
 }
-#slideshow nav li {
+#slideshow .selector li {
 	display: table-cell;
 	border: 2px solid transparent;
 	text-align: center;
 }
-#slideshow nav li div {
+#slideshow .selector li div {
 	width: 100%;
 	height: 11px;
 }
-#slideshow nav li.hovered {
+#slideshow .selector li.hovered {
 	border-color: black;
 }
-#slideshow nav li.hovered div {
+#slideshow .selector li.hovered div {
 	background: #000 url('images/thumb_arrow.png') top no-repeat;
 }
 

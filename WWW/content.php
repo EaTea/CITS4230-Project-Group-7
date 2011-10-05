@@ -7,9 +7,9 @@
 					<img src="images/fmn-C.jpg" alt="C" title="We do our utmost to ensure that your data is safely secured.<br />Read about our <a href='./privacy'>privacy policy</a>!"/>
 					<img src="images/fmn-D.jpg" alt="D" title="Wanna join? It's easy!<br />Just fill in the form to your right and you're set!"/>
 				</div>
-				<nav>
+				<div class="selector">
 					<ul></ul>
-				</nav>
+				</div>
 				<figcaption></figcaption>
 			</figure>
 			<a href="features">Learn more...</a>
