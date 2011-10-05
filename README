@@ -5,16 +5,11 @@ This is a basic README.
 Helper scripts included in this repo:
 
 ./upload
-Uploads the contents of a local "WWW" directory to a sub-directory of your
+Syncs the contents of a local "WWW" directory to a sub-directory of your
 CSSE student WWW directory.
 Variables:
-  INIT - Set this to to run a predefined command:
-           1: creates the sub-directory.
-           2: clears the contents of the sub-directory
+  CLEAR - Set this to 1 to delete extraneous files from destination dirs.
   ID - Set this to pass your student ID.
   SUBDIR - Set this to change the sub-directory.
 Example usage:
-  INIT=1 ID=12345678 ./upload
-*WARNING*:
-  It currently overwrites any contents on the remote directory so do not store
-  other things in the specified sub-directory.
+  CLEAR=1 ID=12345678 ./upload
