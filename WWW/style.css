@@ -46,17 +46,26 @@
 	background-color: #ebf4fb;
 }
 #slideshow .img_container {
+	position: relative;
+	overflow: hidden;
 	width: 412px;
 	height: 309px;
 	border: 2px solid black;
 }
 #slideshow .img_container img {
-	display: none;
+	position: absolute;
+	left: 100%;
+	z-index: -1;
 	width: inherit;
 	height: inherit;
+	-webkit-transition: left 1s ease;
+	-moz-transition: left 1s ease;
+	-o-transition: left 1s ease;
+	transition: left 1s ease;
 }
 #slideshow .img_container img:first-of-type {
-	display: inline;
+	left: 0;
+	z-index: 0;
 }
 #slideshow .selector ul {
 	display: table;
