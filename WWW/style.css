@@ -41,6 +41,9 @@
 #slideshow figcaption {
 	text-align: center;
 	padding: 4px 0;
+	border: 2px solid black;
+	border-top: 0;
+	background-color: #ebf4fb;
 }
 #slideshow .img_container {
 	width: 412px;
@@ -70,9 +73,10 @@
 }
 #slideshow .selector li.hovered {
 	border-color: black;
+	background-color: #ebf4fb;
 }
 #slideshow .selector li.hovered div {
-	background: #000 url('images/thumb_arrow.png') top no-repeat;
+	background: black url('images/thumb_arrow.png') top no-repeat;
 }
 
 /* User Registration Form */
