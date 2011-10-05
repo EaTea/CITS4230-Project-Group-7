@@ -24,7 +24,7 @@ Client-side Programming:
 	   - Uses DOM2 events.
 	     - Register events onto my widgets, as well as the document root node.
 	       - Registering at the root node allows me to detect when an event occurs outside the slideshow area. This is used to detect when mouse focus is on or taken off (ie. hover state)
-	- (Planned to be used in) Form validation
+	- Form validation
 	   - Used to validate forms when HTML5 validation is not available - when available, both will be done.
 
 Server-side Programming:
@@ -32,14 +32,11 @@ Server-side Programming:
  - Used in:
     - All pages
 	   - To extend portability and reference URLs no matter how deep or shallow the site was going to be.
-	   - Increase modularity to reduce the amount of duplicated code so fixing one area can be done in one go.
-	   - Avoid the use of DWTs as I had limited access to Expression Web.
-	- Products pages
-	   - Used to switch between displays while being able to keep track of what has been done so far ie. check what product category a user was in etc.
+	   - Increase modularity to reduce the amount of duplicated code.
 	   
-Web pages have been tested with Firefox 6.0 and partially tested on Opera 10.50.
+Web pages have been tested with Firefox 7.0 and partially tested on Opera 10.50.
 Some features were unsupported in this old version of Opera, so a few declarations were dropped.
-Firefox 6.0 reports 2 warnings:
+Firefox 7.0 reports 2 warnings:
  - Unknown property 'target-name'.  Declaration dropped.
    - This is covered with a fallback ECMAScript function, which emulates it.
  - Unknown property 'transition'.  Declaration dropped.
