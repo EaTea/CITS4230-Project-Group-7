@@ -9,7 +9,7 @@ if [ "$ID" == "" ]; then
 	echo -n "What's your student ID? "
 	read ID
 fi
-# If the INIT flag is set to 2 then clear the remote directory $SUBDIR in WWW
+# If the CLEAR flag is set to 1 then clear the remote directory $SUBDIR in WWW
 if [ "$CLEAR" == "1" ]; then
 	echo "Will clear before copying."
 	RSYNC_EXTRA+=" --del"
