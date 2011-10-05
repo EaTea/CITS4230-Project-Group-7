@@ -1,11 +1,10 @@
-function Slideshow() {
-	this.sshow = document.getElementById("slideshow");
-	this.caption = this.sshow.getElementsByTagName("figcaption")[0];
-	this.imgs = this.sshow.getElementsByTagName("div")[0].getElementsByTagName("img");
-	this.nav = this.sshow.getElementsByTagName("nav")[0].getElementsByTagName("ul")[0];
+function Slideshow(elt) {
+	this.caption = elt.getElementsByTagName("figcaption")[0];
+	this.imgs = elt.getElementsByTagName("div")[0].getElementsByTagName("img");
+	this.nav = elt.getElementsByTagName("div")[1].getElementsByTagName("ul")[0];
 	this.t = 0;
 	this.cur = 0;
-	
+
 	this.update = function(next) {
 		if (next != this.cur) {
 			this.caption.innerHTML = this.imgs[next].getAttribute("title");
@@ -37,10 +36,10 @@ function Slideshow() {
 		clearTimeout(this.t);
 		this.t = 0;
 	}
-	
+
 	{
 		var local = this;
-		this.sshow.addEventListener("mousemove", function(event) {
+		elt.addEventListener("mousemove", function(event) {
 			local.end();
 			event.stopPropagation();
 		}, false);
@@ -48,7 +47,7 @@ function Slideshow() {
 			local.start();
 		}, false);
 	}
-	/*this.sshow.onmousemove = function(event) {}
+	/*elt.onmousemove = function(event) {}
 	document.onmouseover = function(event) {}*/
 	for (var i = 0; i < this.imgs.length; i++) {
 		// Create navigation
@@ -70,7 +69,7 @@ function Slideshow() {
 }
 
 function main() {
-	ss = new Slideshow();
+	ss = new Slideshow(document.getElementById("slideshow"));
 	ss.start();
 }
 
