@@ -1,10 +1,9 @@
-function Slideshow(sname) {
+function Slideshow() {
 	this.sshow = document.getElementById("slideshow");
 	this.caption = this.sshow.getElementsByTagName("figcaption")[0];
 	this.imgs = this.sshow.getElementsByTagName("div")[0].getElementsByTagName("img");
 	this.nav = this.sshow.getElementsByTagName("nav")[0].getElementsByTagName("ul")[0];
-	this.t;
-	this.on = 0;
+	this.t = 0;
 	this.cur = 0;
 	
 	this.update = function(next) {
@@ -21,37 +20,36 @@ function Slideshow(sname) {
 	this.next = function() {
 		var children = this.nav.childNodes;
 		this.update((this.cur + 1) % children.length);
-		this.t = setTimeout(sname+".next()", 5000);
+		var local = this;
+		this.t = setTimeout(function() {
+			local.next();
+		}, 5000);
 	}
 	this.start = function() {
-		if (!this.on) {
-			this.on=1;
-			this.t = setTimeout(sname+".next()", 5000);
+		if (!this.t) {
+			var local = this;
+			this.t = setTimeout(function() {
+				local.next();
+			}, 5000);
 		}
 	}
 	this.end = function() {
 		clearTimeout(this.t);
-		this.on=0;
-	}
-	this.mover = function(event) {
-		var cur = event.currentTarget;
-		eval(sname+".update("+cur.getAttribute("title")+")");
+		this.t = 0;
 	}
 	
-	this.sshow.addEventListener("mousemove", function(event) {
-		eval(sname+".end()");
-		event.stopPropagation();
-	}, false);
-	document.addEventListener("mousemove", function(event) {
-		eval(sname+".start()");
-	}, false);
-	/*this.sshow.onmousemove = function(event) {
-		eval(sname+".end()");
-		event.stopPropagation();
+	{
+		var local = this;
+		this.sshow.addEventListener("mousemove", function(event) {
+			local.end();
+			event.stopPropagation();
+		}, false);
+		document.addEventListener("mousemove", function(event) {
+			local.start();
+		}, false);
 	}
-	document.onmouseover = function(event) {
-		eval(sname+".start()");
-	}*/
+	/*this.sshow.onmousemove = function(event) {}
+	document.onmouseover = function(event) {}*/
 	for (var i = 0; i < this.imgs.length; i++) {
 		// Create navigation
 		var li = document.createElement("li");
@@ -59,8 +57,12 @@ function Slideshow(sname) {
 		li.appendChild(div);
 		li.appendChild(document.createTextNode(this.imgs[i].getAttribute("alt")));
 		li.setAttribute("title", i);
-		li.addEventListener("mousemove", this.mover, false);
-		//li.onmouseover = this.mover;
+		var local = this;
+		li.addEventListener("mousemove", function(event) {
+			var cur = event.currentTarget;
+			local.update(cur.getAttribute("title"));
+		}, false);
+		//li.onmouseover = function(event) {}
 		if (i == 0) li.setAttribute("class", "hovered");
 		this.nav.appendChild(li);
 	}
@@ -68,7 +70,7 @@ function Slideshow(sname) {
 }
 
 function main() {
-	ss = new Slideshow("ss");
+	ss = new Slideshow();
 	ss.start();
 }
 
