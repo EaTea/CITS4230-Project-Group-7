@@ -19,3 +19,15 @@ Variables:
   PORT - Set this value to change the port to use from 3000
 Example usage:
   ./rails-local
+
+./rails-remote
+Syncs the contents of a local "todo" directory to the group server.
+Variables:
+  TMPDIR - Set this to change the tmp directory used on your remote account.
+  ID - Set this to pass your student ID.
+Example usage:
+  ID=12345678 ./rails-remote
+
+./group-upload
+Uploads the whole project up to the group server.
+This calls ./upload and ./rails-remote so the variables are the same.

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Default $SUBDIR to CITS4230
+if [ "$SUBDIR" == "" ]; then
+	SUBDIR="CITS4230"
+fi
+# If a Student ID is not provided then ask for it on stdin
+if [ "$ID" == "" ]; then
+	echo -n "What's your student ID? "
+	read ID
+fi
+# Run ./upload
+echo "Running the ./upload script"
+./upload
+# Run ./rails-remote
+echo "Running the ./rails-remote script"
+./rails-remote
+# Copy the files in remote WWW/$SUBDIR to the group server
+echo "Syncing your remote WWW/$SUBDIR with CITS4230"
+ssh -t $ID@uggp.csse.uwa.edu.au "rsync -a -e ssh ~/WWW/$SUBDIR/ cits4230:/home/cits4230/cits4230g/public_html/"

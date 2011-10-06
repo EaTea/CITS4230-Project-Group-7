@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Default $TMPDIR to CITS4230-todo-tmp
+if [ "$TMPDIR" == "" ]; then
+	TMPDIR="CITS4230-todo-tmp"
+fi
+# If a Student ID is not provided then ask for it on stdin
+if [ "$ID" == "" ]; then
+	echo -n "What's your student ID? "
+	read ID
+fi
+# Copy the rails project to a tmp folder $TMPDIR
+echo "Copying to your account..."
+rsync --del -a -e ssh todo/ "$ID@uggp.csse.uwa.edu.au:~/$TMPDIR/"
+# Move the copied files to the correct destination
+echo "Moving to group server..."
+ssh -t $ID@uggp.csse.uwa.edu.au "rsync --del -a -e ssh ~/$TMPDIR/ cits4230:/home/cits4230/cits4230g/todo/"
