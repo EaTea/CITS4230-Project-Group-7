@@ -4,21 +4,21 @@
 			<p>I guess you're wondering what kind of things you'll be able to do on FMN? Plenty! Take a look below at some of FMN's features:</p>
 			<ul class="logo">
 				<li>
-					<h2>Customisable tasks</h2>
+					<h2>Customisable Tasks</h2>
 					<p>
 						From their creation to their completion, their description and details, control it all on FMN! The tasks end with you!
 					</p>
 				</li>
 				<li>
-					<h2>Categorise your tasks</h2>
+					<h2>Categorise your Tasks</h2>
 					<p>
 						Add a task to a list (or lists!) of things-to-do and then share it with your friends and colleagues, so you can get everyone organised!
 					</p>
 				</li>
 				<li>
-					<h2>List permissions</h2>
+					<h2>List Permissions</h2>
 					<p>
-						Need to make a list that people can view, but they can't change? It's easy with FMN's List Permissions system!
+						Need to make a list that people can view, but they can't edit? It's easy with FMN's permission system!
 					</p>
 				</li>
 				<li>

@@ -1,5 +1,5 @@
 <?php
-	$title = "Site-Map";
+	$title = "Site Map";
 	if(empty($_SERVER["HTTPS"])) $s = '';
 	else if($_SERVER["HTTPS"] == "on") $s = 's';
 	else $s = '';

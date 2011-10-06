@@ -25,7 +25,7 @@
 				<section>
 					<h2>Tasks</h2>
 					<p>
-						Fear not! Write whatever tasks you want! It's your own business, and we don't read it. Nor do we share it. The weird, wonderful smorgasboard of to-do tasks that you've listed on FMN are perfectly safe on our server.
+						Fear not! Write whatever tasks you want! It's your own business, and we won't read it. Nor do we share it. The weird, wonderful smorgasboard of to-do tasks that you've listed on FMN are perfectly safe on our server.
 					</p>
 				</section>
 			</div>
