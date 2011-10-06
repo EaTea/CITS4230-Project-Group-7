@@ -12,3 +12,10 @@ Variables:
   SUBDIR - Set this to change the sub-directory.
 Example usage:
   CLEAR=1 ID=12345678 ./upload
+
+./rails-local
+Starts up a rails server on the local machine.
+Variables:
+  PORT - Set this value to change the port to use from 3000
+Example usage:
+  ./rails-local
