@@ -10,7 +10,7 @@
 					</p>
 				</li>
 				<li>
-					<h2>Categorise your Tasks</h2>
+					<h2>Categorise Your Tasks</h2>
 					<p>
 						Add a task to a list (or lists!) of things-to-do and then share it with your friends and colleagues, so you can get everyone organised!
 					</p>
