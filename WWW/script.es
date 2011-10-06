@@ -19,8 +19,7 @@ function Slideshow(elt) {
 		}
 	}
 	this.next = function() {
-		var children = this.nav.childNodes;
-		this.update((this.cur + 1) % children.length);
+		this.update((this.cur + 1) % this.imgs.length);
 		var local = this;
 		this.t = setTimeout(function() {
 			local.next();
@@ -63,7 +62,7 @@ function Slideshow(elt) {
 		var local = this;
 		li.addEventListener("mousemove", function(event) {
 			var cur = event.currentTarget;
-			local.update(cur.getAttribute("title"));
+			local.update(parseInt(cur.getAttribute("title")));
 		}, false);
 		//li.onmouseover = function(event) {}
 		if (i == 0) li.setAttribute("class", "hovered");
