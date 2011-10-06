@@ -38,7 +38,7 @@
 	margin: 12px auto;
 	cursor: pointer;
 }
-#slideshow figcaption {
+#slideshow .caption {
 	text-align: center;
 	padding: 4px 0;
 	border: 2px solid black;

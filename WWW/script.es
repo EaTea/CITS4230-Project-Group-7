@@ -1,5 +1,5 @@
 function Slideshow(elt) {
-	this.caption = elt.getElementsByTagName("figcaption")[0];
+	this.caption = elt.getElementsByTagName("section")[0];
 	this.imgs = elt.getElementsByTagName("div")[0].getElementsByTagName("img");
 	this.nav = elt.getElementsByTagName("div")[1].getElementsByTagName("ul")[0];
 	this.t = 0;
