@@ -1,6 +1,9 @@
 #!/bin/bash
 
+# Default $PORT to 3000
 if [ "$PORT" == "" ]; then
 	PORT="3000"
 fi
-./todo/script/rails server -p$PORT
+# Start server on port $PORT
+cd todo
+./script/rails server -p$PORT
