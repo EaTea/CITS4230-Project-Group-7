@@ -55,7 +55,6 @@
 #slideshow .img_container img {
 	position: absolute;
 	left: 100%;
-	z-index: -1;
 	width: inherit;
 	height: inherit;
 	-webkit-transition: left 1s ease;
@@ -65,7 +64,6 @@
 }
 #slideshow .img_container img:first-of-type {
 	left: 0;
-	z-index: 0;
 }
 #slideshow .selector ul {
 	display: table;

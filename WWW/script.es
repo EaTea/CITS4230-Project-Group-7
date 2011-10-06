@@ -4,36 +4,18 @@ function Slideshow(elt) {
 	this.nav = elt.getElementsByTagName("div")[1].getElementsByTagName("ul")[0];
 	this.t = 0;
 	this.cur = 0;
-	this.prev = 0;
-	this.animating = 0;
 
 	this.update = function(next) {
 		if (next != this.cur) {
 			var prev = this.cur;
 			this.cur = next;
-			if (this.animating) {
-				clearTimeout(this.animating);
-				this.animating = 0;
-				this.imgs[prev].style.zIndex = "0";
-				this.imgs[this.prev].style.zIndex = "-1";
-				this.imgs[this.prev].style.left = "100%";
+			for (var i = 0; i < this.imgs.length; i++) {
+				this.imgs[i].style.left = ((i-next)*100)+"%";
 			}
-			this.prev = prev;
 			this.caption.innerHTML = this.imgs[next].getAttribute("title");
 			var elts = this.nav.childNodes;
 			elts[prev].removeAttribute("class");
 			elts[next].setAttribute("class", "hovered");
-			// Animate this.imgs[next]
-			this.imgs[next].style.zIndex = "1";
-			this.imgs[next].style.left = "0%";
-			// End animation in 1sec
-			var local = this;
-			this.animating = setTimeout(function() {
-				local.animating = 0;
-				local.imgs[next].style.zIndex = "0";
-				local.imgs[prev].style.zIndex = "-1";
-				local.imgs[prev].style.left = "100%";
-			}, 1000);
 		}
 	}
 	this.next = function() {
@@ -66,11 +48,13 @@ function Slideshow(elt) {
 		document.addEventListener("mousemove", function(event) {
 			local.start();
 		}, false);
+		/*elt.onmousemove = function(event) {}
+		document.onmouseover = function(event) {}*/
 	}
-	/*elt.onmousemove = function(event) {}
-	document.onmouseover = function(event) {}*/
 	for (var i = 0; i < this.imgs.length; i++) {
-		// Create navigation
+		// Initialise the "tape"
+		this.imgs[i].style.left = (i*100)+"%";
+		// Create controller
 		var li = document.createElement("li");
 		var div = document.createElement("div");
 		li.appendChild(div);
