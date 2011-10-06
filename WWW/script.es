@@ -12,7 +12,7 @@ function Slideshow(elt) {
 			for (var i = 0; i < this.imgs.length; i++) {
 				this.imgs[i].style.left = ((i-next)*100)+"%";
 			}
-			this.caption.innerHTML = this.imgs[next].getAttribute("title");
+			this.caption.innerHTML = this.imgs[next].getAttribute("data-caption");
 			var elts = this.nav.childNodes;
 			elts[prev].removeAttribute("class");
 			elts[next].setAttribute("class", "hovered");
@@ -57,18 +57,18 @@ function Slideshow(elt) {
 		var li = document.createElement("li");
 		var div = document.createElement("div");
 		li.appendChild(div);
-		li.appendChild(document.createTextNode(this.imgs[i].getAttribute("alt")));
-		li.setAttribute("title", i);
+		li.appendChild(document.createTextNode(this.imgs[i].getAttribute("data-sub")));
+		li.setAttribute("data-index", i);
 		var local = this;
 		li.addEventListener("mousemove", function(event) {
 			var cur = event.currentTarget;
-			local.update(parseInt(cur.getAttribute("title")));
+			local.update(parseInt(cur.getAttribute("data-index")));
 		}, false);
 		//li.onmouseover = function(event) {}
 		if (i == 0) li.setAttribute("class", "hovered");
 		this.nav.appendChild(li);
 	}
-	this.caption.innerHTML = this.imgs[0].title;
+	this.caption.innerHTML = this.imgs[0].getAttribute("data-caption");
 }
 
 function main() {
