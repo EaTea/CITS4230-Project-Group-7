@@ -4,14 +4,12 @@
 	<meta charset="utf-8" />
 	<title>FMN: The Shared To-do List</title>
 	<!-- <meta name="no-email-collection" content="http://www.unspam.com/noemailcollection" /> -->
-	<!-- global externals -->
-	<link rel="icon" type="image/png" href="images/favicon.png"/>
-	<link rel="stylesheet" type="text/css" href="../global/style.css" />
-	<script type="application/ecmascript" src="../global/script.es"></script>
-	<!-- local externals -->
-	<%= stylesheet_link_tag :all %>
-	<%= javascript_include_tag :defaults %>
-	<%= csrf_meta_tag %>
+<!-- ruby on rails start -->
+<%= favicon_link_tag 'favicon.png', :rel => 'icon', :type => 'image/png' %>
+<%= stylesheet_link_tag("global") %>
+<%= javascript_include_tag :defaults, :type => 'application/ecmascript' %>
+<%= csrf_meta_tag %>
+<!-- ruby on rails end -->
 </head>
 <body onload="load()">
 	<!-- header -->
@@ -30,9 +28,9 @@
 			</div>
 		</div>
 		<div id="logo">
-			<img src="../global/images/fmn-logo.png" alt="" />
 			<a title="Go to home page" href="./">
 				<h1>
+					<img src="<%= image_path('fmn-logo.png') %>" alt="FMN: The Shared To-do List Service" />
 					<strong><span>F</span>orget-<span>M</span>e-<span>N</span>ot</strong>
 					<small>We still don't know the task we were supposed to do that day.</small>
 				</h1>
