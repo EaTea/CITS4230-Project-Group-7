@@ -24,11 +24,11 @@
 		<!-- domain bar -->
 		<div id="domain_bar">
 			<div>
-				<a href="/"><strong>FMN</strong> › The Shared To-do List</a>
+				<a href="<%= root_path %>"><strong>FMN</strong> › The Shared To-do List</a>
 			</div>
 		</div>
 		<div id="logo">
-			<a title="Go to home page" href="./">
+			<a title="Go to home page" href="<%= root_path %>">
 				<h1>
 					<img src="<%= image_path('fmn-logo.png') %>" alt="FMN: The Shared To-do List Service" />
 					<strong><span>F</span>orget-<span>M</span>e-<span>N</span>ot</strong>
@@ -48,9 +48,9 @@
 			<small>FMN © 2011<script type='application/ecmascript'>var a = new Array('.edu','@stu','2050','3332','dent','.uwa','.au');document.write(" : Maintained by <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;"+a[2]+a[3]+a[1]+a[4]+a[5]+a[0]+a[6]+"'>CITS4230 Group 7</a>");</script></small>
 			<ul>
 				<!--<li><a href="<?php echo $rel_path; ?>tos">Terms of Service</a></li>-->
-				<li><a href="../privacy">Privacy Policies</a></li>
-				<li><a href="../reference">References</a></li>
-				<li><a href="../sitemap">Site Map</a></li>
+				<li><a href="<%= File.dirname(root_path) %>privacy">Privacy Policies</a></li>
+				<li><a href="<%= File.dirname(root_path) %>reference">References</a></li>
+				<li><a href="<%= File.dirname(root_path) %>sitemap">Site Map</a></li>
 				<li><a href="#" onclick="show_accesskeys()">Access Keys</a></li>
 			</ul>
 		</nav>
