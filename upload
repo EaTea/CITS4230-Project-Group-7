@@ -9,11 +9,11 @@ if [ "$ID" == "" ]; then
 	echo -n "What's your student ID? "
 	read ID
 fi
-# If the CLEAR flag is set to 1 then clear the remote directory $SUBDIR in WWW
+# If the CLEAR flag is set to 1, then clear the remote $SUBDIR in WWW
 if [ "$CLEAR" == "1" ]; then
 	echo "Will clear before copying."
 	RSYNC_EXTRA+=" --del"
 fi
-# Copy the files in WWW to remote WWW/$SUBDIR
+# Copy the files in public_html to remote WWW/$SUBDIR
 echo "Copying..."
-rsync$RSYNC_EXTRA -a -e ssh WWW/ "$ID@uggp.csse.uwa.edu.au:~/WWW/$SUBDIR/"
+rsync$RSYNC_EXTRA -a -e ssh public_html/ "$ID@uggp.csse.uwa.edu.au:~/WWW/$SUBDIR/"

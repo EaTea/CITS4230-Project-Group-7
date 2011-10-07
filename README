@@ -4,7 +4,7 @@ Build a database driven web application using Ruby on Rails, HTML, CSS and ECMAS
 Helper scripts included in this repo:
 
 ./upload
-Syncs the contents of a local "WWW" directory to a sub-directory of your
+Syncs the contents of a local "public_html" directory to a sub-directory of your
 CSSE student WWW directory.
 Variables:
   CLEAR - Set this to 1 to delete extraneous files from destination dirs.
