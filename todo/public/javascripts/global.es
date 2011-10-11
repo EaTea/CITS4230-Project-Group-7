@@ -1,1 +1,1 @@
-../../../public_html/global/script.es
+../../../public_html/global/base.es

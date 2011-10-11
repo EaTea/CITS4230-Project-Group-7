@@ -7,6 +7,7 @@
 	<!-- global externals -->
 	<link rel="icon" type="image/png" href="<?php echo $rel_path; ?>global/images/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo $rel_path; ?>global/style.css" />
+	<script type="application/ecmascript" src="<?php echo $rel_path; ?>global/base.es"></script>
 	<script type="application/ecmascript" src="<?php echo $rel_path; ?>global/script.es"></script>
 	<!-- local externals -->
 	<link rel="stylesheet" type="text/css" href="style.css" />
