@@ -53,8 +53,7 @@
 		<form id="login_form" name="login" method="post" action="<?php echo $rel_path; ?>./" onsubmit="return validate_login();">
 			<input type="text" name="user" id="user" required="required" placeholder="Enter username" />
 			<input type="password" name="pass" id="pass" required="required" placeholder="Enter password" />
-			<button type="submit">Log In</button>
-			<!--<input type="submit" value="Log In" />-->
+			<input type="submit" value="Log In" />
 		</form>
 		</div>
 		</div>
