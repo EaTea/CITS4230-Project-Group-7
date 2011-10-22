@@ -5,7 +5,7 @@
 	else {
 		echo '
 		<aside id="registration">
-			<form id="signup_form" name="signup" method="post" action="./" onsubmit="return validate_registration();">
+			<form id="signup" name="signup" method="post" action="./" onsubmit="return validate_registration();">
 				<h1>Forget-Me-Not Sign Up</h1>
 				<p>Register and share lists with your friends!</p>
 
