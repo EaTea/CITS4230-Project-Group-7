@@ -9,35 +9,25 @@
 				<h1>Forget-Me-Not Sign Up</h1>
 				<p>Register and share lists with your friends!</p>
 
-				<label for="new_user">Username
-					<span class="highlight">Enter a username</span>
-				</label>
+				<label for="new_user">Username<small>Enter a username</small></label>
 				<input type="text" name="new_user" id="new_user" required="required" value="'.$_REQUEST['new_user'].'" />
 
-				<label for="email">Email
-					<span class="highlight">Enter an email address</span>
-				</label>
+				<label for="email">Email<small>Enter an email address</small></label>
 				<input type="email" name="email" id="email" required="required" value="'.$_REQUEST['email'].'" />
 
-				<label for="v_email">Confirm Email
-					<span class="highlight">Confirm the above email</span>
-				</label>
+				<label for="v_email">Confirm Email<small>Confirm the above email</small></label>
 				<input type="email" name="v_email" id="v_email" required="required" />
 
-				<label for="new_pass">Password
-					<span class="highlight">Min. size 6 chars</span>
-				</label>
+				<label for="new_pass">Password<small>Min. size 6 chars</small></label>
 				<input type="password" name="new_pass" id="new_pass" required="required" />
 
-				<label for="v_pass">Confirm Password
-					<span class="highlight">Min. size 6 chars</span>
-				</label>
+				<label for="v_pass">Confirm Password<small>Min. size 6 chars</small></label>
 				<input type="password" name="v_pass" id="v_pass" required="required" />
 
 				<button type="submit" value="Sign Up">Sign Up</button>
 				<!--<input type="submit" value="Sign Up" />-->
 			</form>
 		</aside>
-		';
+';
 	}
 ?>

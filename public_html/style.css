@@ -81,7 +81,6 @@
 	border: 2px solid #b7ddf2;
 	background: #ebf4fb;
 	margin: 0 auto;
-	width: 388px;
 	padding: 12px;
 }
 #signup h1 {
@@ -103,7 +102,7 @@
 	width: 160px;
 	float: left;
 }
-#signup .highlight {
+#signup label small {
 	color: #736f6e;
 	display: block;
 	font-size: 90%;
