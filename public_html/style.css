@@ -79,6 +79,7 @@
 }
 #slideshow .selector ul {
 	display: table;
+	table-layout: fixed;
 	width: 100%;
 }
 #slideshow .selector li {
@@ -157,6 +158,6 @@
 	text-align: center;
 	line-height: 31px;
 	color: white;
-	font-size: 90%;
+	font-size: 100%;
 	font-weight: bold;
 }
