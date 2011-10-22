@@ -212,6 +212,7 @@ ul.logo li {
 /* ========================================================================== */
 
 #top_bar {
+	display: table;
 	color: #fff;
 	background: #2e3436 url("images/top_bar-bg.png") top repeat-x;
 	padding: 8px 0;
@@ -228,14 +229,10 @@ ul.logo li {
 	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 #top_bar>div {
-	display: table;
-	width: 100%;
-}
-#top_bar>div>div {
 	display: table-cell;
 	width: 50%;
 }
-#top_bar>div .right {
+#top_bar .right {
 	text-align: right;
 }
 #top_bar ul {
@@ -278,7 +275,7 @@ ul.logo li {
 	padding-right: 8px;
 }
 #top_bar input {
-	width: 150px;
+	width: 32%;
 	margin: -8px 0 -8px -8px;
 	padding: 8px 8px 8px 28px;
 	border: 0;
@@ -294,12 +291,6 @@ ul.logo li {
 #top_bar input:focus {
 	background-color: rgba(100%,100%,100%,0.1);
 	color: rgba(100%,100%,100%,1.0);
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-webkit-border-top-right-radius: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	border-top-right-radius: 6px;
-	border-bottom-right-radius: 6px;
 }
 #top_bar input[type=submit] {
 	width: auto;

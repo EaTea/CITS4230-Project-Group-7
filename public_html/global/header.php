@@ -42,20 +42,18 @@
 	<!-- top navbar -->
 	<nav id="top_bar">
 		<div>
-		<div>
-		<ul id="main_nav_list" data-cp="<?php echo $current_path; ?>">
-			<li><a href="<?php echo $rel_path; ?>" title="Home">Home</a></li>
-			<li><a href="<?php echo $rel_path; ?>features" title="Features">Features</a></li>
-			<li><a href="<?php echo $rel_path; ?>faq" title="FAQ">FAQ</a></li>
-		</ul>
+			<ul id="main_nav_list" data-cp="<?php echo $current_path; ?>">
+				<li><a href="<?php echo $rel_path; ?>" title="Home">Home</a></li>
+				<li><a href="<?php echo $rel_path; ?>features" title="Features">Features</a></li>
+				<li><a href="<?php echo $rel_path; ?>faq" title="FAQ">FAQ</a></li>
+			</ul>
 		</div>
 		<div class="right">
-		<form id="login" name="login" method="post" action="<?php echo $rel_path; ?>./" onsubmit="return validate_login();">
-			<input type="text" name="user" id="user" required="required" placeholder="Enter username" />
-			<input type="password" name="pass" id="pass" required="required" placeholder="Enter password" />
-			<input type="submit" value="Log In" />
-		</form>
-		</div>
+			<form id="login" name="login" method="post" action="<?php echo $rel_path; ?>./" onsubmit="return validate_login();">
+				<input type="text" name="user" id="user" required="required" placeholder="Enter username" />
+				<input type="password" name="pass" id="pass" required="required" placeholder="Enter password" />
+				<input type="submit" value="Log In" />
+			</form>
 		</div>
 	</nav>
 	<!-- page body -->
