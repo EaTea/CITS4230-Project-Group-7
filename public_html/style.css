@@ -83,6 +83,11 @@
 	margin: 0 auto;
 	padding: 12px;
 }
+#signup header {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b7ddf2;
+	margin-bottom: 20px;
+}
 #signup h1 {
 	font-size: 120%;
 	font-weight: bold;
@@ -91,36 +96,37 @@
 #signup p {
 	font-size: 90%;
 	color: #666666;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #b7ddf2;
-	padding-bottom: 10px;
+}
+#signup>div {
+	display: table;
+	width: 100%;
+	padding-bottom: 12px;
 }
 #signup label {
-	display: block;
+	display: table-cell;
+	padding-right: 4%;
+	width: 44%;
 	font-weight: bold;
 	text-align: right;
-	width: 160px;
-	float: left;
 }
 #signup label small {
-	color: #736f6e;
 	display: block;
+	color: #736f6e;
 	font-size: 90%;
 	font-weight: normal;
-	text-align: right;
-	width: 160px;
 }
-#signup input, select {
-	float: left;
-	font-size: 100%;
+#signup>div>div {
+	display: table-cell;
+	width: 52%;
+	vertical-align: middle;
+}
+#signup>div input {
 	padding: 4px 2px;
 	border: solid 1px #aacfe4;
-	width: 180px;
-	margin: 2px 0 20px 10px;
+	font-size: 100%;
 }
-#signup button {
-	clear: both;
-	margin-left: 170px;
+#signup input[type=submit] {
+	margin-left: 48%;
 	width: 120px;
 	height: 32px;
 	background-color: #666666;

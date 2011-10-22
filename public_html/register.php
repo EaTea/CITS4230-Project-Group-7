@@ -6,26 +6,37 @@
 		echo '
 		<aside id="registration">
 			<form id="signup" name="signup" method="post" action="./" onsubmit="return validate_registration();">
-				<h1>Forget-Me-Not Sign Up</h1>
-				<p>Register and share lists with your friends!</p>
+				<header>
+					<h1>Forget-Me-Not Sign Up</h1>
+					<p>Register and share lists with your friends!</p>
+				</header>
 
-				<label for="new_user">Username<small>Enter a username</small></label>
-				<input type="text" name="new_user" id="new_user" required="required" value="'.$_REQUEST['new_user'].'" />
+				<div>
+					<label for="new_user">Username <small>Enter a username</small></label>
+					<div><input type="text" name="new_user" id="new_user" required="required" value="'.$_REQUEST['new_user'].'" /></div>
+				</div>
 
-				<label for="email">Email<small>Enter an email address</small></label>
-				<input type="email" name="email" id="email" required="required" value="'.$_REQUEST['email'].'" />
+				<div>
+					<label for="email">Email <small>Enter an email address</small></label>
+					<div><input type="email" name="email" id="email" required="required" value="'.$_REQUEST['email'].'" /></div>
+				</div>
 
-				<label for="v_email">Confirm Email<small>Confirm the above email</small></label>
-				<input type="email" name="v_email" id="v_email" required="required" />
+				<div>
+					<label for="v_email">Confirm Email <small>Confirm the above email</small></label>
+					<div><input type="email" name="v_email" id="v_email" required="required" /></div>
+				</div>
 
-				<label for="new_pass">Password<small>Min. size 6 chars</small></label>
-				<input type="password" name="new_pass" id="new_pass" required="required" />
+				<div>
+					<label for="new_pass">Password <small>Min. size 6 chars</small></label>
+					<div><input type="password" name="new_pass" id="new_pass" required="required" /></div>
+				</div>
 
-				<label for="v_pass">Confirm Password<small>Min. size 6 chars</small></label>
-				<input type="password" name="v_pass" id="v_pass" required="required" />
+				<div>
+					<label for="v_pass">Confirm Password <small>Min. size 6 chars</small></label>
+					<div><input type="password" name="v_pass" id="v_pass" required="required" /></div>
+				</div>
 
-				<button type="submit" value="Sign Up">Sign Up</button>
-				<!--<input type="submit" value="Sign Up" />-->
+				<input type="submit" value="Sign Up" />
 			</form>
 		</aside>
 ';
