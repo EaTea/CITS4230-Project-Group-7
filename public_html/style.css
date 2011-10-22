@@ -1,15 +1,3 @@
-/*
-	Document   : style
-	Created on : Aug 28, 2011, 10:38:02 AM
-	Author     : sontobgay
-	Description:
-		Purpose of the stylesheet follows.
-*/
-
-/*
-   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
-*/
-
 /* Main Content */
 /* ========================================================================== */
 
@@ -65,8 +53,33 @@
 #slideshow .img_container img:first-of-type {
 	left: 0;
 }
+#slideshow .img_container div {
+	position: absolute;
+	background-color: black;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	width: 0;
+	height: 0;
+	opacity: 0.8;
+	-moz-border-radius: 10%;
+	-webkit-border-radius: 10%;
+	border-radius: 10%;
+	-webkit-transition: left 400ms linear, top 400ms linear, width 400ms linear, height 400ms linear, opacity 400ms linear;
+	-moz-transition: left 400ms linear, top 400ms linear, width 400ms linear, height 400ms linear, opacity 400ms linear;
+	-o-transition: left 400ms linear, top 400ms linear, width 400ms linear, height 400ms linear, opacity 400ms linear;
+	transition: left 400ms linear, top 400ms linear, width 400ms linear, height 400ms linear, opacity 400ms linear;
+}
+#slideshow:hover .img_container div {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
 #slideshow .selector ul {
 	display: table;
+	table-layout: fixed;
 	width: 100%;
 }
 #slideshow .selector li {
@@ -89,57 +102,62 @@
 /* User Registration Form */
 /* ========================================================================== */
 
-#signup_form {
+#signup {
 	border: 2px solid #b7ddf2;
 	background: #ebf4fb;
 	margin: 0 auto;
-	width: 388px;
 	padding: 12px;
 }
-#signup_form h1 {
-	font-size: 14px;
+#signup header {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b7ddf2;
+	margin-bottom: 20px;
+}
+#signup h1 {
+	font-size: 120%;
 	font-weight: bold;
 	margin-bottom: 8px;
 }
-#signup_form p {
-	font-size: 11px;
+#signup p {
+	font-size: 90%;
 	color: #666666;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #b7ddf2;
-	padding-bottom: 10px;
 }
-#signup_form label {
-	display: block;
+#signup>div {
+	display: table;
+	width: 100%;
+	padding-bottom: 12px;
+}
+#signup label {
+	display: table-cell;
+	padding-right: 4%;
+	width: 44%;
 	font-weight: bold;
 	text-align: right;
-	width: 160px;
-	float: left;
 }
-#signup_form .highlight {
-	color: #736f6e;
+#signup label small {
 	display: block;
-	font-size: 11px;
+	color: #736f6e;
+	font-size: 90%;
 	font-weight: normal;
-	text-align: right;
-	width: 160px;
 }
-#signup_form input, select {
-	float: left;
-	font-size: 12px;
+#signup>div>div {
+	display: table-cell;
+	width: 52%;
+	vertical-align: middle;
+}
+#signup>div input {
 	padding: 4px 2px;
 	border: solid 1px #aacfe4;
-	width: 180px;
-	margin: 2px 0 20px 10px;
+	font-size: 100%;
 }
-#signup_form button {
-	clear: both;
-	margin-left: 170px;
+#signup input[type=submit] {
+	margin-left: 48%;
 	width: 120px;
 	height: 32px;
 	background-color: #666666;
 	text-align: center;
 	line-height: 31px;
 	color: white;
-	font-size: 11px;
+	font-size: 100%;
 	font-weight: bold;
 }
