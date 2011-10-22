@@ -48,18 +48,42 @@ Other requirements:
  - Email is obfuscated and requires ECMAScript. Also, reference to Project Honey Pot was made to hopefully repel spambots - although, we don't have a terms of use with it.
 
 **NOTE:** This does not work with IE at the moment as we are using DOM2 events.
-Although, it is currently higher priority for us to get some backwards compatibility with fallback script emulations for HTML5 and CSS3 features, which are still very new and not very well supported.
+It is currently higher priority for us to get some backwards compatibility with fallback script emulations for HTML5 and CSS3 features, which are still very new and not very well supported.
 
 W3C's Style Validation errors:
-1. 0 is not a box-shadow value : 0 2px 4px rgba(0,0,0,0.2) 0 2px 4px rgba(0,0,0,0.2)
-2. Property transition doesn't exist : background 100ms linear background 100ms linear
-3. Value Error : border-left Too many values or values are not recognized : 1px solid rgba(100%,100%,100%,0.3) 1px solid rgba(100%,100%,100%,0.3)
-4. Property target-name doesn't exist : new new
-5. Value Error : text-shadow Too many values or values are not recognized : 2px 2px 4px rgba(0,0,0,0.4) 2px 2px 4px rgba(0,0,0,0.4)
+global/style.css:
+Line 109:
+	0 is not a box-shadow value : 0 2px 4px rgba(0,0,0,0.2) 0 2px 4px rgba(0,0,0,0.2)
+	Reason: Seems to pass if I put inset on, which is just an extra optional argument: http://www.w3.org/TR/css3-background/#the-box-shadow so it should be valid without it. Probably a bug in the validator.
+Line 194:
+	Value Error : text-shadow Too many values or values are not recognized : 2px 2px 4px rgba(0,0,0,0.4) 2px 2px 4px rgba(0,0,0,0.4)
+	Reason: I couldn't find a clear explanation from the W3 specifications, but I used the syntax shown on w3schools.com and it rendered correctly with no warning or errors logged in Firefox. Probably a bug in the validator.
+Line 229:
+	Same as 109.
+Line 258:
+	Property transition doesn't exist : background 100ms linear background 100ms linear
+	Reason: The transition property is valid, and at working draft: http://www.w3.org/TR/css3-transitions/
+Line 279:
+	Value Error : border-left Too many values or values are not recognized : 1px solid rgba(100%,100%,100%,0.3) 1px solid rgba(100%,100%,100%,0.3)
+	Reason: It doesn't seem to like the alpha value in the border. It works in Firefox and it is a valid colour. Probably a bug in the validator.
+Line 307, 317, 327:
+	Sorry, the at-rule @keyframes is not implemented.
+	Reason: Self explanatory.
+Line 338:
+	Property animation doesn't exist : glow 800ms ease 0 infinite alternate glow 800ms ease 0 infinite alternate
+	Reason: The animation property is valid, and at working draft: http://www.w3.org/TR/css3-animations/
+Line 343:
+	Same as 109.
+Line 387:
+	Property target-name doesn't exist : new new
+	Reason: The target-* properties are valid, and at working draft: http://www.w3.org/TR/css3-hyperlinks/#the-target-name
 
-2: The transition property is at working draft: http://www.w3.org/TR/css3-transitions/
-4: The target-* properties are at working draft: http://www.w3.org/TR/css3-hyperlinks/#the-target-name
-5: W3 specifications are not very clear, but I used the syntax shown on w3schools.com and it rendered correctly with no errors logged in Firefox.
-1, 3: Not sure. They look valid, but I might be missing something.
-  - 1 seems to pass if I put inset on, which is just an extra optional argument: http://www.w3.org/TR/css3-background/#the-box-shadow so it should be valid without it...
-  - 3 doesn't seem to like the alpha value in the border. It works in Firefox, but I could just make it a solid color close to it, if needed.
+style.css:
+Line 51:
+	Same as 258 in global/style.css
+Line 67:
+	10% is not a border-radius value : 10% 10% 
+	Reason: Should be valid according to http://www.w3.org/TR/css3-background/#the-border-radius so it is probably a bug in the validator.
+Line 71:
+	Same as 258 in global/style.css
+
