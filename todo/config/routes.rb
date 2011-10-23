@@ -1,4 +1,6 @@
 Todo::Application.routes.draw do
+  resources :items
+
   resources :lists
 
   resources :permissions
