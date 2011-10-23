@@ -6,4 +6,6 @@ class Item < ActiveRecord::Base
 	#doing extra validation on it
 	validates :completed, :presence=>true
 	validates :list_id, :presence=>true
+#Referential integrity validation
+	belongs_to :list
 end
