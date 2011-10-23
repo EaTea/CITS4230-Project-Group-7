@@ -333,9 +333,9 @@ ul.logo li {
 	}
 }
 #top_bar input[type=submit]:hover {
-	-moz-animation: glow 800ms ease 0s infinite alternate;
-	-webkit-animation: glow 800ms ease 0s infinite alternate;
-	animation: glow 800ms ease 0s infinite alternate;
+	-moz-animation: glow 800ms ease-in-out 0s infinite alternate;
+	-webkit-animation: glow 800ms ease-in-out 0s infinite alternate;
+	animation: glow 800ms ease-in-out 0s infinite alternate;
 }
 #top_bar input[type=submit]:focus {
 	-moz-box-shadow: 0 0 12px 4px rgba(59,89,152,0.75);
