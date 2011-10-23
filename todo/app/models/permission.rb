@@ -1,10 +1,10 @@
 class Permission < ActiveRecord::Base
-	validates :add, :existence => true
-	validates :edit, :existence => true
-	validates :delete, :existence => true
-	validates :boolean, :existence => true
-	validates :user_id, :existence => true
-	validates :list_id, :existence => true
+	validates :add, :presence => true
+	validates :edit, :presence => true
+	validates :delete, :presence => true
+	validates :boolean, :presence => true
+	validates :user_id, :presence => true
+	validates :list_id, :presence => true
 	belongs_to user
 	belongs_to list
 end
