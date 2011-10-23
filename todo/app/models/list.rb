@@ -3,5 +3,6 @@ class List < ActiveRecord::Base
 #Referential Integrity validation
 	has_many :permissions
 	has_many :users, :through => :permissions
-	has_many :tasks
+	has_many :items
+	validates_associated :items
 end
