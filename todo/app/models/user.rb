@@ -17,4 +17,8 @@ class User < ActiveRecord::Base
 	validates :salt, :presence=>true, :length=>{:is=>16}
 	validates :email, :presence => true, :length=>{:maximum=>64}, :uniqueness=>true
 	validates_with EmailValidator
+
+#Validations for referential integrity follow
+	has_many :permissions
+	has_many :lists, :through => :permissions
 end
