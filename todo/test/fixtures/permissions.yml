@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  add: false
+  edit: false
+  delete: false
+  own: false
+  user_id: 1
+  list_id: 1
+
+two:
+  add: false
+  edit: false
+  delete: false
+  own: false
+  user_id: 1
+  list_id: 1

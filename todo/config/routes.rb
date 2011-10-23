@@ -1,4 +1,6 @@
 Todo::Application.routes.draw do
+  resources :permissions
+
   resources :users
 
   get "home/index"
