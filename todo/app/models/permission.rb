@@ -7,4 +7,6 @@ class Permission < ActiveRecord::Base
 	validates :list_id, :presence => true
 	belongs_to user
 	belongs_to list
+	validates_associated :user
+	validates_associated :list
 end
