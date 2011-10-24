@@ -39,6 +39,7 @@
 	width: 412px;
 	height: 309px;
 	border: 2px solid black;
+	border-bottom: 0;
 }
 #slideshow .img_container img {
 	position: absolute;
@@ -86,6 +87,12 @@
 	display: table-cell;
 	border: 2px solid transparent;
 	text-align: center;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
 }
 #slideshow .selector li div {
 	width: 100%;
