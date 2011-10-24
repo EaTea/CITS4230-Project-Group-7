@@ -13,7 +13,8 @@ end
 class User < ActiveRecord::Base
 	include ActiveModel::Validations
 	validates :username, :presence=>true, :length=>{:maximum=>32}, :uniqueness=>true
-	validates :password, :presence=>true, :length=>{:maximum=>128}
+	validates :password, :presence=>true, :length=>{:maximum=>128}, :confirmation => true
+	validates :password_confirmation, :presence=>true, :length=>{:maximum=>128}
 	validates :salt, :presence=>true, :length=>{:is=>16}
 	validates :email, :presence => true, :length=>{:maximum=>64}, :uniqueness=>true
 	validates_with EmailValidator
