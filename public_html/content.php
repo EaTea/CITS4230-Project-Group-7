@@ -8,7 +8,7 @@
 					<img src="images/fmn-D.jpg" alt="" data-sub="Signup" data-caption="Wanna join? It's easy!<br />Just fill in the form to your right and you're set!"/>
 					<div></div>
 				</div>
-				<section class="caption"></section>
+				<section class="caption">FMN: The exciting shared To-Do List service!<br />Read more <a href='./features'>here</a>!</section>
 				<div class="selector">
 					<ul></ul>
 				</div>
