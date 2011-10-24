@@ -11,27 +11,27 @@
 					<p>Register and share lists with your friends!</p>
 				</header>
 
-				<div>
+				<div class="field">
 					<label for="new_user">Username <small>Enter a username</small></label>
 					<div><input type="text" name="new_user" id="new_user" required="required" value="'.$_REQUEST['new_user'].'" /></div>
 				</div>
 
-				<div>
+				<div class="field">
 					<label for="email">Email <small>Enter an email address</small></label>
 					<div><input type="email" name="email" id="email" required="required" value="'.$_REQUEST['email'].'" /></div>
 				</div>
 
-				<div>
+				<div class="field">
 					<label for="v_email">Confirm Email <small>Confirm the above email</small></label>
 					<div><input type="email" name="v_email" id="v_email" required="required" /></div>
 				</div>
 
-				<div>
+				<div class="field">
 					<label for="new_pass">Password <small>Min. size 6 chars</small></label>
 					<div><input type="password" name="new_pass" id="new_pass" required="required" /></div>
 				</div>
 
-				<div>
+				<div class="field">
 					<label for="v_pass">Confirm Password <small>Min. size 6 chars</small></label>
 					<div><input type="password" name="v_pass" id="v_pass" required="required" /></div>
 				</div>

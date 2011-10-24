@@ -129,7 +129,7 @@
 	font-size: 90%;
 	color: #666666;
 }
-#signup>div {
+#signup .field {
 	display: table;
 	width: 100%;
 	padding-bottom: 12px;
@@ -147,12 +147,12 @@
 	font-size: 90%;
 	font-weight: normal;
 }
-#signup>div>div {
+#signup .field>div {
 	display: table-cell;
 	width: 52%;
 	vertical-align: middle;
 }
-#signup>div input {
+#signup .field input {
 	padding: 4px 2px;
 	border: solid 1px #aacfe4;
 	font-size: 100%;
