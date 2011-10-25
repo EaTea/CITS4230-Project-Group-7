@@ -7,5 +7,5 @@ class Item < ActiveRecord::Base
 	validates :list_id, :presence => true
 #Referential integrity validation
 	belongs_to :list
-	validates :list, :presence => true
+	validates :list, :presence => { :message => "must be a valid list" }
 end
