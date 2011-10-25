@@ -5,7 +5,7 @@ class EmailValidator < ActiveModel::Validator
   def validate(record)
 		@value = record.email
     unless @value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-      record.errors[:email] << ("Specified email is not an email")
+      record.errors[:email] << ("is not an email")
     end
   end
 end
@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 	validates :password_confirmation, :presence=>true, :length=>{:maximum=>128}
 	validates :salt, :presence=>true, :length=>{:is=>16}
 	validates :email, :presence => true, :length=>{:maximum=>64}, :uniqueness=>true
-	validates_with EmailValidator
+	validates_with EmailValidator, :if => "email?"
 
 #Validations for referential integrity follow
 	has_many :permissions
