@@ -16,7 +16,8 @@ class User < ActiveRecord::Base
 	validates :password, :presence=>true, :length=>{:maximum=>128}, :confirmation => true
 	validates :password_confirmation, :presence=>true, :length=>{:maximum=>128}
 	validates :salt, :presence=>true, :length=>{:is=>16}
-	validates :email, :presence => true, :length=>{:maximum=>64}, :uniqueness=>true
+validates :email, :presence => true, :length=>{:maximum=>64}, :uniqueness=>true, :confirmation => true
+	validates :email_confirmation, :presence => true, :length=>{:maximum=>64}, :confirmation => true
 	validates_with EmailValidator, :if => "email?"
 
 #Validations for referential integrity follow
