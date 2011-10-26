@@ -50,9 +50,9 @@
 			</ul>
 		</div>
 		<div class="right">
-			<form id="login" name="login" method="post" action="<?php echo $rel_path; ?>todo" onsubmit="return validate_login();">
-				<input type="text" name="user" id="user" required="required" placeholder="Enter username" />
-				<input type="password" name="pass" id="pass" required="required" placeholder="Enter password" />
+			<form accept-charset="UTF-8" id="login" name="login" method="get" action="<?php echo $rel_path; ?>todo/login" onsubmit="return validate_login();">
+				<input type="text" name="username" id="username" required="required" placeholder="Enter username" />
+				<input type="password" name="password" id="password" required="required" placeholder="Enter password" />
 				<input type="submit" value="Log In" />
 			</form>
 		</div>

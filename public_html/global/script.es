@@ -11,7 +11,7 @@ function gmain() {
 }
 
 function validate_login() {
-	var username = document.forms['login']['user'].value;
+	var username = document.forms['login']['username'].value;
 	if((username == null || username == "")) {
 		alert('Please fill in the username field with a valid username.');
 		return false;
@@ -20,7 +20,7 @@ function validate_login() {
 		alert("You\'ve used a character that's not a letter, number or underscore in your username.\nPlease remove it from your username and resubmit.");
 		return false;
 	}
-	var password = document.forms['login']['pass'].value;
+	var password = document.forms['login']['password'].value;
 	if((password == null || password == "")) {
 		alert('Please fill in the password field with a valid password.');
 		return false;
