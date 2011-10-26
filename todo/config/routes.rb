@@ -1,4 +1,12 @@
 Todo::Application.routes.draw do
+  resources :items
+
+  resources :lists
+
+  resources :permissions
+
+  resources :users
+
   get "home/index"
 
   # The priority is based upon order of creation:
