@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout "embed"
   # GET /users
   # GET /users.xml
   def index

@@ -15,13 +15,13 @@ end
 class User < ActiveRecord::Base
 	include ActiveModel::Validations
 	attr_accessible :username, :email, :password, :password_confirmation, :email_confirmation
-	validates :username, :presence=>true, :length=>{:maximum=>32}, :uniqueness=>true
-	validates :password, :presence=>true, :length=>{:maximum=>128}, :confirmation => true
-	validates :password_confirmation, :presence=>true, :length=>{:maximum=>128}
-	#validates :salt, :presence=>true, :length=>{:is=>16}
+	validates :username, :presence => true, :length => {:maximum => 32}, :uniqueness => true
+	validates :password, :presence => true, :length => {:maximum => 128}, :confirmation => true
+	validates :confirmation_password, :presence => true, :length => {:maximum => 128}
+	#validates :salt, :presence => true, :length => {:is => 16}
 	#this shouldn't be needed anymore, salt is automatically generated
-	validates :email, :presence => true, :length=>{:maximum=>64}, :uniqueness=>true, :confirmation => true
-	validates :email_confirmation, :presence => true, :length=>{:maximum=>64}, :confirmation => true
+	validates :email, :presence => true, :length => {:maximum => 64}, :uniqueness => true, :confirmation => true
+	validates :confirmation_email, :presence => true, :length => {:maximum => 64}
 	validates_with EmailValidator, :if => "email?"
 
 	#automatically generate salt and encrypts password
