@@ -1,0 +1,44 @@
+<%= form_for @user do |f| %>
+	<header>
+		<h1>Forget-Me-Not Sign Up</h1>
+		<p>Register and share lists with your friends!</p>
+	</header>
+
+	<% if @user.errors.any? %>
+	<div class="error_explanation">
+		<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+		<ul>
+			<% @user.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+
+	<div class="field">
+		<label for="user_username">Username <small>Enter a username</small></label>
+		<div><%= f.text_field :username, :required => 'required', :size => '20' %></div>
+	</div>
+
+	<div class="field">
+		<label for="user_email">Email <small>Enter an email address</small></label>
+		<div><%= f.email_field :email, :required => 'required', :size => '20' %></div>
+	</div>
+
+	<div class="field">
+		<label for="user_confirmation_email">Confirm Email <small>Confirm the above email</small></label>
+		<div><%= f.email_field :confirmation_email, :required => 'required', :size => '20' %></div>
+	</div>
+
+	<div class="field">
+		<label for="user_password">Password <small>Min. size 6 chars</small></label>
+		<div><%= f.password_field :password, :required => 'required', :size => '20' %></div>
+	</div>
+
+	<div class="field">
+		<label for="user_confirmation_password">Confirm Password <small>Min. size 6 chars</small></label>
+		<div><%= f.password_field :confirmation_password, :required => 'required', :size => '20' %></div>
+	</div>
+
+	<%= f.submit :value => 'Sign Up' %>
+<% end %>

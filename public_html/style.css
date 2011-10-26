@@ -27,8 +27,13 @@
 #registration {
 	display: table-cell;
 	width: 50%;
+	height: 440px;
 	padding: 32px;
 	vertical-align: top;
+}
+#registration iframe {
+	height: 100%;
+	width: 100%;
 }
 
 /* Slideshow */

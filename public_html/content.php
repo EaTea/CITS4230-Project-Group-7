@@ -15,4 +15,6 @@
 			<a href="features">Learn more...</a>
 		</article>
 
-		<?php include("register.php"); ?>
+		<aside id="registration">
+			<iframe src="todo/users/new"></iframe>
+		</aside>
