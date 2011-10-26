@@ -16,8 +16,8 @@ class User < ActiveRecord::Base
 	include ActiveModel::Validations
 	attr_accessible :username, :email, :password, :password_confirmation, :email_confirmation
 	validates :username, :presence => true, :length => {:within => 4..32}, :uniqueness => true
-	validates :password, :presence => true, :length => {:within => 6..128}, :confirmation => true
-	validates :password_confirmation, :presence => true, :length => {:within => 6..128}
+	validates :password, :presence => true, :length => {:within => 6..64}, :confirmation => true
+	validates :password_confirmation, :presence => true, :length => {:within => 6..64}
 	validates :email, :presence => true, :length => {:maximum => 64}, :uniqueness => true, :confirmation => true
 	validates :email_confirmation, :presence => true, :length => {:maximum => 64}
 	validates_with EmailValidator, :if => "email?"

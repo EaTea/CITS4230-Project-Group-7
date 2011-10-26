@@ -42,8 +42,8 @@ function validate_registration() {
 		alert('Please enter a password that is at least 6 characters long.');
 		return false;
 	}
-	if(password.length > 128) {
-		alert('Please enter a password that is at most 128 characters long.');
+	if(password.length > 64) {
+		alert('Please enter a password that is at most 64 characters long.');
 		return false;
 	}
 	var confirm_password = document.forms['new_user']['user[password_confirmation]'].value;
