@@ -1,0 +1,103 @@
+/* 
+    Document   : forms
+    Created on : Oct 24, 2011, 3:32:35 PM
+    Author     : sontobgay
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.field {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    width: 160px;
+    float: left;
+}
+
+/*
+ *Rails Application Form Styles
+ *
+*/
+
+.forms {
+	border: 2px solid #b7ddf2;
+	background: #ebf4fb;
+	margin: 0 auto;
+	width: 388px;
+	padding: 12px;
+}
+
+.forms h1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.forms p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #b7ddf2;
+	padding-bottom: 10px;
+}
+
+.forms .label {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	width: 160px;
+	float: left;
+}
+
+.forms .highlight {
+	color: #736f6e;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	width: 160px;
+}
+
+.forms input, select {
+	float: left;
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 180px;
+	margin: 2px 0 20px 10px;
+}
+
+.forms button {
+	clear: both;
+	margin-left: 170px;
+	width: 120px;
+	height: 32px;
+	background-color: #666666;
+	text-align: center;
+	line-height: 31px;
+	color: white;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/*
+ *CSS for tables
+*/
+
+table.record-view tr:nth-child(even) {
+    background: #aacfe4 ; 
+} 
+
+table.record-view tr:nth-child(odd) {
+    background: #ebf4fb ; 
+} 
+ 

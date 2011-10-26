@@ -10,24 +10,24 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="forms">   
+    <label for="username">User Name</label>>
     <%= f.label :username %><br />
     <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :salt %><br />
-    <%= f.text_field :salt %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
+ 
+    <label for="password">Pass Word</label>>
+      <%= f.label :password %><br />
+      <%= f.text_field :password %>
+
+      <label for="salt">Salt</label>>
+      <%= f.label :salt %><br />
+      <%= f.text_field :salt %>
+    
+      <label for="email"></label>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+   <label for="">
     <%= f.submit %>
+  </div>
   </div>
 <% end %>
