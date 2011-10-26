@@ -26,8 +26,8 @@
 	</div>
 
 	<div class="field">
-		<label for="user_confirmation_email">Confirm Email <small>Confirm the above email</small></label>
-		<div><%= f.email_field :confirmation_email, :required => 'required', :size => '20' %></div>
+		<label for="user_email_confirmation">Confirm Email <small>Confirm the above email</small></label>
+		<div><%= f.email_field :email_confirmation, :required => 'required', :size => '20' %></div>
 	</div>
 
 	<div class="field">
@@ -36,8 +36,8 @@
 	</div>
 
 	<div class="field">
-		<label for="user_confirmation_password">Confirm Password <small>Min. size 6 chars</small></label>
-		<div><%= f.password_field :confirmation_password, :required => 'required', :size => '20' %></div>
+		<label for="user_password_confirmation">Confirm Password <small>Min. size 6 chars</small></label>
+		<div><%= f.password_field :password_confirmation, :required => 'required', :size => '20' %></div>
 	</div>
 
 	<%= f.submit :value => 'Sign Up' %>
