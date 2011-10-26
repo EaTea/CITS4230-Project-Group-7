@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => { :onsubmit => "return validate_registration();" } do |f| %>
 	<header>
 		<h1>Forget-Me-Not Sign Up</h1>
 		<p>Register and share lists with your friends!</p>
