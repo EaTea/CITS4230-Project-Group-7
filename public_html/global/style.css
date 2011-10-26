@@ -306,8 +306,8 @@ ul.logo li {
 }
 @-moz-keyframes glow {
 	from {
-		-moz-box-shadow: 0;
-		box-shadow: 0;
+		-moz-box-shadow: 0 0;
+		box-shadow: 0 0;
 	}
 	to {
 		-moz-box-shadow: 0 0 12px 4px rgba(59,89,152,0.8);
@@ -316,8 +316,8 @@ ul.logo li {
 }
 @-webkit-keyframes glow {
 	from {
-		-webkit-box-shadow: 0;
-		box-shadow: 0;
+		-webkit-box-shadow: 0 0;
+		box-shadow: 0 0;
 	}
 	to {
 		-webkit-box-shadow: 0 0 12px 4px rgba(59,89,152,0.8);
@@ -326,7 +326,7 @@ ul.logo li {
 }
 @keyframes glow {
 	from {
-		box-shadow: 0;
+		box-shadow: 0 0;
 	}
 	to {
 		box-shadow: 0 0 12px 4px rgba(59,89,152,0.8);
