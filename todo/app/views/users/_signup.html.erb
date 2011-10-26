@@ -17,27 +17,27 @@
 
 	<div class="field">
 		<label for="user_username">Username <small>Enter a username</small></label>
-		<div><%= f.text_field :username, :required => 'required', :size => '20' %></div>
+		<div><%= f.text_field :username, :required => 'required', :size => '24', :maxlength => '32' %></div>
 	</div>
 
 	<div class="field">
 		<label for="user_email">Email <small>Enter an email address</small></label>
-		<div><%= f.email_field :email, :required => 'required', :size => '20' %></div>
+		<div><%= f.email_field :email, :required => 'required', :size => '24', :maxlength => '64' %></div>
 	</div>
 
 	<div class="field">
 		<label for="user_email_confirmation">Confirm Email <small>Confirm the above email</small></label>
-		<div><%= f.email_field :email_confirmation, :required => 'required', :size => '20' %></div>
+		<div><%= f.email_field :email_confirmation, :required => 'required', :size => '24', :maxlength => '64' %></div>
 	</div>
 
 	<div class="field">
 		<label for="user_password">Password <small>Min. size 6 chars</small></label>
-		<div><%= f.password_field :password, :required => 'required', :size => '20' %></div>
+		<div><%= f.password_field :password, :required => 'required', :size => '24', :maxlength => '64' %></div>
 	</div>
 
 	<div class="field">
 		<label for="user_password_confirmation">Confirm Password <small>Min. size 6 chars</small></label>
-		<div><%= f.password_field :password_confirmation, :required => 'required', :size => '20' %></div>
+		<div><%= f.password_field :password_confirmation, :required => 'required', :size => '24', :maxlength => '64' %></div>
 	</div>
 
 	<%= f.submit :value => 'Sign Up' %>
