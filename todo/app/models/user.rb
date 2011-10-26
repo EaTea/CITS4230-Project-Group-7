@@ -4,12 +4,21 @@
 require 'digest/sha2'
 
 class EmailValidator < ActiveModel::Validator
-  def validate(record)
+	def validate(record)
 		@value = record.email
-    unless @value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-      record.errors[:email] << ("is not an email")
-    end
-  end
+		unless @value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+			record.errors[:email] << ("is not an email")
+		end
+	end
+end
+
+class UsernameValidator < ActiveModel::Validator
+	def validate(record)
+		@value = record.username
+		unless @value =~ /\A[a-z0-9_]+\Z/i
+			record.errors[:username] << ("contains invalid characters")
+		end
+	end
 end
 
 class User < ActiveRecord::Base
@@ -21,6 +30,7 @@ class User < ActiveRecord::Base
 	validates :email, :presence => true, :length => {:maximum => 64}, :uniqueness => true, :confirmation => true
 	validates :email_confirmation, :presence => true, :length => {:maximum => 64}
 	validates_with EmailValidator, :if => "email?"
+	validates_with UsernameValidator, :if => "username?"
 
 	#automatically generate salt and encrypts password
 	before_save :encrypt_password

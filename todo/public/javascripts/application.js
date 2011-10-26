@@ -24,6 +24,10 @@ function validate_registration() {
 		alert('Please fill in the email field.');
 		return false;
 	}
+	if(email.length > 64) {
+		alert('Please enter a email that is at most 64 characters long.');
+		return false;
+	}
 	if(email.match(/[\w\.]+@([\w]+\.)+[\w]{2,}/) == null) {
 		alert('An invalid email address has been entered.\nPlease make sure a valid email address is entered.');
 		return false;
