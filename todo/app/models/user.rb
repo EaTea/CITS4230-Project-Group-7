@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
 
 	#automatically generate salt and encrypts password
 	before_save :encrypt_password
-	before_destroy :is_only_owner
+	before_destroy :delete_list_if_user_is_only_owner
 
 #Validations for referential integrity follow
 	has_many :permissions, :dependent => :destroy
@@ -64,7 +64,7 @@ class User < ActiveRecord::Base
 		def secure_hash(string)
   	 	Digest::SHA2.hexdigest(string)
   	end
-		def is_only_owner
+		def delete_list_if_user_is_only_owner
 			sql_find_lists = "SELECT l.* FROM lists l, permissions p WHERE p.own = 't' AND l.id = p.list_id AND p.user_id = " + id.to_s
 			#not neat but I got incorrect behaviour when using other notation [string, args]
 			puts 'entering this method!'
@@ -76,8 +76,5 @@ class User < ActiveRecord::Base
 					l.destroy
 				end
 			end
-			#incorrect behaviour when splitting into lines, tried using semi-colon
-			#separation but still resulted in incorrect behaviour during
-			#prototyping in rails console, reverting to single line solution
 		end
 end
