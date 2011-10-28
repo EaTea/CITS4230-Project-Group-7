@@ -4,7 +4,6 @@ class HomeController < ApplicationController
 
 	def assign_list_id
 		session[:list_id] = params[:session][:list_id]
-		puts params[:list_id]
 		redirect_to root_url
 	end
 end
