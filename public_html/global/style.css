@@ -147,7 +147,7 @@ ul.logo li {
 	position: absolute;
 	visibility: hidden;
 }
-.popup:hover>div, .popup:focus>div {
+.popup:hover>div, .popup>a:focus ~ div {
 	visibility: visible;
 }
 
