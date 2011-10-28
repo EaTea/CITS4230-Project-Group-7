@@ -3,8 +3,6 @@
 <table>
   <tr>
     <th>Username</th>
-    <th>Password</th>
-    <th>Salt</th>
     <th>Email</th>
     <th></th>
     <th></th>
@@ -14,12 +12,10 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.username %></td>
-    <td><%= user.password %></td>
-    <td><%= user.salt %></td>
     <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= button_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete  %></td>
+    <td><%= button_to 'Destroy', user, :method => :delete  %></td>
   </tr>
 <% end %>
 </table>
