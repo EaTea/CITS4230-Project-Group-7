@@ -6,6 +6,6 @@
 <aside id="extra">
 </aside>
 <section id="list_view">
-	<%= link_to "items/index" {:controller => 'Items', :action => 'index(13)'}, {:target => "item_display"} %>
-	<iframe name="item_display" id="item_display" frameborder="0"></iframe>
+	<%= link_to "Items", {:controller => "items", :action => "index", :list_id => '13'}, :target => 'item_display' %>
+	<iframe name="item_display" id="item_display" src="/items?list_id=13"></iframe>
 </section>

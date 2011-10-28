@@ -2,16 +2,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
   def index
-    @items = Item.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @items }
-    end
-  end
-
-	def index(list_id)
-    @items = List.find(list_id).items
+    @items = List.find(params[:list_id]).items
 
     respond_to do |format|
       format.html # index.html.erb
