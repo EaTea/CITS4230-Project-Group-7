@@ -20,16 +20,12 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
+    <%= f.label :due_date %><br />
+    <%= f.date_select :due_date %>
   </div>
   <div class="field">
     <%= f.label :completed %><br />
     <%= f.check_box :completed %>
-  </div>
-  <div class="field">
-    <%= f.label :list_id %><br />
-    <%= f.text_field :list_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
