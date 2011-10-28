@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111024181600) do
+ActiveRecord::Schema.define(:version => 20111028103854) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.date     "date"
+    t.date     "due_date"
     t.boolean  "completed"
     t.integer  "list_id"
     t.datetime "created_at"

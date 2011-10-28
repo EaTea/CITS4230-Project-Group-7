@@ -3,10 +3,8 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
-    <th>Date</th>
+    <th>Due Date</th>
     <th>Completed</th>
-    <th>List</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,13 +13,11 @@
 <% @items.each do |item| %>
   <tr>
     <td><%= item.name %></td>
-    <td><%= item.description %></td>
-    <td><%= item.date %></td>
+    <td><%= item.due_date %></td>
     <td><%= item.completed %></td>
-    <td><%= item.list_id %></td>
     <td><%= link_to 'Show', item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

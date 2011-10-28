@@ -2,8 +2,14 @@
 <div class="popup"><a href="#">Log Out</a><div><%= button_to 'Yes', 'logout', :method => :delete  %></div></div>
 </section>
 <aside id="controls">
+<%= form_tag assign_list_id_url, :method => 'post' do %>
+<%= collection_select("session", "list_id", User.find(session[:user_id]).lists, :id, :name)%>
+<%= submit_tag "Assign List ID" %>
+<% end %>
+<%= link_to "Items", {:controller => "items", :action => "index", :list_id => session[:list_id]}, :target => 'item_display' %>
 </aside>
 <aside id="extra">
 </aside>
 <section id="list_view">
+	<iframe name="item_display" id="item_display"></iframe>
 </section>
