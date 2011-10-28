@@ -1,11 +1,7 @@
 class SessionsController < ApplicationController
 	skip_filter :authorize
+	protect_from_forgery :except => :create
 	def new
-		user = User.find_by_username(params[:username])
-		if user and user.authenticate?(params[:password])
-			session[:user_id] = user.id
-			redirect_to root_url
-		end
 	end
 
 	def create
