@@ -11,22 +11,34 @@ function gmain() {
 }
 
 function validate_login() {
-	var username = document.forms['login']['user'].value;
+	var username = document.forms['login']['username'].value;
 	if((username == null || username == "")) {
-		alert('Please fill in the username field with a valid username.');
+		alert('Please fill in the username field.');
+		return false;
+	}
+	if(username.length < 4) {
+		alert('Please enter a username that is at least 4 characters long.');
+		return false;
+	}
+	if(username.length > 32) {
+		alert('Please enter a username that is at most 32 characters long.');
 		return false;
 	}
 	if(username.match(/\W/) != null) {
-		alert("You\'ve used a character that's not a letter, number or underscore in your username.\nPlease remove it from your username and resubmit.");
+		alert("A character that is not a letter, number or underscore is in the username.\nPlease make sure to remove them.");
 		return false;
 	}
-	var password = document.forms['login']['pass'].value;
+	var password = document.forms['login']['password'].value;
 	if((password == null || password == "")) {
-		alert('Please fill in the password field with a valid password.');
+		alert('Please fill in the password field.');
 		return false;
 	}
-	if(password.match(/.{6,}/) == null) {
-		alert('Please use a password that is at least of length 6 characters.');
+	if(password.length < 6) {
+		alert('Please enter a password that is at least 6 characters long.');
+		return false;
+	}
+	if(password.length > 64) {
+		alert('Please enter a password that is at most 64 characters long.');
 		return false;
 	}
 }

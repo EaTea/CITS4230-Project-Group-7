@@ -51,19 +51,19 @@ class User < ActiveRecord::Base
 			self.password = encrypt(password)
 		end
 		def make_salt
-  	 	secure_hash("#{Time.now.utc}--#{password}")
+			secure_hash("#{Time.now.utc}--#{password}")
 			#secure_hash to get a hash of current time
-  	end
+		end
 		def encrypt(string)
 			temp_string = string
-	   	for i in 1..3 do 
+			for i in 1..3 do 
 				temp_string = secure_hash("#{salt}--#{temp_string}") 
 			end
 			temp_string
-  	end
+		end
 		def secure_hash(string)
-  	 	Digest::SHA2.hexdigest(string)
-  	end
+			Digest::SHA2.hexdigest(string)
+		end
 		def delete_list_if_user_is_only_owner
 			sql_find_lists = "SELECT l.* FROM lists l, permissions p WHERE p.own = 't' AND l.id = p.list_id AND p.user_id = " + id.to_s
 			#not neat but I got incorrect behaviour when using other notation [string, args]

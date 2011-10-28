@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_filter :authorize, :only => [:new, :create]
+  before_filter :admin, :except => [:new, :create]
   layout "embed"
   # GET /users
   # GET /users.xml
