@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   skip_filter :authorize, :only => [:new, :create]
   before_filter :admin, :except => [:new, :create]
-  layout "embed"
   # GET /users
   # GET /users.xml
   def index
@@ -27,6 +26,7 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.xml
   def new
+    self.class.layout('embed')
     @user = User.new
 
     respond_to do |format|
