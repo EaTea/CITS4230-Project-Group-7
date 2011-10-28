@@ -25,12 +25,12 @@
 
 	<div class="field">
 		<label for="user_email">Email <small>Enter your email address</small></label>
-		<div><%= f.email_field :email, :required => 'required', :size => '22', :maxlength => '64', :title => 'Please enter your email address', :pattern => '[\w\.]+@([\w]+\.)+[\w]{2,}' %></div>
+		<div><%= f.email_field :email, :required => 'required', :size => '22', :maxlength => '64', :title => 'Please enter your email address', :pattern => '([^@\s]+)@((?:[-a-zA-Z0-9]+\.)+[a-zA-Z]{2,})' %></div>
 	</div>
 
 	<div class="field">
 		<label for="user_email_confirmation">Confirm Email <small>Confirm email address</small></label>
-		<div><%= f.email_field :email_confirmation, :required => 'required', :size => '22', :maxlength => '64', :title => 'Please confirm the email address above', :pattern => '[\w\.]+@([\w]+\.)+[\w]{2,}' %></div>
+		<div><%= f.email_field :email_confirmation, :required => 'required', :size => '22', :maxlength => '64', :title => 'Please confirm the email address above', :pattern => '([^@\s]+)@((?:[-a-zA-Z0-9]+\.)+[a-zA-Z]{2,})' %></div>
 	</div>
 
 	<div class="field">

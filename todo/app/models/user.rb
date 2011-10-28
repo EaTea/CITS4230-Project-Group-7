@@ -36,10 +36,9 @@ class User < ActiveRecord::Base
 	before_save :encrypt_password
 	before_destroy :delete_list_if_user_is_only_owner
 
-#Validations for referential integrity follow
+	#Validations for referential integrity follow
 	has_many :permissions, :dependent => :destroy
 	has_many :lists, :through => :permissions
-
 
 	def authenticate?(sub_password)
 		password == encrypt(sub_password)
