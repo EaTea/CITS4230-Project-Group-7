@@ -44,8 +44,16 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to(@list, :notice => 'List was successfully created.') }
-        format.xml  { render :xml => @list, :status => :created, :location => @list }
+        	format.html { redirect_to(@list, :notice => 'List was successfully created.') }
+        	format.xml  { render :xml => @list, :status => :created, :location => @list }
+				@perm = Permission.new(
+					:add => true,
+					:edit => true,
+					:own => true,
+					:del => true,
+					:user_id => session[:user_id],
+					:list_id => @list.id)
+				@perm.save
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @list.errors, :status => :unprocessable_entity }
