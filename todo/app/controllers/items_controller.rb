@@ -41,6 +41,7 @@ class ItemsController < ApplicationController
   # POST /items.xml
   def create
     @item = Item.new(params[:item])
+		@item.list_id = session[:list_id]
 
     respond_to do |format|
       if @item.save
@@ -57,6 +58,7 @@ class ItemsController < ApplicationController
   # PUT /items/1.xml
   def update
     @item = Item.find(params[:id])
+		@item.list_id = session[:list_id]
 
     respond_to do |format|
       if @item.update_attributes(params[:item])

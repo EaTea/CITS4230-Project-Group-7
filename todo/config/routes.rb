@@ -5,6 +5,10 @@ Todo::Application.routes.draw do
     delete 'logout' => :destroy
   end
 
+	controller :home do
+		post 'assign_list_id' => :assign_list_id
+	end
+
   resources :items
 
   resources :lists
