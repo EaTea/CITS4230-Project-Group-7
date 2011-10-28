@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "username, password and email should be nonempty" do
+		user = User.new
+		assert user.invalid?
+		assert user.errors[:username].any?
+		assert user.errors[:password].any?
+		assert user.errors[:email].any?
   end
 end
