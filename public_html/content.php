@@ -1,3 +1,4 @@
+		<div id="imain">
 		<article id="content">
 			Shared to-do lists let you manage and share schedules with your friends!
 			<article id="slideshow">
@@ -19,3 +20,4 @@
 		<aside id="registration">
 			<iframe src="todo/users/new"></iframe>
 		</aside>
+		</div>
