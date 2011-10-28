@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+	layout 'embed'
   # GET /items
   # GET /items.xml
   def index
