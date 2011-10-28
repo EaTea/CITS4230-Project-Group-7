@@ -3,7 +3,7 @@
 one:
   add: false
   edit: false
-  delete: false
+  del: false
   own: false
   user_id: 1
   list_id: 1
@@ -11,7 +11,7 @@ one:
 two:
   add: false
   edit: false
-  delete: false
+  del: false
   own: false
   user_id: 1
   list_id: 1
