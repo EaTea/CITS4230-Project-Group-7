@@ -10,6 +10,15 @@ class ItemsController < ApplicationController
     end
   end
 
+	def index(list_id)
+    @items = List.find(list_id).items
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @items }
+    end
+  end
+
   # GET /items/1
   # GET /items/1.xml
   def show
