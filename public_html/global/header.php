@@ -50,9 +50,9 @@
 			</ul>
 		</div>
 		<div class="right">
-			<form accept-charset="UTF-8" id="login" name="login" method="get" action="<?php echo $rel_path; ?>todo/login" onsubmit="return validate_login();">
-				<input type="text" name="username" id="username" required="required" placeholder="Enter username" />
-				<input type="password" name="password" id="password" required="required" placeholder="Enter password" />
+			<form accept-charset="UTF-8" id="login" name="login" method="post" action="<?php echo $rel_path; ?>todo/login" onsubmit="return validate_login();">
+				<input type="text" name="username" id="username" required="required" placeholder="Enter username" title="Please enter a username of length at least 4 and consisting of only letters, numbers and underscores" maxlength="32" pattern="[\w]{4,32}" />
+				<input type="password" name="password" id="password" required="required" placeholder="Enter password" title="Please enter a password of length at least 6" maxlength="64" pattern=".{6,64}" />
 				<input type="submit" value="Log In" />
 			</form>
 		</div>

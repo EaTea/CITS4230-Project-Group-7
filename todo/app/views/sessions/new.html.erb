@@ -1,23 +1,8 @@
-<div>
 	<% if flash[:alert] %>
-	<p id="notice"><%= flash[:alert] %><%= params[:username] %></p>
+	<p id="notice"><%= flash[:alert] %></p>
 	<% end %>
-
-	<%= form_tag  do %>
-		<fieldset>
-			<div>
-				<label for="username">Name:</label>
-				<%= text_field_tag :username, params[:username] %>
-			</div>
-
-			<div>
-				<label for="password">Password:</label>
-				<%= password_field_tag :password, params[:password] %>
-			</div>
-
-			<div>
-				<%= submit_tag "Login" %>
-			</div>
-		</fieldset>
-	<% end %>
-</div>
+	<%= form_tag login_url, :id => 'login', :name => 'login' do %>
+		<%= text_field_tag :username, params[:username], :placeholder => 'Enter username', :required => 'required', :maxlength => '32', :title => 'Please enter a username of length at least 4 and consisting of only letters, numbers and underscores', :pattern => '[\w]{4,32}' %>
+		<%= password_field_tag :password, params[:password], :placeholder => 'Enter password', :required => 'required', :maxlength => '64', :title => 'Please enter a password of length at least 6', :pattern => '.{6,64}' %>
+		<%= submit_tag "Log In" %>
+	<%= %><% end %>
