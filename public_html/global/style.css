@@ -134,6 +134,22 @@ ul.logo li {
 	color: brown;
 	vertical-align: middle;
 }
+.popup>div {
+	border: 12px solid rgba(0,0,0,0.6);
+	padding: 4px;
+	background-color: white;
+	-moz-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	border-radius: 8px;
+	position: absolute;
+	visibility: hidden;
+}
+.popup:hover>div, .popup:focus>div {
+	visibility: visible;
+}
 
 /* Accessibility Access */
 /* ========================================================================== */
