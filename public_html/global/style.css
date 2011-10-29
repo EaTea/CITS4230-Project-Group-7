@@ -146,6 +146,7 @@ ul.logo li {
 	border-radius: 8px;
 	position: absolute;
 	visibility: hidden;
+	display: inline;
 }
 .popup:hover>div, .popup>a:focus ~ div {
 	visibility: visible;
@@ -322,8 +323,8 @@ ul.logo li {
 }
 @-moz-keyframes glow {
 	from {
-		-moz-box-shadow: 0 0;
-		box-shadow: 0 0;
+		-moz-box-shadow: 0 0 transparent;
+		box-shadow: 0 0 transparent;
 	}
 	to {
 		-moz-box-shadow: 0 0 12px 4px rgba(59,89,152,0.8);
@@ -332,8 +333,8 @@ ul.logo li {
 }
 @-webkit-keyframes glow {
 	from {
-		-webkit-box-shadow: 0 0;
-		box-shadow: 0 0;
+		-webkit-box-shadow: 0 0 transparent;
+		box-shadow: 0 0 transparent;
 	}
 	to {
 		-webkit-box-shadow: 0 0 12px 4px rgba(59,89,152,0.8);
@@ -342,7 +343,7 @@ ul.logo li {
 }
 @keyframes glow {
 	from {
-		box-shadow: 0 0;
+		box-shadow: 0 0 transparent;
 	}
 	to {
 		box-shadow: 0 0 12px 4px rgba(59,89,152,0.8);

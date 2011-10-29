@@ -3,4 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @item %> |
-<%= link_to 'Back', {:controller => "items", :action => "index", :list_id => '13'}, :target => 'item_display' %>
+<%= link_to 'Back', {:controller => "items", :action => "index", :list_id => session[:list_id]}, :target => 'item_display' %>
