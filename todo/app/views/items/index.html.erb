@@ -1,4 +1,4 @@
-<h1>Listing <%= params[:comp] == 't' ? "Completed" : "Incomplete" %> items</h1>
+<h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= List.find(session[:list_id]).name %></h1>
 
 <table>
   <tr>
@@ -16,14 +16,14 @@
     <td><%= item.due_date %></td>
     <td><%= check_box item, :completed %></td>
     <td><%=	button_to 'Show', item, :method => :get %></td>
-    <td><%= button_to 'Edit', edit_item_path(item), :method => :get %></td>
-    <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to 'Edit', edit_item_path(item), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit%></td>
+    <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del%></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add%>
 <%= link_to 'See Pending Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 'f'}, :target => 'item_display' %>
 <%= link_to 'See Completed Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 't'}, :target => 'item_display' %>
