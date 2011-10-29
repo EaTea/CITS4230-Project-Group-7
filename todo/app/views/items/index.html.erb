@@ -14,7 +14,7 @@
   <tr>
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
-    <td><%= check_box item, :completed %></td>
+    <td><%= item.completed ? "Yes" : "No" %></td>
     <td><%=	button_to 'Show', item, :method => :get %></td>
     <td><%= button_to 'Edit', edit_item_path(item), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit%></td>
     <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del%></td>
