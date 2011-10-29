@@ -25,4 +25,5 @@
 <br />
 
 <%= link_to 'New Item', new_item_path %>
+<%= link_to 'See Pending Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 'f'}, :target => 'item_display' %>
 <%= link_to 'See Completed Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 't'}, :target => 'item_display' %>
