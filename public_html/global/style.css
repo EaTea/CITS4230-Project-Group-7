@@ -146,6 +146,7 @@ ul.logo li {
 	border-radius: 8px;
 	position: absolute;
 	visibility: hidden;
+	display: inline;
 }
 .popup:hover>div, .popup>a:focus ~ div {
 	visibility: visible;
