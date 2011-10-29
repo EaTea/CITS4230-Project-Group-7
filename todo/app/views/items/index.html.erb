@@ -15,8 +15,8 @@
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
     <td><%= item.completed %></td>
-    <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%=	button_to 'Show', item, :method => :get %></td>
+    <td><%= button_to 'Edit', edit_item_path(item), :method => :get %></td>
     <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
