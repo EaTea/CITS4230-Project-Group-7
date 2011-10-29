@@ -85,10 +85,4 @@ class ItemsController < ApplicationController
 			format.xml	{ head :ok }
 		end
 	end
-
-	def mark_as_complete
-		@item = Item.find(params[:id])
-		@item.complete = true
-		@item.save
-	end
 end
