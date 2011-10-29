@@ -21,4 +21,4 @@
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', {:controller => "items", :action => "index", :list_id => session[:list_id]}, :target => 'item_display' %>
+<%= link_to 'Back', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 'f'}, :target => 'item_display' %>

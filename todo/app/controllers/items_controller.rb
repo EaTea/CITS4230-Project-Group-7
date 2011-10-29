@@ -4,7 +4,9 @@ class ItemsController < ApplicationController
 	# GET /items.xml
 	def index
 		session[:list_id] = params[:list_id]
-		@items = List.find(params[:list_id]).items
+		@find_completed = params[:comp]
+		@items = List.find(params[:list_id]).items.find_all_by_completed(@find_completed)
+		puts @find_completed
 
 		respond_to do |format|
 			format.html # index.html.erb
@@ -83,5 +85,11 @@ class ItemsController < ApplicationController
 			format.html { redirect_to(items_url) }
 			format.xml	{ head :ok }
 		end
+	end
+
+	def mark_as_complete
+		@item = Item.find(params[:id])
+		@item.complete = true
+		@item.save
 	end
 end

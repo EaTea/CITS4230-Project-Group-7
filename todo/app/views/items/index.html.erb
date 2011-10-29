@@ -14,7 +14,7 @@
   <tr>
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
-    <td><%= item.completed %></td>
+    <td><%= button_to 'Mark as complete', item, :method => :post %></td>
     <td><%=	button_to 'Show', item, :method => :get %></td>
     <td><%= button_to 'Edit', edit_item_path(item), :method => :get %></td>
     <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -25,3 +25,4 @@
 <br />
 
 <%= link_to 'New Item', new_item_path %>
+<%= link_to 'See Completed Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 't'}, :target => 'item_display' %>
