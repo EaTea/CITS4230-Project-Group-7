@@ -1,12 +1,15 @@
 <section id="dash">
-<div class="popup"><a href="#">Log Out</a><div><%= button_to 'Yes', 'logout', :method => :delete  %></div></div>
+	<div class="popup"><a href="#">Log Out</a><div><%= button_to 'Yes', 'logout', :method => :delete  %></div></div>
 </section>
 <aside id="controls">
-<%= form_tag assign_list_id_url, :method => 'post' do %>
-<%= collection_select("session", "list_id", User.find(session[:user_id]).lists, :id, :name)%>
-<%= submit_tag "Assign List ID" %>
-<% end %>
-<%= link_to "Items", {:controller => "items", :action => "index", :list_id => session[:list_id]}, :target => 'item_display' %>
+	<div class="popup">
+		<a href="#">Lists</a>
+		<div><ol>
+			<% User.find(session[:user_id]).lists.each do |list_id| %>
+			<li><%= link_to List.find(list_id).name, {:controller => "items", :action => "index", :list_id => list_id}, :target => 'item_display' %></li>
+			<% end %>
+		</ol></div>
+	</div>
 </aside>
 <aside id="extra">
 </aside>

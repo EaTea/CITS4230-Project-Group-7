@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 	# GET /items
 	# GET /items.xml
 	def index
+		session[:list_id] = params[:list_id]
 		@items = List.find(params[:list_id]).items
 
 		respond_to do |format|
