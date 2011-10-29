@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
 		@items = List.find(params[:list_id]).items.find_all_by_completed(@find_completed)
 
 		respond_to do |format|
-			format.html # index.html.erb
+			format.html  {render :action => "index", :is_complete => params[:comp] == 't'} # index.html.erb
 			format.xml	{ render :xml => @items }
 		end
 	end

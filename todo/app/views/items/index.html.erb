@@ -1,4 +1,4 @@
-<h1>Listing items</h1>
+<h1>Listing <%= params[:comp] == 't' ? "Completed" : "Incomplete" %> items</h1>
 
 <table>
   <tr>
@@ -14,7 +14,7 @@
   <tr>
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
-    <td><%= button_to 'Mark as complete', item, :method => :post %></td>
+    <td><%= check_box item, :completed %></td>
     <td><%=	button_to 'Show', item, :method => :get %></td>
     <td><%= button_to 'Edit', edit_item_path(item), :method => :get %></td>
     <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
