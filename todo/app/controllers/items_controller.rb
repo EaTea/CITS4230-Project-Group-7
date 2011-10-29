@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
 		session[:list_id] = params[:list_id]
 		@find_completed = params[:comp]
 		@items = List.find(params[:list_id]).items.find_all_by_completed(@find_completed)
-		puts @find_completed
 
 		respond_to do |format|
 			format.html # index.html.erb
