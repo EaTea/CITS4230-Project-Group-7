@@ -1,4 +1,7 @@
-<h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= List.find(session[:list_id]).name %></h1>
+<% @list = List.find(session[:list_id])%>
+
+<h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= @list.name %></h1>
+<td><%= button_to 'Rename ' + @list.name, edit_list_path(@list), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).own%></td>
 
 <table>
   <tr>
