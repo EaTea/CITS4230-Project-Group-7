@@ -16,7 +16,7 @@
   <tr>
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
-    <td><%=	button_to 'Show', item, :method => :get %></td>
+    <td><%= button_to 'Show', item, :method => :get %></td>
     <td><%= button_to 'Edit', edit_item_path(item), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit and params[:comp] == 'f'%></td>
     <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete if (Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del and params[:comp] == 'f') %></td>
   </tr>

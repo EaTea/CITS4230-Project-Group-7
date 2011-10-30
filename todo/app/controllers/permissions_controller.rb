@@ -44,10 +44,10 @@ class PermissionsController < ApplicationController
 
 		respond_to do |format|
 			if @permission.save
-				format.html { redirect_to(@permission, :notice => 'Permission was successfully created.') }
+				format.html	{ redirect_to(@permission, :notice => 'Permission was successfully created.') }
 				format.xml	{ render :xml => @permission, :status => :created, :location => @permission }
 			else
-				format.html { render :action => "new" }
+				format.html	{ render :action => "new" }
 				format.xml	{ render :xml => @permission.errors, :status => :unprocessable_entity }
 			end
 		end
@@ -60,10 +60,10 @@ class PermissionsController < ApplicationController
 
 		respond_to do |format|
 			if @permission.update_attributes(params[:permission])
-				format.html { redirect_to(@permission, :notice => 'Permission was successfully updated.') }
+				format.html	{ redirect_to(@permission, :notice => 'Permission was successfully updated.') }
 				format.xml	{ head :ok }
 			else
-				format.html { render :action => "edit" }
+				format.html	{ render :action => "edit" }
 				format.xml	{ render :xml => @permission.errors, :status => :unprocessable_entity }
 			end
 		end
@@ -76,7 +76,7 @@ class PermissionsController < ApplicationController
 		@permission.destroy
 
 		respond_to do |format|
-			format.html { redirect_to(permissions_url) }
+			format.html	{ redirect_to(permissions_url) }
 			format.xml	{ head :ok }
 		end
 	end

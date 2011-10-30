@@ -45,7 +45,7 @@ class ListsController < ApplicationController
 
 		respond_to do |format|
 			if @list.save
-					format.html { redirect_to(@list, :notice => 'List was successfully created.') }
+					format.html	{ redirect_to(@list, :notice => 'List was successfully created.') }
 					format.xml	{ render :xml => @list, :status => :created, :location => @list }
 				@perm = Permission.new(
 					:add => true,
@@ -56,7 +56,7 @@ class ListsController < ApplicationController
 					:list_id => @list.id)
 				@perm.save
 			else
-				format.html { render :action => "new" }
+				format.html	{ render :action => "new" }
 				format.xml	{ render :xml => @list.errors, :status => :unprocessable_entity }
 			end
 		end
@@ -69,10 +69,10 @@ class ListsController < ApplicationController
 
 		respond_to do |format|
 			if @list.update_attributes(params[:list])
-				format.html { redirect_to(@list, :notice => 'List was successfully updated.') }
+				format.html	{ redirect_to(@list, :notice => 'List was successfully updated.') }
 				format.xml	{ head :ok }
 			else
-				format.html { render :action => "edit" }
+				format.html	{ render :action => "edit" }
 				format.xml	{ render :xml => @list.errors, :status => :unprocessable_entity }
 			end
 		end
@@ -85,7 +85,7 @@ class ListsController < ApplicationController
 		@list.destroy
 
 		respond_to do |format|
-			format.html { redirect_to(lists_url) }
+			format.html	{ redirect_to(lists_url) }
 			format.xml	{ head :ok }
 		end
 	end

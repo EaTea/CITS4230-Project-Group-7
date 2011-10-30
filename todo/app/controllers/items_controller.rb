@@ -48,10 +48,10 @@ class ItemsController < ApplicationController
 
 		respond_to do |format|
 			if @item.save
-				format.html { redirect_to(@item, :notice => 'Item was successfully created.') }
+				format.html	{ redirect_to(@item, :notice => 'Item was successfully created.') }
 				format.xml	{ render :xml => @item, :status => :created, :location => @item }
 			else
-				format.html { render :action => "new" }
+				format.html	{ render :action => "new" }
 				format.xml	{ render :xml => @item.errors, :status => :unprocessable_entity }
 			end
 		end
@@ -65,10 +65,10 @@ class ItemsController < ApplicationController
 
 		respond_to do |format|
 			if @item.update_attributes(params[:item])
-				format.html { redirect_to(@item, :notice => 'Item was successfully updated.') }
+				format.html	{ redirect_to(@item, :notice => 'Item was successfully updated.') }
 				format.xml	{ head :ok }
 			else
-				format.html { render :action => "edit" }
+				format.html	{ render :action => "edit" }
 				format.xml	{ render :xml => @item.errors, :status => :unprocessable_entity }
 			end
 		end
@@ -81,7 +81,7 @@ class ItemsController < ApplicationController
 		@item.destroy
 
 		respond_to do |format|
-			format.html { redirect_to(items_url) }
+			format.html	{ redirect_to(items_url) }
 			format.xml	{ head :ok }
 		end
 	end
