@@ -2,7 +2,7 @@
 
 <h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= @list.name %></h1>
 <table>
-  <tr>
+  <tr class="item_headings">
     <th>Name</th>
     <th>Due Date</th>
     <th></th>
@@ -11,7 +11,7 @@
   </tr>
 
 <% @items.each do |item| %>
-  <tr>
+  <tr class="item_row">
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
     <td><%= button_to 'Show', item, :method => :get %></td>
