@@ -1,4 +1,5 @@
 <h1>New list</h1>
 
 <%= render 'form' %>
-<%= link_to 'Back', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 'f'}, :target => 'ui_display' %>
+<%= link_to 'Back', {:controller => "home", :action => "index"} %>
+
