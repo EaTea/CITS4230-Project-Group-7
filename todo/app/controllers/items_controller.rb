@@ -81,7 +81,7 @@ class ItemsController < ApplicationController
 		@item.destroy
 
 		respond_to do |format|
-			format.html	{ redirect_to :action => 'index', :list_id => session[:list_id]  }
+			format.html	{ redirect_to :action => 'index', :list_id => session[:list_id], :comp => 'f' }
 			format.xml	{ head :ok }
 		end
 	end
