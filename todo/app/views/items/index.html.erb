@@ -1,10 +1,12 @@
-<h1>Listing items</h1>
+<% @list = List.find(session[:list_id])%>
+
+<h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= @list.name %></h1>
+<td><%= button_to 'Rename ' + @list.name, edit_list_path(@list), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).own%></td>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Due Date</th>
-    <th>Completed</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,14 +16,15 @@
   <tr>
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
-    <td><%= item.completed %></td>
-    <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=	button_to 'Show', item, :method => :get %></td>
+    <td><%= button_to 'Edit', edit_item_path(item), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit and params[:comp] == 'f'%></td>
+    <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete if (Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del and params[:comp] == 'f') %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add%>
+<%= link_to 'See Pending Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 'f'}, :target => 'ui_display' %>
+<%= link_to 'See Completed Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 't'}, :target => 'ui_display' %>
