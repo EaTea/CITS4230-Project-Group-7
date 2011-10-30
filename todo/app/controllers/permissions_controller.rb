@@ -2,7 +2,9 @@ class PermissionsController < ApplicationController
 	# GET /permissions
 	# GET /permissions.xml
 	def index
-		@permissions = Permission.all
+		@permissions = params[:list_id] ? Permission.find_all_by_list_id(params[:list_id]) : Permission.all
+		puts params[:list_id]
+#@permissions = Permission.all
 
 		respond_to do |format|
 			format.html # index.html.erb

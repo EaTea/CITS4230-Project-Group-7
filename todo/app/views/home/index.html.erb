@@ -1,21 +1,23 @@
 <section id="dash">
 	<div class="popup"><a href="#">Log Out</a><div>Are you sure?<%= button_to 'Yes', 'logout', :method => :delete  %></div></div>
+	<div id="edit_profile"><%= link_to "Edit User Profile", edit_user_path(User.find(session[:user_id])) %></div>
 </section>
 <aside id="controls">
 	<div class="popup">
 		<a href="#">Lists</a>
 		<div>
 			<table>
-				<tr>
+				<tr class="list_heading">
 					<th>Name</th>
 					<th></th>
 					<th></th>
 				</tr>
 				<% User.find(session[:user_id]).lists.each do |list_id| %>
-				<tr>
+				<tr class="list_row">
 					<td><%= link_to List.find(list_id).name, {:controller => "items", :action => "index", :list_id => list_id, :comp => 'f' }, :target => 'ui_display' %></td>
 					<td><%= button_to 'Rename', edit_list_path(List.find(list_id)), :method => :get, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
 					<td><%= button_to 'Delete', List.find(list_id), :confirm => 'Are you sure?', :method => :delete, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
+					<td><%= link_to 'Sharing', {:controller => "permissions", :action => "index", :list_id => list_id}, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
 				</tr>
 				<% end %>
 			</table>
