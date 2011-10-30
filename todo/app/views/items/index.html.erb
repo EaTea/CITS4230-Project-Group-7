@@ -1,8 +1,6 @@
 <% @list = List.find(session[:list_id])%>
 
 <h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= @list.name %></h1>
-<td><%= button_to 'Rename ' + @list.name, edit_list_path(@list), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).own%></td>
-
 <table>
   <tr>
     <th>Name</th>
@@ -17,8 +15,8 @@
     <td><%= item.name %></td>
     <td><%= item.due_date %></td>
     <td><%= button_to 'Show', item, :method => :get %></td>
-    <td><%= button_to 'Edit', edit_item_path(item), :method => :get if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit and params[:comp] == 'f'%></td>
-    <td><%= button_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete if (Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del and params[:comp] == 'f') %></td>
+    <td><%= button_to 'Edit', edit_item_path(item), :method => :get, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit and params[:comp] == 'f')%></td>
+    <td><%= button_to 'Delete', item, :confirm => 'Are you sure?', :method => :delete, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del and params[:comp] == 'f') %></td>
   </tr>
 <% end %>
 </table>
