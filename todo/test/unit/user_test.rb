@@ -9,14 +9,11 @@ class UserTest < ActiveSupport::TestCase
 		assert user.errors[:email].any?
   end
   
-  test "password length check" do
+  test "passwords" do
     user = User.new
-    user.password < 6
-    assert user.invalid? 
-    assert_equal "Must be 6 or more characters",
-      user.error[:password].join('; ')
-    
-    user.password >= 6
-    assert user.valid?
+    assert !user.password.empty?
+    assert user.password.length > 5
+    assert_match /(0-9)/, user.password
+    assert_not_equal 'password', user.password.downcase   
   end
 end

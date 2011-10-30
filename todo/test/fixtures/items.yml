@@ -1,15 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  description: MyString
-  due_date: 2011-10-23
+items_one:
+  id: 1
+  name: 'Buy Cooking Oil'
+  description: 'Buying olive oil is far better than other refined oil from health point of view'
+  due_date: 2011-10-30
   completed: false
   list_id: 1
 
-two:
-  name: MyString
-  description: MyString
-  due_date: 2011-10-23
+items_two:
+  id: 2
+  name: 'Buy 2 scotch fingers'
+  description: 'Coles scotch fingers are far better'
+  due_date: 2011-10-30
   completed: false
   list_id: 1
