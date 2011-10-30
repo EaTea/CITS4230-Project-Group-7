@@ -4,7 +4,8 @@ class ItemsController < ApplicationController
 	# GET /items.xml
 	def index
 		session[:list_id] = params[:list_id]
-		@items = List.find(params[:list_id]).items
+		@find_completed = params[:comp]
+		@items = List.find(params[:list_id]).items.find_all_by_completed(@find_completed)
 
 		respond_to do |format|
 			format.html # index.html.erb
