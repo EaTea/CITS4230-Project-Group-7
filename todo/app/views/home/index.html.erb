@@ -17,7 +17,7 @@
 					<td><%= link_to List.find(list_id).name, {:controller => "items", :action => "index", :list_id => list_id, :comp => 'f' }, :target => 'ui_display' %></td>
 					<td><%= button_to 'Rename', edit_list_path(List.find(list_id)), :method => :get, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
 					<td><%= button_to 'Delete', List.find(list_id), :confirm => 'Are you sure?', :method => :delete, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
-					<td><%= link_to 'Sharing', {:controller => "permissions", :action => "index", :list_id => list_id}, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
+					<td><%= button_to 'Sharing', {:controller => "permissions", :action => "index", :list_id => list_id},  :method => :get, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
 				</tr>
 				<% end %>
 			</table>
