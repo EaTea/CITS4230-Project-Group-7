@@ -1,5 +1,4 @@
 class ListsController < ApplicationController
-	layout 'embed'
 	# GET /lists
 	# GET /lists.xml
 	def index
