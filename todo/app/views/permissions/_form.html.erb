@@ -27,14 +27,10 @@
 		<%= f.label :own %><br />
 		<%= f.check_box :own %>
 	</div>
-	<div class="field">
-		<%= f.label :user_id %><br />
-		<%= f.text_field :user_id %>
-	</div>
-	<div class="field">
-		<%= f.label :list_id %><br />
-		<%= f.text_field :list_id %>
-	</div>
+
+	<%= f.text_field :user_id, :type => 'hidden', :value => params[:new_permission_user_id] %>
+	<%= f.text_field :list_id, :type => 'hidden', :value => session[:list_id] %>
+
 	<div class="actions">
 		<%= f.submit %>
 	</div>
