@@ -1,35 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Add:</b>
+  <b>User:</b>
+  <%= @permission.user.username %>
+</p>
+
+<p>
+  <b>Adding Items:</b>
   <%= @permission.add %>
 </p>
 
 <p>
-  <b>Edit:</b>
+  <b>Editing Existing Items:</b>
   <%= @permission.edit %>
 </p>
 
 <p>
-  <b>Delete:</b>
+  <b>Deleting Existing Items:</b>
   <%= @permission.del %>
 </p>
 
 <p>
-  <b>Own:</b>
+  <b>Owns this list:</b>
   <%= @permission.own %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @permission.user_id %>
-</p>
-
-<p>
-  <b>List:</b>
-  <%= @permission.list_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_permission_path(@permission) %> |
-<%= link_to 'Back', permissions_path %>
+<%= button_to 'Change ' + @permission.user.username + '\'s permissions', edit_permission_path(@permission.id), :method => :get %>
+<%= button_to 'Remove ' + @permission.user.username + '\'s permissions', @permission, :method => :delete, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).own)%>
+<%= button_to 'Back', {:controller => "permissions", :action => "index"}, :target => 'ui_display' %>

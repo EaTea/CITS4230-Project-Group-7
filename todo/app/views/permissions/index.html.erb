@@ -2,28 +2,14 @@
 
 <table>
   <tr>
-    <th>Add</th>
-    <th>Edit</th>
-    <th>Delete</th>
-    <th>Own</th>
-    <th>User</th>
-    <th>List</th>
-    <th></th>
-    <th></th>
+		<th>User</th>
     <th></th>
   </tr>
 
 <% @permissions.each do |permission| %>
   <tr>
-    <td><%= permission.add %></td>
-    <td><%= permission.edit %></td>
-    <td><%= permission.del %></td>
-    <td><%= permission.own %></td>
-    <td><%= permission.user_id %></td>
-    <td><%= permission.list_id %></td>
-    <td><%= link_to 'Show', permission %></td>
-    <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
-    <td><%= button_to 'Destroy', permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= permission.user.username %></td>
+    <td><%= link_to 'See Permissions', permission %></td>
   </tr>
 <% end %>
 </table>
