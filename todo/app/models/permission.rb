@@ -1,5 +1,4 @@
 class Permission < ActiveRecord::Base
-	
 	validates :user_id, :presence => true, :uniqueness => { :scope => :list_id}
 	validates :list_id, :presence => true, :uniqueness => { :scope => :user_id}
 	validates :user, :presence => { :message => "should be an existing user" }
