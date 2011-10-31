@@ -24,5 +24,4 @@
 <br />
 
 <%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add%>
-<%= link_to 'See Pending Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 'f'}, :target => 'ui_display' %>
-<%= link_to 'See Completed Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 't'}, :target => 'ui_display' %>
+<%= link_to 'See ' + (params[:comp] == 't' ? 'Pending' : 'Completed') + ' Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => (params[:comp] == 't' ? 'f' : 't')}, :target => 'ui_display' %>
