@@ -1,28 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>User:</b>
-  <%= @permission.user.username %>
+	<b>User:</b>
+	<%= @permission.user.username %>
 </p>
 
 <p>
-  <b>Adding Items:</b>
-  <%= @permission.add %>
+	<b>Adding Items:</b>
+	<%= @permission.add %>
 </p>
 
 <p>
-  <b>Editing Existing Items:</b>
-  <%= @permission.edit %>
+	<b>Editing Existing Items:</b>
+	<%= @permission.edit %>
 </p>
 
 <p>
-  <b>Deleting Existing Items:</b>
-  <%= @permission.del %>
+	<b>Deleting Existing Items:</b>
+	<%= @permission.del %>
 </p>
 
 <p>
-  <b>Owns this list:</b>
-  <%= @permission.own %>
+	<b>Owns this list:</b>
+	<%= @permission.own %>
 </p>
 
 <%= button_to 'Change ' + @permission.user.username + '\'s permissions', edit_permission_path(@permission.id), :method => :get %>

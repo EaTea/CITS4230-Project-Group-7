@@ -6,22 +6,22 @@
 <%= link_to 'See ' + (params[:comp] == 't' ? 'Pending' : 'Completed') + ' Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => (params[:comp] == 't' ? 'f' : 't')}, :target => 'ui_display' %>
 <%= link_to 'Share this list', {:controller => "permissions", :action => "index", :list_id => session[:list_id]}, :target => 'ui_display' %>
 <table>
-  <tr class="item_headings">
-    <th>Name</th>
-    <th>Due Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+	<tr class="item_headings">
+		<th>Name</th>
+		<th>Due Date</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
 
 <% @items.each do |item| %>
-  <tr class="item_row">
-    <td><%= item.name %></td>
-    <td><%= item.due_date %></td>
-    <td><%= button_to 'Show', item, :method => :get %></td>
-    <td><%= button_to 'Edit', edit_item_path(item), :method => :get, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit and params[:comp] == 'f')%></td>
-    <td><%= button_to 'Delete', item, :confirm => 'Are you sure?', :method => :delete, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del) %></td>
-  </tr>
+	<tr class="item_row">
+		<td><%= item.name %></td>
+		<td><%= item.due_date %></td>
+		<td><%= button_to 'Show', item, :method => :get %></td>
+		<td><%= button_to 'Edit', edit_item_path(item), :method => :get, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit and params[:comp] == 'f')%></td>
+		<td><%= button_to 'Delete', item, :confirm => 'Are you sure?', :method => :delete, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del) %></td>
+	</tr>
 <% end %>
 </table>
 

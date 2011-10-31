@@ -1,6 +1,6 @@
 class PermissionsController < ApplicationController
 	layout 'embed'
-	
+
 	# GET /permissions
 	# GET /permissions.xml
 	def index

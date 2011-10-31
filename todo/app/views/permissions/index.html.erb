@@ -1,16 +1,16 @@
 <h1>Listing permissions</h1>
 
 <table>
-  <tr>
+	<tr>
 		<th>User</th>
-    <th></th>
-  </tr>
+		<th></th>
+	</tr>
 
 <% @permissions.each do |permission| %>
-  <tr>
-    <td><%= permission.user.username %></td>
-    <td><%= link_to 'See Permissions', permission %></td>
-  </tr>
+	<tr>
+		<td><%= permission.user.username %></td>
+		<td><%= link_to 'See Permissions', permission %></td>
+	</tr>
 <% end %>
 </table>
 
