@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Username:</b>
-  <%= @user.username %>
+	<b>Username:</b>
+	<%= @user.username %>
+</p>
+
+<% if @is_admin %>
+<p>
+	<b>Password:</b>
+	<%= @user.password %>
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
+	<b>Salt:</b>
+	<%= @user.salt %>
 </p>
+<% end %>
 
 <p>
-  <b>Salt:</b>
-  <%= @user.salt %>
+	<b>Email:</b>
+	<%= @user.email %>
 </p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

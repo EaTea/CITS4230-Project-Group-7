@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	skip_filter :authorize, :only => [:new, :create]
-	before_filter :admin, :except => [:new, :create]
+	before_filter :admin, :except => [:new, :create, :show, :update]
 	# GET /users
 	# GET /users.xml
 	def index
@@ -15,7 +15,8 @@ class UsersController < ApplicationController
 	# GET /users/1
 	# GET /users/1.xml
 	def show
-		@user = User.find(params[:id])
+		@is_admin = is_admin?(session[:user_id])
+		@user = @is_admin ? User.find(params[:id]) : User.find(session[:user_id])
 
 		respond_to do |format|
 			format.html # show.html.erb
@@ -60,15 +61,19 @@ class UsersController < ApplicationController
 	# PUT /users/1
 	# PUT /users/1.xml
 	def update
-		@user = User.find(params[:id])
+		if !is_admin?(session[:user_id]) and session[:user_id] != params[:id]
+			format.html	{ render :action => "show" }
+		else
+			@user = User.find(params[:id])
 
-		respond_to do |format|
-			if @user.update_attributes(params[:user])
-				format.html	{ redirect_to(@user, :notice => 'User was successfully updated.') }
-				format.xml	{ head :ok }
-			else
-				format.html	{ render :action => "edit" }
-				format.xml	{ render :xml => @user.errors, :status => :unprocessable_entity }
+			respond_to do |format|
+				if @user.update_attributes(params[:user])
+					format.html	{ redirect_to(@user, :notice => 'User was successfully updated.') }
+					format.xml	{ head :ok }
+				else
+					format.html	{ render :action => "edit" }
+					format.xml	{ render :xml => @user.errors, :status => :unprocessable_entity }
+				end
 			end
 		end
 	end
