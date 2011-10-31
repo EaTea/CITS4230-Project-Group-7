@@ -3,9 +3,18 @@ class ItemsController < ApplicationController
 	# GET /items
 	# GET /items.xml
 	def index
-		session[:list_id] = params[:list_id]
-		@find_completed = params[:comp]
-		@items = List.find(params[:list_id]).items.find_all_by_completed(@find_completed, :order => 'due_date, name')
+		if params[:list_id] and is_a_number?(params[:list_id])
+			session[:list_id] = params[:list_id]
+		end
+		if !User.find(session[:user_id]).lists.include?(session[:list_id])
+			session[:list_id] = User.find(session[:user_id]).lists[0]
+		end
+		if params[:comp] and ( params[:comp] == 't' or params[:comp] == 'f' )
+			@find_completed = params[:comp]
+		else
+			@find_completed = 'f'
+		end
+		@items = List.find(session[:list_id]).items.find_all_by_completed(@find_completed, :order => 'due_date, name')
 
 		respond_to do |format|
 			format.html # index.html.erb
@@ -81,7 +90,7 @@ class ItemsController < ApplicationController
 		@item.destroy
 
 		respond_to do |format|
-			format.html	{ redirect_to :action => 'index', :list_id => session[:list_id], :comp => 'f' }
+			format.html	{ redirect_to :action => 'index', :comp => 'f' }
 			format.xml	{ head :ok }
 		end
 	end
