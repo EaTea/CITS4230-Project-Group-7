@@ -43,6 +43,7 @@ class UsersController < ApplicationController
 	# POST /users
 	# POST /users.xml
 	def create
+		self.class.layout('embed')
 		@user = User.new(params[:user])
 
 		respond_to do |format|

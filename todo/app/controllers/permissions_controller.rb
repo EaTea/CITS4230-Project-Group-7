@@ -1,8 +1,10 @@
 class PermissionsController < ApplicationController
+	layout 'embed'
+	
 	# GET /permissions
 	# GET /permissions.xml
 	def index
-		@permissions = Permission.all
+		@permissions = (session[:list_id]) ? Permission.find_all_by_list_id(session[:list_id]) : Permission.all
 
 		respond_to do |format|
 			format.html # index.html.erb

@@ -1,6 +1,10 @@
+<section id="dash">
+	<div class="popup"><a href="#">Log Out</a><div>Are you sure?<%= button_to 'Yes', 'logout', :method => :delete  %></div></div>
+	<div id="edit_profile"><%= link_to "Edit User Profile", edit_user_path(User.find(session[:user_id])) %></div>
+</section>
+
 <h1>Editing user</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>

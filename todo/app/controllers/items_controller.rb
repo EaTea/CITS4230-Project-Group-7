@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 	def index
 		session[:list_id] = params[:list_id]
 		@find_completed = params[:comp]
-		@items = List.find(params[:list_id]).items.find_all_by_completed(@find_completed)
+		@items = List.find(params[:list_id]).items.find_all_by_completed(@find_completed, :order => 'due_date, name')
 
 		respond_to do |format|
 			format.html # index.html.erb
@@ -81,7 +81,7 @@ class ItemsController < ApplicationController
 		@item.destroy
 
 		respond_to do |format|
-			format.html	{ redirect_to(items_url) }
+			format.html	{ redirect_to :action => 'index', :list_id => session[:list_id], :comp => 'f' }
 			format.xml	{ head :ok }
 		end
 	end

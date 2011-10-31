@@ -1,5 +1,4 @@
 class ListsController < ApplicationController
-	layout 'embed'
 	# GET /lists
 	# GET /lists.xml
 	def index
@@ -69,7 +68,7 @@ class ListsController < ApplicationController
 
 		respond_to do |format|
 			if @list.update_attributes(params[:list])
-				format.html	{ redirect_to(@list, :notice => 'List was successfully updated.') }
+				format.html	{ redirect_to(root_url) }
 				format.xml	{ head :ok }
 			else
 				format.html	{ render :action => "edit" }
@@ -85,7 +84,7 @@ class ListsController < ApplicationController
 		@list.destroy
 
 		respond_to do |format|
-			format.html	{ redirect_to(lists_url) }
+			format.html	{ redirect_to(root_url) }
 			format.xml	{ head :ok }
 		end
 	end
