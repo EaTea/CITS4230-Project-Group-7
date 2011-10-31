@@ -22,9 +22,10 @@
 	color: #666666;
 }
 #new_user .notice {
-	font-size: 100%;
+	font-size: 120%;
 	font-weight: bold;
-	color: black;
+	color: green;
+	margin-bottom: 8px;
 }
 #new_user .error_explanation {
 	margin: auto;
