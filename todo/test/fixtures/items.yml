@@ -1,6 +1,6 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-items_one:
+one:
   id: 1
   name: 'Buy Cooking Oil'
   description: 'Buying olive oil is far better than other refined oil from health point of view'
@@ -8,7 +8,7 @@ items_one:
   completed: false
   list_id: 1
 
-items_two:
+two:
   id: 2
   name: 'Buy 2 scotch fingers'
   description: 'Coles scotch fingers are far better'

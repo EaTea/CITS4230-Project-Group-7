@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-list_one:
+one:
   id: 1
   name: 'Do Grocery Shopping'
 
-list_two:
+two:
   id: 2
   name: 'Prepare Black Tea'

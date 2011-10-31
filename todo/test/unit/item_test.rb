@@ -14,10 +14,10 @@ class ItemTest < ActiveSupport::TestCase
   
   test "items of todo list" do
     #create a new List object using the name field from first record in the text fixtures/lists.yml 
-    todo_list_items1 = Item.new :name => items(:items_one).name,
-                                :description => items(:items_one).description,
-                                :due_date => items(:items_one).due_date,
-                                :list_id => items(:items_one).list_id
+    todo_list_items1 = Item.new :name => items(:one).name,
+                                :description => items(:one).description,
+                                :due_date => items(:one).due_date,
+                                :list_id => items(:one).list_id
 
     #This assertion test that saving the book object is successful: Test the ability to create DB record
     assert todo_list_items1.save

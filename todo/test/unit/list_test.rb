@@ -15,7 +15,7 @@ class ListTest < ActiveSupport::TestCase
 
    test "todo list" do
     #create a new List object using the name field from first record in the text fixtures/lists.yml 
-    todo_list1 = List.new :name => lists(:list_one).name
+    todo_list1 = List.new :name => lists(:one).name
 
     #This assertion test that saving the book object is successful: Test the ability to create DB record
     assert todo_list1.save
