@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @permission %> |
-<%= link_to 'Back', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => 'f'}, :target => 'ui_display' %>
+<%= button_to 'Back', @permission, :method => :get %>
+

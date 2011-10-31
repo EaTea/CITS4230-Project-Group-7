@@ -9,6 +9,10 @@ Todo::Application.routes.draw do
 		post 'assign_list_id' => :assign_list_id
 	end
 
+	controller :application do
+		get 'search_for_user' => :search_for_user
+	end
+
   resources :items
 
   resources :lists
