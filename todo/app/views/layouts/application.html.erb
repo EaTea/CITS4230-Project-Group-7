@@ -30,8 +30,8 @@
 		</div>
 	</header>
 	<!-- page body -->
-	<!-- all of this should only run iff a user is currently logged in -->
 	<section id="main">
+		<!-- the dash board should only render iff a user is currently logged in -->
 		<% if session[:user_id]%>
 		<section id="dash">
 			<div class="popup">
@@ -41,7 +41,9 @@
 			<div id="edit_profile"><%= link_to "Edit User Profile", edit_user_path(User.find(session[:user_id])) %></div>
 		</section>
 		<% end %>
+		<div>
 <%= yield %>
+		</div>
 	</section>
 	<!-- footer -->
 	<footer>
