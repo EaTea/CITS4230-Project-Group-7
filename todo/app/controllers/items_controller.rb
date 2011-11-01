@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 	# GET /items
 	# GET /items.xml
 	def index
-		if params[:list_id] and is_a_number?(params[:list_id])
+		if params[:list_id] and (params[:list_id].is_a? Integer)
 			session[:list_id] = params[:list_id]
 		end
 		if !User.find(session[:user_id]).lists.include?(session[:list_id])
