@@ -17,15 +17,11 @@
 	</div>
 	<div class="field">
 		<%= f.label :password %><br />
-		<%= f.text_field :password %>
+		<%= f.password_field :password, :value => "" %>
 	</div>
 	<div class="field">
-		<%= f.label :password_confirmation %><br />
-		<%= f.text_field :password_confirmation %>
-	</div>
-	<div class="field">
-		<%= f.label :salt %><br />
-		<%= f.text_field :salt %>
+		<%= f.label :new_password_confirmation %><br />
+		<%= f.password_field :password_confirmation %>
 	</div>
 	<div class="field">
 		<%= f.label :email %><br />
@@ -33,7 +29,7 @@
 	</div>
 	<div class="field">
 		<%= f.label :email_confirmation %><br />
-		<%= f.text_field :email_confirmation %>
+		<%= f.text_field :email_confirmation, :value => @user.email %>
 	</div>
 	<div class="actions">
 		<%= f.submit %>
