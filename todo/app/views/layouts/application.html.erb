@@ -30,7 +30,9 @@
 		</div>
 	</header>
 	<!-- page body -->
+	<!-- all of this should only run iff a user is currently logged in -->
 	<section id="main">
+		<% if session[:user_id]%>
 		<section id="dash">
 			<div class="popup">
 				<a href="#">Log Out</a>
@@ -38,6 +40,7 @@
 			</div>
 			<div id="edit_profile"><%= link_to "Edit User Profile", edit_user_path(User.find(session[:user_id])) %></div>
 		</section>
+		<% end %>
 <%= yield %>
 	</section>
 	<!-- footer -->
