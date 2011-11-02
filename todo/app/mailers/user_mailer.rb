@@ -16,7 +16,6 @@ class UserMailer < ActionMailer::Base
    def todo_notification(user) 
     list_items_due = self.fetch_users_due_items(user)
 		num_items_due = list_items_due.size
-		puts num_items_due
 		if num_items_due
 			email_subject = "ForgetMeNot: You have " + num_items_due.to_s + " due!"
 	   	mail(:to => "#{user.username} <#{user.email}>", :subject => email_subject)
