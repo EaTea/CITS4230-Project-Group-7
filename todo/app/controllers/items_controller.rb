@@ -3,10 +3,10 @@ class ItemsController < ApplicationController
 	# GET /items
 	# GET /items.xml
 	def index
-		if params[:list_id] and (params[:list_id].is_a? Integer)
+		if params[:list_id] and (params[:list_id].to_i.is_a? Integer)
 			session[:list_id] = params[:list_id]
 		end
-		if !User.find(session[:user_id]).lists.include?(session[:list_id])
+		if !(User.find(session[:user_id]).lists.include?(List.find_by_id(session[:list_id])))
 			session[:list_id] = User.find(session[:user_id]).lists[0].id
 		end
 		if params[:comp] and ( params[:comp] == 't' or params[:comp] == 'f' )
