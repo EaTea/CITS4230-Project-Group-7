@@ -1,7 +1,7 @@
 		<section id="dash">
 			<div class="popup">
 				<a href="#">Log Out</a>
-				<div>Are you sure?<%= button_to 'Yes', 'logout', :method => :delete %></div>
+				<div>Are you sure?<%= button_to 'Yes', logout_url, :method => :delete %></div>
 			</div>
 			<div id="edit_profile"><%= link_to 'Edit User Profile', edit_user_path(User.find(session[:user_id])) %></div>
 		</section>
