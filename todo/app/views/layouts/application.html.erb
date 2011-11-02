@@ -31,19 +31,7 @@
 	</header>
 	<!-- page body -->
 	<section id="main">
-		<!-- the dash board should only render iff a user is currently logged in -->
-		<% if session[:user_id]%>
-		<section id="dash">
-			<div class="popup">
-				<a href="#">Log Out</a>
-				<div>Are you sure?<%= button_to 'Yes', 'logout', :method => :delete  %></div>
-			</div>
-			<div id="edit_profile"><%= link_to "Edit User Profile", edit_user_path(User.find(session[:user_id])) %></div>
-		</section>
-		<% end %>
-		<div>
 <%= yield %>
-		</div>
 	</section>
 	<!-- footer -->
 	<footer>
