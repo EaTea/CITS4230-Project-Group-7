@@ -8,7 +8,7 @@
 		</ul>
 	</section>
 	<section class="doc">
-		<h1>Lists</h1>
+		<h1>Lists:</h1>
 		<table class="control_table">
 			<% @list_ids = User.find(session[:user_id]).lists.sort!{|l1, l2| l1.name.upcase <=> l2.name.upcase} %>
 			<colgroup span="1"></colgroup>
