@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
 		true if Integer(object) rescue false
 	end
 
+	def email_all_users
+		User.all.each do |user|
+			UserMailer.todo_notification(user).deliver
+		end
+	end
+
 	protected
 
 		def authorize
