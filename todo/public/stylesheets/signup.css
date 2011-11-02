@@ -1,12 +1,6 @@
 /* User Registration Form */
 /* ========================================================================== */
 
-#new_user {
-	border: 2px solid #b7ddf2;
-	background: #ebf4fb;
-	margin: 0 auto;
-	padding: 12px;
-}
 #new_user header {
 	padding-bottom: 8px;
 	border-bottom: 1px solid #b7ddf2;
@@ -26,62 +20,4 @@
 	font-weight: bold;
 	color: green;
 	margin-bottom: 8px;
-}
-#new_user .error_explanation {
-	margin: auto;
-	width: 90%;
-	border: 2px solid red;
-	margin-bottom: 16px;
-}
-#new_user .error_explanation h2 {
-	text-align: left;
-	font-weight: bold;
-	padding: 5px 5px 5px 15px;
-	background-color: #c00;
-	color: #fff;
-}
-#new_user .error_explanation ul {
-	background-color: #f0f0f0;
-	padding-left: 8%;
-	list-style-position: inside;
-	list-style: square;
-}
-#new_user .field {
-	display: table;
-	width: 100%;
-	padding-bottom: 12px;
-}
-#new_user label {
-	display: table-cell;
-	padding-right: 4%;
-	width: 44%;
-	font-weight: bold;
-	text-align: right;
-}
-#new_user label small {
-	display: block;
-	color: #736f6e;
-	font-size: 90%;
-	font-weight: normal;
-}
-#new_user .field>div {
-	display: table-cell;
-	width: 52%;
-	vertical-align: middle;
-}
-#new_user .field input {
-	padding: 4px 2px;
-	border: solid 1px #aacfe4;
-	font-size: 100%;
-}
-#new_user input[type=submit] {
-	margin-left: 48%;
-	width: 120px;
-	height: 32px;
-	background-color: #666666;
-	text-align: center;
-	line-height: 31px;
-	color: white;
-	font-size: 100%;
-	font-weight: bold;
 }

@@ -1,3 +1,142 @@
-#dash div.popup div, #dash div.popup form {
+/* General */
+/* ========================================================================== */
+
+#main>div {
+	display: table;
+	width: 100%;
+	border-top: 2px solid black;
+}
+#controls {
+	display: table-cell;
+	width: 32%;
+	border-right: 1px solid black;
+}
+#views {
+	display: table-cell;
+	width: 68%;
+	height: 600px;
+}
+#views iframe {
+	width: 100%;
+	height: 100%;
+}
+.error_explanation {
+	margin: auto;
+	width: 90%;
+	border: 2px solid red;
+	margin-bottom: 16px;
+}
+.error_explanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	background-color: #c00;
+	color: #fff;
+}
+.error_explanation ul {
+	background-color: #f0f0f0;
+	padding-left: 8%;
+	list-style-position: inside;
+	list-style: square;
+}
+
+.field {
+	display: table;
+	width: 100%;
+	padding-bottom: 12px;
+}
+.field label {
+	display: table-cell;
+	padding-right: 4%;
+	width: 42%;
+	font-weight: bold;
+	text-align: right;
+}
+.field label small {
+	display: block;
+	color: #736f6e;
+	font-size: 90%;
+	font-weight: normal;
+}
+.field>div {
+	display: table-cell;
+	width: 54%;
+	vertical-align: middle;
+}
+.field input {
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	font-size: 100%;
+}
+.iform {
+	border: 2px solid #b7ddf2;
+	background: #ebf4fb;
+	margin: 0 auto;
+	padding: 12px;
+}
+.iform input[type=submit] {
+	margin-left: 48%;
+	width: 120px;
+	height: 32px;
+	background-color: #666666;
+	text-align: center;
+	line-height: 31px;
+	color: white;
+	font-size: 100%;
+	font-weight: bold;
+}
+.control_table {
+	width: 100%;
+	padding: 10px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.control_table tbody tr {
+	width: 96%;
+	border-bottom: 1px dotted black;
+	padding: 8px 2%;
+}
+.control_table tbody form {
+	text-align: center;
+}
+.control_table tbody tr:nth-of-type(even) {
+	background-color: #ddddff;
+}
+.control_table tbody tr:nth-of-type(odd) {
+	background-color: #ebf4fb;
+}
+.control_table tbody tr:hover {
+	background-color: #99ccff;
+}
+.control_table thead, .control_table tfoot {
+	font-weight: bold;
+	color: brown;
+}
+.control_table thead {
+	border-bottom: 1px solid black;
+}
+.control_table tfoot {
+	border-top: 1px solid black;
+	text-align: right;
+}
+
+/* Dash */
+/* ========================================================================== */
+
+#dash {
+	text-align: right;
+}
+#dash .popup form, #dash .popup form div {
 	display: inline;
 }
+
+/* Controls */
+/* ========================================================================== */
+
+
+/* Main View */
+/* ========================================================================== */
