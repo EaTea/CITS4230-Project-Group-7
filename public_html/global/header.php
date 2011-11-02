@@ -41,7 +41,7 @@
 		</div>
 	</header>
 	<!-- top navbar -->
-	<nav id="top_bar">
+	<nav id="top_bar" class="menu">
 		<div>
 			<ul id="main_nav_list" data-cp="<?php echo $current_path; ?>">
 				<li><a href="<?php echo $rel_path; ?>" title="Home">Home</a></li>

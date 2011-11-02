@@ -151,6 +151,55 @@ ul.logo li {
 .popup>div:hover, .popup>a:hover ~ div, .popup>a:focus ~ div {
 	visibility: visible;
 }
+.menu {
+	color: #fff;
+	background: #2e3436 url("images/top_bar-bg.png") top repeat-x;
+	padding: 8px 0;
+	font-size: 120%;
+	line-height: normal;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0 6px;
+}
+.menu ul li {
+	display: inline;
+	margin: 0 6px 0 0;
+}
+.menu a {
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 8px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	outline: 0;
+	-webkit-transition: background 100ms linear;
+	-moz-transition: background 100ms linear;
+	-o-transition: background 100ms linear;
+	transition: background 100ms linear;
+	text-shadow: 0 1px 0 #000;
+}
+.menu a:hover {
+	background-color: #64696d;
+	background-color: rgba(100%, 100%, 100%, 0.2);
+}
+.menu a:focus {
+	background-color: rgba(100%, 100%, 100%, 0.15);
+}
+.menu a:active, .menu li.current-menu-item a {
+	background: #1c2021 url("images/top_bar-item-bg.png") top repeat-x;
+	-moz-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+	box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+}
 
 /* Accessibility Access */
 /* ========================================================================== */
@@ -230,20 +279,9 @@ ul.logo li {
 
 #top_bar {
 	display: table;
-	color: #fff;
-	background: #2e3436 url("images/top_bar-bg.png") top repeat-x;
-	padding: 8px 0;
 	margin: 12px auto 0;
 	max-width: 960px;
 	width: 960px;
-	font-size: 120%;
-	line-height: normal;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 #top_bar>div {
 	display: table-cell;
@@ -251,42 +289,6 @@ ul.logo li {
 }
 #top_bar .right {
 	text-align: right;
-}
-#top_bar ul {
-	list-style: none;
-	margin: 0;
-	padding: 0 6px;
-}
-#top_bar ul li {
-	display: inline;
-	margin: 0 6px 0 0;
-}
-#top_bar a {
-	color: #fff;
-	text-decoration: none;
-	padding: 4px 8px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	outline: 0;
-	-webkit-transition: background 100ms linear;
-	-moz-transition: background 100ms linear;
-	-o-transition: background 100ms linear;
-	transition: background 100ms linear;
-	text-shadow: 0 1px 0 #000;
-}
-#top_bar a:hover {
-	background-color: #64696d;
-	background-color: rgba(100%, 100%, 100%, 0.2);
-}
-#top_bar a:focus {
-	background-color: rgba(100%, 100%, 100%, 0.15);
-}
-#top_bar a:active, #top_bar li.current-menu-item a {
-	background: #1c2021 url("images/top_bar-item-bg.png") top repeat-x;
-	-moz-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
-	-webkit-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
-	box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
 }
 #top_bar input {
 	width: 32%;
