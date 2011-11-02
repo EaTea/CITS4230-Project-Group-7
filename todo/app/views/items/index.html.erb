@@ -1,5 +1,5 @@
 <% @list = List.find(session[:list_id])%>
-<section class="doc">
+<div class="doc">
 <h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= @list.name %></h1>
 
 <section class="embed_control_panel">
@@ -37,5 +37,5 @@
 <% end %>
 </table>
 
-</section>
+</div>
 <br />

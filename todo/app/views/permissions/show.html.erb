@@ -1,3 +1,5 @@
+<div class="doc">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -28,3 +30,4 @@
 <%= button_to 'Change ' + @permission.user.username + '\'s permissions', edit_permission_path(@permission.id), :method => :get %>
 <%= button_to 'Remove ' + @permission.user.username + '\'s permissions', @permission, :method => :delete, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).own)%>
 <%= button_to 'Back', {:controller => "permissions", :action => "index"}, :method => :get, :target => 'ui_display' %>
+</div>

@@ -1,13 +1,15 @@
-<h1>Listing permissions</h1>
+<div class="doc">
 
-<table>
-	<tr>
+<h1>Users who can access <%= List.find_by_id(session[:list_id]).name%> </h1>
+
+<table class="tlist">
+	<tr class="tlist_headings">
 		<th>User</th>
 		<th></th>
 	</tr>
 
 <% @permissions.each do |permission| %>
-	<tr>
+	<tr class="tlist_row">
 		<td><%= permission.user.username %></td>
 		<td><%= link_to 'See Permissions', permission %></td>
 	</tr>
@@ -17,3 +19,4 @@
 <br />
 
 <%= link_to 'Add a new user', new_permission_path %>
+</div>

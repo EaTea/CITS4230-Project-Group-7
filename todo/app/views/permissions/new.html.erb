@@ -1,3 +1,5 @@
+<div class="doc">
+
 <h1>Create a new permission</h1>
 
 <% if (!params[:new_permission_user_id] or params[:already_exists]) and params[:not_initial_run]%>
@@ -25,3 +27,4 @@
 <% end %>
 
 <%= button_to 'Back', {:controller => "permissions", :action => "index"}, :method => :get, :target => 'ui_display' %>
+</div>
