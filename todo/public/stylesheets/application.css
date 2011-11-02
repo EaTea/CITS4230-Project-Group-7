@@ -135,7 +135,7 @@
 
 #controls {
 	display: table-cell;
-	width: 32%;
+	width: 20%;
 	border-right: 1px solid black;
 	vertical-align: top;
 	line-height: 260%;
@@ -146,7 +146,7 @@
 
 #views {
 	display: table-cell;
-	width: 68%;
+	width: 80%;
 	padding-left: 2%;
 	height: 600px;
 }
