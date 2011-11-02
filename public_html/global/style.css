@@ -134,6 +134,46 @@ ul.logo li {
 	color: brown;
 	vertical-align: middle;
 }
+
+table.tlist {
+	width:inherit;
+	max-width:inherit;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	padding:10px;
+	overflow: hidden;
+}
+.tlist tr {
+	width: 96%;
+	border-bottom: 1px dotted black;
+	padding: 8px 2%;
+}
+.tlist tr td, .tlist tr th {
+	/*width: 20%;
+	max-width: 20%;*/
+}
+.tlist tr:last-of-type {
+	border-bottom: 0;
+}
+.tlist tr:nth-of-type(even) {
+	background-color: #ddddff;
+}
+.tlist tr:nth-of-type(odd) {
+	background-color: #ebf4fb;
+}
+.tlist tr:hover {
+	background-color: #99ccff;
+}
+.tlist tr.tlist_headings {
+	padding-right: 16px;
+	color: brown;
+	vertical-align: middle;
+}
+
 .popup>div {
 	border: 12px solid rgba(0,0,0,0.6);
 	padding: 4px;
@@ -228,14 +268,11 @@ ul.logo li {
 /* Top Bar */
 /* ========================================================================== */
 
-#top_bar {
+#top_bar, .embed_control_panel {
 	display: table;
 	color: #fff;
 	background: #2e3436 url("images/top_bar-bg.png") top repeat-x;
 	padding: 8px 0;
-	margin: 12px auto 0;
-	max-width: 960px;
-	width: 960px;
 	font-size: 120%;
 	line-height: normal;
 	-moz-border-radius: 6px;
@@ -245,6 +282,16 @@ ul.logo li {
 	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+.embed_control_panel {
+	width: 512px;
+	max-width: 512px;
+	margin: 12px 0;
+}
+#top_bar{
+	margin: 12px auto 0;
+	width: 960px;
+	max-width: 960px;
+}
 #top_bar>div {
 	display: table-cell;
 	width: 50%;
@@ -252,16 +299,16 @@ ul.logo li {
 #top_bar .right {
 	text-align: right;
 }
-#top_bar ul {
+#top_bar ul, .menu_bar ul {
 	list-style: none;
 	margin: 0;
 	padding: 0 6px;
 }
-#top_bar ul li {
+#top_bar ul li, .menu_bar ul li {
 	display: inline;
 	margin: 0 6px 0 0;
 }
-#top_bar a {
+#top_bar a, .menu_bar a {
 	color: #fff;
 	text-decoration: none;
 	padding: 4px 8px;
@@ -275,14 +322,14 @@ ul.logo li {
 	transition: background 100ms linear;
 	text-shadow: 0 1px 0 #000;
 }
-#top_bar a:hover {
+#top_bar a:hover, .menu_bar a:hover {
 	background-color: #64696d;
 	background-color: rgba(100%, 100%, 100%, 0.2);
 }
-#top_bar a:focus {
+#top_bar a:focus, .menu_bar a:focus {
 	background-color: rgba(100%, 100%, 100%, 0.15);
 }
-#top_bar a:active, #top_bar li.current-menu-item a {
+#top_bar a:active, #top_bar li.current-menu-item a, .menu_bar a:active {
 	background: #1c2021 url("images/top_bar-item-bg.png") top repeat-x;
 	-moz-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
 	-webkit-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
@@ -402,4 +449,28 @@ body>footer a {
 }
 #validators a {
 	target-name: new;
+}
+
+
+/* Embed View */
+/* ========================================================================== */
+#embed_view {
+	width: 720px;
+	max-width:720px;
+	height:512px;
+}
+
+#embed_view #ui_display {
+  width: 80%;
+	height:inherit;
+	float:left;
+}
+
+/* Embed View */
+/* ========================================================================== */
+#controls {
+	display:block;
+	padding-top: 20px;
+	float:left;
+	margin:20px;
 }

@@ -1,12 +1,24 @@
 <% @list = List.find(session[:list_id])%>
-
+<section class="doc">
 <h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= @list.name %></h1>
 
-<%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add%>
-<%= link_to 'See ' + (params[:comp] == 't' ? 'Pending' : 'Completed') + ' Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => (params[:comp] == 't' ? 'f' : 't')}, :target => 'ui_display' %>
-<%= link_to 'Share this list', {:controller => "permissions", :action => "index", :list_id => session[:list_id]}, :target => 'ui_display' %>
-<table>
-	<tr class="item_headings">
+<section class="embed_control_panel">
+	<menu class="menu_bar">
+		<ul>
+			<li>
+				<%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add%>
+			</li>
+			<li>
+				<%= link_to 'See ' + (params[:comp] == 't' ? 'Pending' : 'Completed') + ' Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => (params[:comp] == 't' ? 'f' : 't')}, :target => 'ui_display' %>
+			</li>
+			<li>
+				<%= link_to 'Share this list', {:controller => "permissions", :action => "index", :list_id => session[:list_id]}, :target => 'ui_display' %>
+			</li>
+		</ul>
+	</menu>
+</section>
+<table class="tlist">
+	<tr class="tlist_headings">
 		<th>Name</th>
 		<th>Due Date</th>
 		<th></th>
@@ -15,7 +27,7 @@
 	</tr>
 
 <% @items.each do |item| %>
-	<tr class="item_row">
+	<tr class="tlist_row">
 		<td><%= item.name %></td>
 		<td><%= item.due_date %></td>
 		<td><%= button_to 'Show', item, :method => :get %></td>
@@ -25,4 +37,5 @@
 <% end %>
 </table>
 
+</section>
 <br />
