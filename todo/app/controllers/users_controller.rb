@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	skip_filter :authorize, :only => [:new, :create]
-	before_filter :admin, :except => [:new, :create, :show, :update]
+	before_filter :admin, :except => [:new, :create, :show, :update, :edit]
 	# GET /users
 	# GET /users.xml
 	def index
@@ -38,7 +38,8 @@ class UsersController < ApplicationController
 
 	# GET /users/1/edit
 	def edit
-		@user = User.find(params[:id])
+		@is_admin = is_admin?(session[:user_id])
+		@user = @is_admin ? User.find(params[:id]) : User.find(session[:user_id])
 	end
 
 	# POST /users
