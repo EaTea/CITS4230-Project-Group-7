@@ -1,7 +1,7 @@
 <%= form_for(@permission) do |f| %>
 	<% if @permission.errors.any? %>
-		<div id="error_explanation">
-			<h2><%= pluralize(@permission.errors.count, "error") %> prohibited this permission from being saved:</h2>
+		<div class="error_explanation">
+			<h2><%= pluralize(@permission.errors.count, "error") %> encountered:</h2>
 
 			<ul class="logo">
 			<% @permission.errors.full_messages.each do |msg| %>
