@@ -49,7 +49,7 @@ class PermissionsController < ApplicationController
 				format.html	{ redirect_to(@permission, :notice => 'Permission was successfully created.') }
 				format.xml	{ render :xml => @permission, :status => :created, :location => @permission }
 			else
-				format.html {redirect_to :action => 'new', :new_permission_user_id => @permission.user_id, :not_initial_run => '1', :already_exists => false }
+				format.html	{ redirect_to :action => 'new', :new_permission_user_id => @permission.user_id, :not_initial_run => '1', :already_exists => false }
 				format.xml	{ render :xml => @permission.errors, :status => :unprocessable_entity }
 			end
 		end
