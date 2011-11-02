@@ -11,8 +11,10 @@ class Item < ActiveRecord::Base
 	validates :list, :presence => { :message => "must be a valid list" }
 
 	def is_later_than_today
-		unless due_date >= Date.today
-			errors[:due_date] << ("must be at a future date")
+		if due_date
+			unless due_date >= Date.today
+				errors[:due_date] << ("must be at a future date")
+			end
 		end
 	end
 end
