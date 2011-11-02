@@ -3,7 +3,7 @@
 		<div class="error_explanation">
 			<h2><%= pluralize(@item.errors.count, "error") %> encountered:</h2>
 
-			<ul>
+			<ul class="logo">
 			<% @item.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 			<% end %>
