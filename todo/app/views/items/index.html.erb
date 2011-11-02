@@ -1,28 +1,40 @@
-<% @list = List.find(session[:list_id])%>
+<div class="doc">
+<h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= List.find(session[:list_id]).name %></h1>
 
-<h1><%= params[:comp] == 't' ? "Completed" : "Pending" %> items for <%= @list.name %></h1>
+<menu class="menu">
+	<ul>
+		<li><%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add %></li>
+		<li><%= link_to 'See ' + (params[:comp] == 't' ? 'Pending' : 'Completed') + ' Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => (params[:comp] == 't' ? 'f' : 't')}, :target => 'ui_display' %></li>
+		<li><%= link_to 'Share this list', {:controller => "permissions", :action => "index", :list_id => session[:list_id]}, :target => 'ui_display' %></li>
+	</ul>
+</menu>
 
-<%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add%>
-<%= link_to 'See ' + (params[:comp] == 't' ? 'Pending' : 'Completed') + ' Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => (params[:comp] == 't' ? 'f' : 't')}, :target => 'ui_display' %>
-<%= link_to 'Share this list', {:controller => "permissions", :action => "index", :list_id => session[:list_id]}, :target => 'ui_display' %>
-<table>
-	<tr class="item_headings">
+<table class="control_table">
+	<colgroup span="2"></colgroup>
+	<colgroup span="3"></colgroup>
+	<thead>
+	<tr>
 		<th>Name</th>
 		<th>Due Date</th>
-		<th></th>
-		<th></th>
-		<th></th>
+		<th colspan="3">Controls</th>
 	</tr>
-
-<% @items.each do |item| %>
-	<tr class="item_row">
+	</thead>
+	<tfoot>
+	<tr>
+		<td colspan="2">Total</td>
+		<td colspan="3"><%= @items.length %></td>
+	</tr>
+	</tfoot>
+	<tbody>
+	<% @items.each do |item| %>
+	<tr>
 		<td><%= item.name %></td>
 		<td><%= item.due_date %></td>
 		<td><%= button_to 'Show', item, :method => :get %></td>
 		<td><%= button_to 'Edit', edit_item_path(item), :method => :get, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).edit and params[:comp] == 'f')%></td>
 		<td><%= button_to 'Delete', item, :confirm => 'Are you sure?', :method => :delete, :disabled => !(Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).del) %></td>
 	</tr>
-<% end %>
+	<% end %>
+	</tbody>
 </table>
-
-<br />
+</div>

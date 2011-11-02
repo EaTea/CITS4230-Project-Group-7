@@ -1,27 +1,35 @@
 <%= render 'dash' %>
 <div>
 <aside id="controls">
+	<%= link_to 'New List', new_list_path %>
 	<div class="popup">
 		<a href="#">Lists</a>
 		<div>
-			<table>
-				<tr class="list_heading">
+			<table class="control_table">
+				<% @list_ids = User.find(session[:user_id]).lists.sort!{|l1, l2| l1.name.upcase <=> l2.name.upcase} %>
+				<colgroup span="1"></colgroup>
+				<colgroup span="2"></colgroup>
+				<thead>
+				<tr>
 					<th>Name</th>
-					<th></th>
-					<th></th>
+					<th colspan="2">Controls</th>
 				</tr>
-				<% User.find(session[:user_id]).lists.sort!{|l1, l2| l1.name.upcase <=> l2.name.upcase}.each do |list_id| %>
-				<tr class="list_row">
-					<td><%= link_to List.find(list_id).name, {:controller => "items", :action => "index", :list_id => list_id, :comp => 'f' }, :target => 'ui_display' %></td>
+				</thead>
+				<tfoot>
+					<td>Total</td>
+					<td colspan="2"><%= @list_ids.length %></td>
+				</tfoot>
+				<tbody>
+				<% @list_ids.each do |list_id| %>
+				<tr>
+					<td><%= link_to List.find(list_id).name, { :controller => "items", :action => "index", :list_id => list_id, :comp => 'f' }, :target => 'ui_display' %></td>
 					<td><%= button_to 'Rename', edit_list_path(List.find(list_id)), :method => :get, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
 					<td><%= button_to 'Delete', List.find(list_id), :confirm => 'Are you sure?', :method => :delete, :disabled => !Permission.find_by_user_id_and_list_id(session[:user_id], list_id).own%></td>
 				</tr>
 				<% end %>
+				</tbody>
 			</table>
 		</div>
-	</div>
-	<div id="list_new">
-		<%= link_to 'New List', new_list_path %>
 	</div>
 </aside>
 <section id="views">

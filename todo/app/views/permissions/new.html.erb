@@ -2,11 +2,11 @@
 
 <h1>Create a new permission</h1>
 
-<% if (!params[:new_permission_user_id] or params[:already_exists]) and params[:not_initial_run]%>
-	<div id="error_explanation">
+<% if (!params[:new_permission_user_id] or params[:already_exists]) and params[:not_initial_run] %>
+	<div class="error_explanation">
 		<h2>Error</h2>
 		<p>
-	<% if !params[:already_exists]%>
+		<% if !params[:already_exists] %>
 			Sorry! It looks like you've entered an invalid username. This user doesn't seem to exist.
 		<% else %>
 			Sorry! This person already has permissions to access their list. If you go back, you can go and edit their permissions.
@@ -22,7 +22,7 @@
 <% end %>
 
 <% if params[:new_permission_user_id] and !params[:already_exists] %>
-<h2>Adding permissions for <%= User.find_by_id(params[:new_permission_user_id]).username%></h2>
+<h2>Adding permissions for <%= User.find_by_id(params[:new_permission_user_id]).username %></h2>
 <%= render 'form' %>
 <% end %>
 
