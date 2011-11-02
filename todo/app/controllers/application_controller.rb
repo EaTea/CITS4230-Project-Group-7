@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
 	def search_for_user
 		@user = User.find_by_username(params[:username])
 		if @user != nil
-			@permission = Permission.find_by_user_id_and_list_id(@user.id, session[:list_id]).id
-			puts @permission == nil
+			@permission = Permission.find_by_user_id_and_list_id(@user.id, session[:list_id])
 		end
 		respond_to do |format|
 			format.html { redirect_to :controller => "permissions", :action => 'new', :new_permission_user_id => (@user == nil ? nil : @user.id), :not_initial_run => '1', :already_exists => @permission != nil}

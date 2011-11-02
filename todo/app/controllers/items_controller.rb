@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
 			session[:list_id] = params[:list_id]
 		end
 		if !User.find(session[:user_id]).lists.include?(session[:list_id])
-			session[:list_id] = User.find(session[:user_id]).lists[0]
+			session[:list_id] = User.find(session[:user_id]).lists[0].id
 		end
 		if params[:comp] and ( params[:comp] == 't' or params[:comp] == 'f' )
 			@find_completed = params[:comp]
