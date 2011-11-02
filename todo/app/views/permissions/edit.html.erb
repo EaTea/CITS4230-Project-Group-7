@@ -1,5 +1,9 @@
-<h1>Editing permission</h1>
+<div class="doc">
+
+<h1>Editing <%= User.find_by_id(@permission.user_id).username %>'s permissions</h1>
 
 <%= render 'form' %>
 
 <%= button_to 'Back', @permission, :method => :get %>
+
+</div>
