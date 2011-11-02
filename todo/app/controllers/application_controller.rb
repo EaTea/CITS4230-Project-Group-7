@@ -28,4 +28,11 @@ class ApplicationController < ActionController::Base
 		end
 
 	protect_from_forgery
+
+	def email_all_users
+		User.all.each do |user|
+			UserMailer.todo_notification(user).deliver
+		end
+	end
+
 end

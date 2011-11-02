@@ -7,15 +7,19 @@ class UserMailer < ActionMailer::Base
     list_items_due = Array.new 
       
     lists.each do |list|
-      list_items_due.insert(list.items.find_all_by_due_date(Date.today))
+      list_items_due.concat(list.items.where('completed = "f" and due_date <= ?', Date.today))
     end
     
     list_items_due.flatten
   end
   
    def todo_notification(user) 
-    #@user = user
     list_items_due = self.fetch_users_due_items(user)
-    mail(:to => "#{user.username} <#{user.email}>", :subject => "Your have Pending To-Do task!")
+		num_items_due = list_items_due.size
+		puts num_items_due
+		if num_items_due
+			email_subject = "ForgetMeNot: You have " + num_items_due.to_s + " due!"
+	   	mail(:to => "#{user.username} <#{user.email}>", :subject => email_subject)
+		end
   end
 end
