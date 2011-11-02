@@ -50,8 +50,6 @@ class UsersController < ApplicationController
 
 		respond_to do |format|
 			if @user.save
-        #Added for Rails mail testing
-        UserMailer.todo_notification(@user).deliver
 				format.html	{ redirect_to(new_user_path, :notice => 'User was successfully created.') }
 				format.xml	{ render :xml => @user, :status => :created, :location => @user }
 			else
