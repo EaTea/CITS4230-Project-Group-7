@@ -1,4 +1,4 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :html => { :class => 'iform' } do |f| %>
 	<% if @user.errors.any? %>
 		<div class="error_explanation">
 			<h2><%= pluralize(@user.errors.count, "error") %> encountered:</h2>
@@ -12,26 +12,24 @@
 	<% end %>
 
 	<div class="field">
-		<%= f.label :username %><br />
-		<%= f.text_field :username %>
+		<%= f.label :username %>
+		<div><%= f.text_field :username %></div>
 	</div>
 	<div class="field">
-		<%= f.label :password %><br />
-		<%= f.password_field :password, :value => "" %>
+		<%= f.label :password %>
+		<div><%= f.password_field :password, :value => "" %></div>
 	</div>
 	<div class="field">
-		<%= f.label :new_password_confirmation %><br />
-		<%= f.password_field :password_confirmation %>
+		<%= f.label :new_password_confirmation %>
+		<div><%= f.password_field :password_confirmation %></div>
 	</div>
 	<div class="field">
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
+		<%= f.label :email %>
+		<div><%= f.text_field :email %></div>
 	</div>
 	<div class="field">
-		<%= f.label :email_confirmation %><br />
-		<%= f.text_field :email_confirmation, :value => @user.email %>
+		<%= f.label :email_confirmation %>
+		<div><%= f.text_field :email_confirmation, :value => @user.email %></div>
 	</div>
-	<div class="actions">
-		<%= f.submit %>
-	</div>
+	<%= f.submit %>
 <% end %>
