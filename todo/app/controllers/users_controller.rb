@@ -62,8 +62,13 @@ class UsersController < ApplicationController
 	# PUT /users/1
 	# PUT /users/1.xml
 	def update
-		if !is_admin?(session[:user_id]) and session[:user_id] != params[:id]
-			format.html	{ render :action => "show" }
+#if !is_admin?(session[:user_id]) and 
+		if session[:user_id].to_i.to_s != params[:id].to_i.to_s
+			@user = User.find(session[:user_id])
+			respond_to do |format|
+				format.html	{ render :action => "show" }
+				format.xml  { render :xml => @user }
+			end
 		else
 			@user = User.find(params[:id])
 
