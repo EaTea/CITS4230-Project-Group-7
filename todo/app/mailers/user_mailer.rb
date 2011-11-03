@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-	default :from => "todo-notifier@shared-todo.com"
+	default :from => "todo-notifier@fmn-shared-todo.com"
 	#	User.all.each do |user|
 	def fetch_users_due_items(usr)
 		lists = User.find_by_id(usr.id).lists
@@ -13,6 +13,7 @@ class UserMailer < ActionMailer::Base
 	end
 
 	def todo_notification(user)
+		@user = user
 		list_items_due = self.fetch_users_due_items(user)
 		num_items_due = list_items_due.size
 		if num_items_due

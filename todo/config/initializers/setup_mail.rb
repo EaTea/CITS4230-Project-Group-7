@@ -1,7 +1,7 @@
 ActionMailer::Base.smtp_settings = {
 	:address              => "smtp.gmail.com",
 	:port                 => 587,
-	:domain               => "cits4230g.csse.uwa.edu.au",
+	:domain               => "fmn-shared-todo.com",
 	:user_name            => "20503332@student.uwa.edu.au",
 	:password             => "aaaaaa",
 	:authentication       => "plain",

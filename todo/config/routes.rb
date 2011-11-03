@@ -1,9 +1,9 @@
 Todo::Application.routes.draw do
-  controller :sessions do
-    get 'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
-  end
+	controller :sessions do
+		get 'login' => :new
+		post 'login' => :create
+		delete 'logout' => :destroy
+	end
 
 	controller :home do
 		post 'assign_list_id' => :assign_list_id
@@ -11,6 +11,7 @@ Todo::Application.routes.draw do
 
 	controller :application do
 		get 'search_for_user' => :search_for_user
+		get 'email_reminder' => :email_all_users
 	end
 
   resources :items
