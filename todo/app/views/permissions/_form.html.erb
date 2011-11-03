@@ -28,8 +28,8 @@
 		<div><%= f.check_box :own %></div>
 	</div>
 
-	<%= f.text_field :user_id, :type => 'hidden', :value => params[:new_permission_user_id] %>
-	<%= f.text_field :list_id, :type => 'hidden', :value => session[:list_id] %>
+	<%= f.text_field :user_id, :type => 'hidden', :value => (params[:new_permission_user_id] ? params[:new_permission_user_id] : @permission.user_id)  %>
+	<%= f.text_field :list_id, :type => 'hidden', :value => (session[:list_id]? session[:list_id] : @permission.list_id) %>
 
 	<%= f.submit %>
 <% end %>
