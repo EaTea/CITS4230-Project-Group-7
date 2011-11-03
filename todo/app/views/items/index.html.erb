@@ -5,7 +5,7 @@
 	<ul>
 		<li><%= link_to 'New Item', new_item_path if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).add %></li>
 		<li><%= link_to 'See ' + (params[:comp] == 't' ? 'Pending' : 'Completed') + ' Items', {:controller => "items", :action => "index", :list_id => session[:list_id], :comp => (params[:comp] == 't' ? 'f' : 't')}, :target => 'ui_display' %></li>
-		<li><%= link_to 'Share this list', {:controller => "permissions", :action => "index", :list_id => session[:list_id]}, :target => 'ui_display' %></li>
+		<li><%= link_to 'Share this list', {:controller => "permissions", :action => "index", :list_id => session[:list_id]}, :target => 'ui_display' if Permission.find_by_user_id_and_list_id(session[:user_id], session[:list_id]).own %></li>
 	</ul>
 </menu>
 
