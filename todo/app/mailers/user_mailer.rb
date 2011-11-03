@@ -16,7 +16,7 @@ class UserMailer < ActionMailer::Base
 		@user = user
 		list_items_due = self.fetch_users_due_items(user)
 		num_items_due = list_items_due.size
-		if num_items_due
+		if num_items_due > 0
 			email_subject = "ForgetMeNot: You have " + num_items_due.to_s + " due!"
 			mail(:to => "#{user.username} <#{user.email}>", :subject => email_subject)
 		end
