@@ -1,12 +1,22 @@
 A CITS4230 Project at UWA:
 Build a database-driven web application using Ruby on Rails, HTML, CSS and ECMAScript.
 
+Requirements:
+- A PHP and Ruby-on-Rails capable server.
+- crontab is needed for the email reminders.
+
 Setup:
-1. Sync the `public_html` into the directory where the site should be shown.
+1. Modify the .htaccess file inside `public_html` if necessary to point to the
+   correct location for the rails base location.
+2. Add emailer credidentials into `todo/config/initializers/setup_mail.rb`.
+   Note: Just editing the "user_name" and "password" maps should be sufficient
+   for local testing on port 3000.
+3. Sync the `public_html` into the directory where the site should be shown.
    Note: Make sure all symlinks are kept otherwise links will break.
-2. Sync the `todo` into the same folder as `public_html`.
+4. Sync the `todo` into the same folder as `public_html`.
    Note: Make sure all symlinks are kept otherwise links will break.
-3. Access the site in `public_html`.
+5. Add the contents of `crontab` into the system's crontab.
+6. Access the site in `public_html`.
 
 Helper scripts included in this repo:
 
