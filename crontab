@@ -1,0 +1,1 @@
+0 7 * * *  wget http://cits4230g.csse.uwa.edu.au/todo/email_reminder
